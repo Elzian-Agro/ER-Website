@@ -41,6 +41,10 @@
             }
             .product-card {
                 border-left: 4px solid #79b083;
+                transition: transform 0.3s;
+            }
+            .product-card:hover {
+               transform: translateY(-5px);
             }
             .flow-arrow {
                 font-size: 1.5rem;
@@ -51,6 +55,27 @@
             .quote {
                 border: 3px solid #79b083;
             }
+            .contract-table {
+                max-width: 600px;
+                margin: 0rem auto;
+            }
+            .table-header {
+                background-color: #79b083;
+                color: #e7ebe7;
+            }
+            .total-row {
+                font-weight: bold;
+                background-color: #f9f9f7;
+            }
+
+            .custom-bg-shape {
+                background-color: #e7ebe7; 
+                padding: 1.5rem;
+                border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%; 
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                transition: 0.3s ease;
+            }
+
         </style>
     </head>
 
@@ -166,7 +191,7 @@
                         </div>
                         <div class="col-lg-6 col-xl-8 wow fadeInUp" data-wow-delay="0.3s">
                             <h4 class="text-primary">About Us</h4>
-                            <h1 class="display-5 text-dark mb-4">The nature of our business : <br/>Defining ‘onset’ economies backed by BioCurrencies</h1>
+                            <h1 class="display-5 text-dark mb-4 fs-2">The nature of our business : <br/>Defining ‘onset’ economies backed by BioCurrencies</h1>
                             <p class="text ps-4 text-muted mb-4">There is no ‘production technology’ that is more efficient than trees and plants to produce oxygen. But the amount of Oxygen that they provide varies greatly, depending on age and species - Dr. Ranil Senanayake.
                             </p>
                             <div class="row g-4 justify-content-between mb-5">
@@ -185,7 +210,7 @@
                     </div>
                 </div>
 
-                <div class="container vi-mi pb-5">
+                <div class="container vi-mi pb-5 pt-2">
                     <div class="row g-4 justify-content-center wow fadeInUp">
                         <div class="col-md-6">
                             <div class="info-box text-center p-4 h-100 rounded shadow-sm">
@@ -221,9 +246,9 @@
             <div class="container-fluid">
                 <div class="container pt-5">
                     <div class="text-center mb-5 wow fadeInUp">
-                        <h4 class="text-primary">Our Products</h4>
-                        <h1 class="display-5 mb-4 text-dark">LifeForce Tokenized Primary Ecosystem Services</h1>
-                        <p class="text mb-4 text-muted">
+                        <h4 class="text-primary mb-3">Our Products</h4>
+                        <h1 class="display-5 mb-3 text-dark fs-2">LifeForce Tokenized Primary Ecosystem Services</h1>
+                        <p class="text-muted">
                             LifeForce tokens are value set to existing markets based on the volume of contractually produced Primary Ecosystem Services (atmospheric elements). They represent traceable, measurable ecosystem value with economic recognition.
                         </p>
                     </div>
@@ -336,9 +361,56 @@
         <section id="our-services" class="bg-white py-5">
             <div class="container-fluid">
                 <div class="container">
-                    <div class="text-center mb-5 wow fadeInUp pt-5">
-                        <h4 class="text-primary">Our Services</h4>
-                        <h1 class="display-5 mb-4 text-dark">Our Service Content Here</h1>
+                    <div class="text-center mb-5 pt-5">
+                        <h4 class="text-primary mb-3 wow fadeInUp">Our Services</h4>
+
+                        <div class="row g-4 py-3">
+                            <div class="col-lg-6 wow fadeInLeft">
+                                <h1 class="display-5 mb-3 text-dark fs-2">Tree species we Monitor Record and <br>Validate (MRV) using LF</h1>    
+                                <p class="text-muted">(will be include diagram)</p>                                              
+                            </div>
+
+                            <div class="col-lg-6 wow fadeInRight">
+                                <h1 class="display-5 text-dark fs-2">The LifeForce tree farming contract </h1>
+                            
+                                <p class="text-muted">LifeForce™ tree farming contract offers up to 80% pay <br>back of each tree unit investment to <br>the landowner, farmer, or rural host who cared for that tree UNIT.</p>                           
+
+                                <div class="contract-table">                        
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr class="table-header">
+                                                <th>LF Tree Farming Contract Year</th>
+                                                <th>Maximum Payback Allocation ($)</th>
+                                                <th>Insurance Payback (5% of the maximum total payback)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>11.20</td>
+                                                <td>0.56</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>16.80</td>
+                                                <td>0.84</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>28.00</td>
+                                                <td>1.40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>56.00</td>
+                                                <td>2.80</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="text-muted">Total payback allocation over 4 years = $112</p>
+                                </div>
+                            </div>
+                        </div>  
                     </div>
                 </div>
             </div>
@@ -351,8 +423,9 @@
             <div class="container-fluid">
                 <div class="container">
                     <div class="text-center mb-5 wow fadeInUp pt-5">
-                        <h4 class="text-primary">Other Services</h4>
-                        <h1 class="display-5 mb-4 text-dark">Other Service Content Here</h1>
+                        <h4 class="text-primary mb-3">Other Services</h4>
+                        <h1 class="display-5 mb-3 text-dark fs-2">Designing and replicating Adaptive Resilient Ecosystem Areas (AREA)</h1>
+                        <p class="text-muted">“Quit thinking about decent land use as solely an economic problem, but examine each question in terms of what is ethically and aesthetically right, as well as what is economically expedient. A thing is right when it tends to preserve the integrity, stability and beauty of the biotic community. It is wrong when it tends otherwise”   (Aldo Leopold – A Land Ethic)</p>
                     </div>
                 </div>
             </div>
@@ -365,8 +438,8 @@
             <div class="container-fluid">
                 <div class="container">
                     <div class="text-center mb-5 wow fadeInUp pt-5">
-                        <h4 class="text-primary">Who We Are</h4>
-                        <h1 class="display-5 mb-4 text-dark">Who We Are Content Here</h1>
+                        <h4 class="text-primary mb-3">Who We Are</h4>
+                        <p class="text-muted">We are a group of scientists and traditionalists seeking to define a new synthesis of wealth to facilitate truly sustainable trade and development.</p>
                     </div>
                 </div>
             </div>
@@ -378,17 +451,17 @@
         <section id="page-7"  class="bg-light py-5">
             <div class="container-fluid">
                 <div class="container">
-                    <div class="text-center wow fadeInUp pt-5">
-                        <h4 class="text-primary">Page 7</h4>
+                    <div class="text-center pt-5">
+                        <h4 class="text-primary wow fadeInUp">Page 7</h4>
                         <div class="">
-                            <div class="py-3">
+                            <div class="py-3 wow fadeInUp">
                                 <h1 class="display-5 mb-3 text-dark fs-2">HOW IT WORKS</h1>
                                 <h4 class="text-dark">From Tree to Token — Bringing the LifeForce Contract to Life</h4>                               
                             </div>
 
                             <hr class="text-muted">
 
-                            <div class="py-3">
+                            <div class="py-3 wow fadeInUp">
                                 <h1 class="display-5 mb-3 text-dark fs-2">THE LIFEFORCE CONTRACT</h1>
                                 <h4 class="text-dark mb-3">A 4-Year Ecosystem Service Agreement</h4>
                                 <p class="text-muted">Each LifeForce Unit is a tree under contract to provide measurable ecosystem services. We manage and verify this production for you over 4 years.</p>
@@ -397,11 +470,11 @@
                             <hr class="text-muted">
 
                             <div class="py-3">
-                                <h1 class="display-5 mb-3 text-dark fs-2">OUR SERVICES</h1>
-                                <h4 class="text-dark mb-3">What We Do for Every LifeForce Unit</h4>
+                                <h1 class="display-5 mb-3 text-dark fs-2 wow fadeInUp">OUR SERVICES</h1>
+                                <h4 class="text-dark mb-3 wow fadeInUp">What We Do for Every LifeForce Unit</h4>
                                 <div class="row g-4 py-3">
                                     <!-- Year 1 -->
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-3 wow fadeInLeft">
                                         <div class="card service-card shadow-sm bg-white">
                                             <div class="card-body text-center">                                                                           
                                                 <p>1 YEAR</p>
@@ -417,7 +490,7 @@
                                     </div>
 
                                     <!-- Year 2 -->
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-3 wow fadeInLeft">
                                         <div class="card service-card shadow-sm bg-white">
                                             <div class="card-body text-center">                                                                           
                                                 <p>2 YEAR</p>
@@ -434,7 +507,7 @@
 
                                     
                                     <!-- Year 3 -->
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-3 wow fadeInRight">
                                         <div class="card service-card shadow-sm bg-white">
                                             <div class="card-body text-center">                                                                           
                                                 <p>3 YEAR</p>
@@ -450,7 +523,7 @@
                                     </div>
 
                                     <!-- Year 4 -->
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-3 wow fadeInRight">
                                         <div class="card service-card shadow-sm bg-white">
                                             <div class="card-body text-center">                                                                           
                                                 <p>4 YEAR</p>
@@ -465,7 +538,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="quote rounded-sm mt-3">
+                                <div class="quote rounded-sm mt-3 wow fadeInUp">
                                     <p class="text-muted fs-6 pt-3">"We don't just plant trees — we manage their life green infrastructure for 4 years, ensuring they yield real, <br>measurable oxygen and water purification."</p>
                                 </div>
                             </div>
@@ -473,10 +546,10 @@
                             <hr class="text-muted">
 
                             <div class="py-4">
-                                <h1 class="display-5 mb-3 text-dark fs-2">OUR PRODUCTS</h1>
-                                <h4 class="text-dark mb-3">What You Receive from Every LifeForce Unit</h4>
+                                <h1 class="display-5 mb-3 text-dark fs-2 wow fadeInUp">OUR PRODUCTS</h1>
+                                <h4 class="text-dark mb-3 wow fadeInUp">What You Receive from Every LifeForce Unit</h4>
                                 <div class="row g-4 py-2">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 wow fadeInLeft">
                                         <div class="card product-card h-100 bg-white">
                                             <div class="card-body">
                                                 <h4 class="text-dark mb-4">LifeForce C-PES Token</h4>
@@ -499,7 +572,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 wow fadeInRight">
                                         <div class="card product-card h-100 bg-white">
                                             <div class="card-body">
                                                 <h4 class="text-dark mb-4">Value set of Ecosystem Services</h4>
@@ -524,7 +597,7 @@
                             
                             <hr class="text-muted">
 
-                            <div class="py-4">
+                            <div class="py-4 wow fadeInUp">
                                 <h1 class="display-5 mb-3 text-dark fs-2">AT A GLANCE — LIFEFORCE CONTRACT FLOW</h1>
                                 <div class="flow-section">
                                 <div class="row flex-nowrap align-items-center overflow-auto g-0">                                    
@@ -594,6 +667,52 @@
                         <div class="col-lg-4 text-center pt-4 pt-lg-0 wow fadeInRight">
                             <img src="img/oxygen-economy.png" alt="home-1" class="img-fluid" />
                         </div>
+                    </div>
+
+                    <div class="row g-4 wow fadeInUp">
+                        <div class="col-lg-6 p-4 shadow-sm">
+                            <h4 class="text-dark mb-3">Primary Ecosystem Services (PES) <br>of Photosynthetic</h4>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="p-3 custom-bg-shape">
+                                        <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                                    </div>
+                                    <p class="text-muted text-center mt-3">Oxygen<br>Generation</p>
+                                </div>
+                                 <div class="col-sm-3">
+                                    <div class="p-3 custom-bg-shape">
+                                        <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                                    </div>
+                                    <p class="text-muted text-center mt-3">CSs<br>Segrestiation</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="p-3 custom-bg-shape">
+                                        <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                                    </div>
+                                    <p class="text-muted text-center mt-3">Curtishydretd<br>Creactting</p>
+                                </div>
+                                 <div class="col-sm-3">
+                                    <div class="p-3 custom-bg-shape">
+                                        <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                                    </div>
+                                    <p class="text-muted text-center mt-3">Ambient<br>Cooling</p>
+                                </div>
+                            </div>
+                        </div>
+                       <!-- <div class="col-lg-6"  style="background-color: #ffffff;">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-sm-6">
+                                    <div class="p-3 bg-light rounded">
+                                        <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 d-flex flex-column justify-content-center">
+                                    <h4 class="text-dark">$250-450</h4>
+                                    <p>per acre/year</p>
+                                    <p>for mature, diverse <br> forests</p>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
