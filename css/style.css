@@ -716,41 +716,64 @@
 /*** Project End ***/
 
 /*** Blog Start ***/
-.blog .blog-item .project-img {
-    position: relative;
-    overflow: hidden;
+.blog .blog-item {
     border-radius: 10px;
+    background: var(--bs-white);
     transition: 0.5s;
+     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.blog .blog-item .project-img .blog-plus-icon {
+.blog .blog-item .blog-img {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.blog .blog-item .blog-img::after {
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.blog .blog-item .blog-img img {
+    transition: 0.5s;
+}
+
+.blog .blog-item:hover .blog-img img {
+    transform: scale(1.2);
+}
+
+/* .blog .blog-item:hover .blog-img::after {
+    background: rgba(121, 176, 131, 0.2);
+} */
+
+.blog .blog-item .blog-date {
+    position: absolute;
+    top: 25px;
+    left: 25px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: rgba(68, 210, 246, 0.2);
-    transition: 0.5s;
-    opacity: 0;
+    background: var(--bs-primary);
+    color: var(--bs-white);
+    z-index: 2;
 }
 
-.blog .blog-item:hover .project-img .blog-plus-icon {
-    opacity: 1;
-}
-
-.blog .blog-item .project-img img {
+.blog .blog-item .blog-content a {
     transition: 0.5s;
 }
 
-.blog .blog-item:hover .project-img img {
-    transform: scale(1.3);
+.blog .blog-item:hover .blog-content a:hover {
+    color: var(--bs-primary) !important;
 }
-
 /*** Blog End ***/
 
 /*** Team Start ***/
