@@ -340,13 +340,19 @@
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                function deactivateAllNavLinks() {
-                    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-                    navLinks.forEach(link => link.classList.remove("active"));
-                }
+                const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
-                deactivateAllNavLinks(); // Call on page load
+                // Deactivate all nav links
+                navLinks.forEach(link => link.classList.remove("active"));
+
+                // Activate "Oxygen Economy" link based on href
+                navLinks.forEach(link => {
+                    if (link.getAttribute("href").includes("#oxygen-economy")) {
+                        link.classList.add("active");
+                    }
+                });
             });
         </script>
+
     </body>
 </html>
