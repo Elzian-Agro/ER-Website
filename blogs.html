@@ -1,368 +1,588 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>EarthRestoration</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+  <head>
+    <meta charset="utf-8" />
+    <title>EarthRestoration</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
-        <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet" />
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet" />
 
-        <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <style>
+      .service-card {
+        border: none;
+        transition: transform 0.3s;
+        height: 100%;
+        cursor: pointer;
+      }
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
+      .product-card {
+        border-left: 4px solid #79b083;
+        transition: transform 0.3s;
+      }
+      .product-card:hover {
+        transform: translateY(-5px);
+      }
+      .flow-arrow {
+        font-size: 1.5rem;
+        color: #79b083;
+        text-align: center;
+      }
+      .quote {
+        border: 3px solid #79b083;
+      }
+      .contract-table {
+        max-width: 600px;
+        margin: 0rem auto;
+      }
+      .table-header {
+        background-color: #79b083;
+        color: #e7ebe7;
+      }
+      .total-row {
+        font-weight: bold;
+        background-color: #f9f9f7;
+      }
 
-    <body>
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+      .custom-bg-shape {
+        background-color: #e7ebe7;
+        padding: 1.5rem;
+        border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease;
+      }
+
+      .hover-shadow:hover {
+        box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar bg-primary px-0 d-none d-lg-block">
+      <div class="container px-0">
+        <div class="row gx-0 align-items-center" style="height: 35px">
+          <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+            <div class="d-flex flex-wrap">
+              <a href="mailto:info@restore.earth" class="text-light me-4">
+                <i class="fas fa-envelope text-light me-2"></i>info@restore.earth
+              </a>
+              <a href="tel:+94767191428" class="text-light me-4">
+                <i class="fas fa-phone-alt text-light me-2"></i>+94 76 719 1428
+              </a>
             </div>
+          </div>
+          <div class="col-lg-4 text-center text-lg-end">
+            <div class="d-flex align-items-center justify-content-end">
+              <a
+                href="https://www.youtube.com/channel/UCL5dFM7Kr1dMapzjSJExftg?view_as=subscriber"
+                target="_blank"
+                class="btn nav-fill"
+                ><i class="fab fa-youtube text-light"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100045842366453"
+                target="_blank"
+                class="btn nav-fill"
+                ><i class="fab fa-facebook-f text-light"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/earth-restoration/"
+                target="_blank"
+                class="btn nav-fill"
+                ><i class="fab fa-linkedin-in text-light"></i
+              ></a>
+            </div>
+          </div>
         </div>
-        <!-- Spinner End -->
-       
-        
-        <!-- Topbar Start -->
-        <div class="container-fluid topbar bg-primary px-0 d-none d-lg-block">
-            <div class="container px-0">
-                <div class="row gx-0 align-items-center" style="height: 35px;">
-                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-                        <div class="d-flex flex-wrap">
-                            <a href="mailto:info@restore.earth" class="text-light me-4">
-                                <i class="fas fa-envelope text-light me-2"></i>info@restore.earth
-                            </a>
-                            <a href="tel:+94767191428" class="text-light me-4">
-                                <i class="fas fa-phone-alt text-light me-2"></i>+94 76 719 1428
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 text-center text-lg-end">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <a href="https://www.youtube.com/channel/UCL5dFM7Kr1dMapzjSJExftg?view_as=subscriber" target="_blank" class="btn nav-fill"><i class="fab fa-youtube text-light"></i></a>
-                            <a href="https://www.facebook.com/profile.php?id=100045842366453" target="_blank" class="btn nav-fill"><i class="fab fa-facebook-f text-light"></i></a>
-                            <a href="https://www.linkedin.com/company/earth-restoration/" target="_blank" class="btn nav-fill"><i class="fab fa-linkedin-in text-light"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Topbar End -->
+      </div>
+    </div>
+    <!-- Topbar End -->
 
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid sticky-top px-0">
-            <div class="position-absolute bg-primary" style="left: 0; top: 0; width: 100%; height: 100%;">
-            </div>
-            <div class="container px-0">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
-                    <a href="index.html" class="navbar-brand p-0">             
-                        <img class="nav-logo" src="img/logo.png" alt="Logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars"></span>
-                    </button>
-                     <div class="collapse navbar-collapse" id="navbarCollapse">
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid sticky-top px-0">
+      <div class="position-absolute bg-primary" style="left: 0; top: 0; width: 100%; height: 100%"></div>
+      <div class="container px-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+          <a href="index.html" class="navbar-brand p-0">
+            <img class="nav-logo" src="img/logo.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-              <a href="#home" class="nav-item nav-link active">Home</a>
-              <a href="#about" class="nav-item nav-link">About</a>
-              <a href="#why-we-do-it" class="nav-item nav-link">Why we do it</a>
-              <a href="#how-we-do-it " class="nav-item nav-link">How we do it</a>
-              <a href="#our-products " class="nav-item nav-link">Our Products</a>
-              <a href="#how-it-works" class="nav-item nav-link">How it works</a>
-              <a href="#other-services" class="nav-item nav-link">Other Services</a>
-              <a href="#who-we-are" class="nav-item nav-link">Who We Are</a>
-              <a href="#oxygen-economy" class="nav-item nav-link">OXYGEN ECONOMY</a>
-              <div class="nav-item dropdown active">
+              <a href="index.html#home" class="nav-item nav-link active">Home</a>
+              <a href="index.html#about" class="nav-item nav-link">About</a>
+              <a href="index.html#why-we-do-it" class="nav-item nav-link">Why we do it</a>
+              <a href="index.html#how-we-do-it " class="nav-item nav-link">How we do it</a>
+              <a href="index.html#our-products " class="nav-item nav-link">Our Products</a>
+              <a href="index.html#how-it-works" class="nav-item nav-link">How it works</a>
+              <a href="index.html#other-services" class="nav-item nav-link">Other Services</a>
+              <a href="index.html#who-we-are" class="nav-item nav-link">Who We Are</a>
+              <a href="blogs.html" class="nav-item nav-link">Blogs</a>
+              <!-- <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Other</a>
                 <div class="dropdown-menu m-0">
                   <a href="blogs.html" class="dropdown-item">Blogs</a>
-                  <a href="further-reading.html" class="dropdown-item active">Further reading</a>
-                  <a href="#faq" class="nav-item nav-link">Scientific Publications & FAQ</a>
+                  <a href="#further-reading" class="dropdown-item">Further reading</a>
+                  <a href="#faq" class="dropdown-item">Scientific Publications & FAQ</a>
+                </div>
+              </div> -->
+              <a href="oxygen-economy.html" class="nav-item nav-link">OXYGEN ECONOMY</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Blog Start -->
+
+    <div class="container-fluid blog py-5 bg-light">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div id="why-the-oxygen-economy" class="blog-item">
+              <div class="blog-img">
+                <img src="img/forest-1.jpg" class="img-fluid rounded-top w-100" alt="" />
+                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
+              </div>
+              <div class="blog-content rounded-bottom p-4">
+                <h4 class="text-dark mb-4 fs-5">Why the Oxygen Economy?</h4>
+                <p id="less-content" class="text-muted">
+                  The Air We Breathe Is free but being rapidly degraded, its protection should be valued...
+                </p>
+
+                <!-- Hidden extra content -->
+                <div class="extra-content d-none">
+                  <p class="text-muted">
+                    The Air We Breathe Is free but being rapidly degraded, its protection should be valued.
+                  </p>
+
+                  <p class="text-muted">
+                    Its most critical component, Oxygen surrounds us, filling our lungs with every breath we
+                    take. For many of us, it’s an invisible gift of nature that we take for granted. But Why
+                    is this essential resource—the very foundation of life— free to be exploited at present?
+                    Why could not trees, plants, and photosynthetic organisms that produce oxygen have
+                    economic value ? Could those who benefit most from using the resources of the Global
+                    Commons be required to contribute to its maintenance? This is the idea behind the Oxygen
+                    Economy, a bold and transformative concept that seeks to address environmental and social
+                    challenges in a way that is fair, sustainable, and forward-thinking beyond GDP value which
+                    measures the success of our societies today.
+                  </p>
+                </div>
+
+                <a href="#" class="fw-bold text-secondary read-more-btn"
+                  >Read More <i class="fa fa-angle-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="blog-item">
+              <div class="blog-img">
+                <img src="img/forest-4.jpg" class="img-fluid rounded-top w-100" alt="" />
+                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
+              </div>
+              <div class="blog-content rounded-bottom p-4">
+                <h4 class="text-dark mb-4 fs-5">How the Oxygen Economy Works?</h4>
+                <p id="less-content" class="text-muted">
+                  The Oxygen Economy operates on the principles of private property being valued...
+                </p>
+
+                <!-- Hidden extra content -->
+                <div class="extra-content d-none">
+                  <p class="text-muted">
+                    The Oxygen Economy operates on the principles of private property being valued using
+                    financial tools such as Valuation guarantees, stakeholder Contracts and Insurances to
+                    monetize contractually produced oxygen as a financial product . This involves three key
+                    components:
+                  </p>
+
+                  <ol>
+                    <li class="mb-2">
+                      MRV Guarantee : Assigning an economic value to the oxygen produced by contracted and
+                      registered units in identified geographical areas of production is based on the MRV of
+                      PES productivity by trees / plants or photosynthetic organisms such as Cyanobacteria.
+                    </li>
+                    <li class="mb-2">
+                      Stakeholder Contracts and Compensation: Establishing formal agreements between oxygen
+                      consumers (e.g., corporations / Space exploration companies ) and contracted oxygen
+                      producers (e.g., farmers, Local communities) to ensure optimal primary ecosystem
+                      services production are MRVd and Value Set as a financial tool.
+                    </li>
+                    <li class="mb-2">
+                      Financial tool : The Validated quantity of Photosynthetic Biomass is Value Set using ER
+                      methodology and MArket peg approach based on Mining Oxygen from the Global Commons.
+                      <a
+                        href="https://livewell.com/finance/how-much-does-home-oxygen-cost-without-insurance/"
+                        target="_blank"
+                        class="text-primary"
+                        >click</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      Policy and Regulation: Introducing legal frameworks at a regional scale to enforce
+                      accountability and prevent the exploitation of oxygen resources.The private contracts
+                      would play a key role in monitoring bioregional Oxygen production, ensuring compliance,
+                      and incentivizing sustainable practices to scale the Oxygen economy.
+                    </li>
+                  </ol>
+                </div>
+
+                <a href="#" class="fw-bold text-secondary read-more-btn"
+                  >Read More <i class="fa fa-angle-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="blog-item">
+              <div class="blog-img">
+                <img src="img/forest-3.jpg" class="img-fluid rounded-top w-100" alt="" />
+                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
+              </div>
+              <div class="blog-content rounded-bottom p-4">
+                <h4 class="text-dark mb-4 fs-5">A Vision for the Future : A Global Commons Exchange</h4>
+                <p id="less-content" class="text-muted">
+                  The Oxygen Economy represents a paradigm shift in how we think about our relationship...
+                </p>
+
+                <!-- Hidden extra content -->
+                <div class="extra-content d-none">
+                  <p class="text-muted">
+                    The Oxygen Economy represents a paradigm shift in how we think about our relationship with
+                    the planet. It challenges us to move beyond the notion of nature as an infinite resource
+                    and to recognize the true value of the Earth as an ecosystem that sustains life for all
+                    biota. By aligning economic practices with environmental stewardship, the Oxygen Economy
+                    offers a path towards a more equitable and sustainable future that backs the foundations
+                    of intergenerational wealth to reflect our contributions to cycling atmospheric gasses of
+                    the atmosphere and our Global Commons. Imagine a world where the air we breathe is not
+                    taken for granted but cherished and protected. Where farmers, communities, and ecosystems
+                    are rewarded for their contributions to the planet’s well-being. Where industries operate
+                    with this truly revolutionary framework of accountability to prioritize the health of our
+                    shared environment. This is the vision of the Oxygen Economy—a vision that is within our
+                    reach if we act together, with urgency and determination to lay its foundations.
+                  </p>
+                </div>
+
+                <a href="#" class="fw-bold text-secondary read-more-btn"
+                  >Read More <i class="fa fa-angle-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="blog-item">
+              <div class="blog-img">
+                <img src="img/forest-5.jpg" class="img-fluid rounded-top w-100" alt="" />
+                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
+              </div>
+              <div class="blog-content rounded-bottom p-4">
+                <h4 class="text-dark mb-4 fs-5">
+                  Addressing Potential Challenges of marketing the Oxygen economy
+                </h4>
+                <p id="less-content" class="text-muted">
+                  Like any transformative idea, the Oxygen Economy faces potential challenges. Critics may...
+                </p>
+
+                <!-- Hidden extra content -->
+                <div class="extra-content d-none">
+                  <p class="text-muted">
+                    Like any transformative idea, the Oxygen Economy faces potential challenges. Critics may
+                    argue that assigning a monetary value to Oxygen risks commodifying a natural resource that
+                    should remain freely accessible. Others may question the feasibility of measuring,
+                    validating and regulating oxygen production on a global scale. These concerns can be
+                    addressed by emphasizing the ethical principles behind the Oxygen Economy. The goal is not
+                    to charge people for breathing but to ensure that those who contribute to its
+                    sustainability profit from financial contracts for Oxygen production. Additionally, such
+                    transparent systems. for measuring and validating oxygen production will be crucial for
+                    building trust and ensuring fairness towards the vision of accounting for
+                    intergenerational wealth beyond the GDP framework that exists.
+                  </p>
+                </div>
+
+                <a href="#" class="fw-bold text-secondary read-more-btn"
+                  >Read More <i class="fa fa-angle-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="blog-item">
+              <div class="blog-img">
+                <img src="img/forest-3.jpg" class="img-fluid rounded-top w-100" alt="" />
+                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
+              </div>
+              <div class="blog-content rounded-bottom p-4">
+                <h4 class="text-dark mb-4 fs-5">A Vision for the Future : A Global Commons Exchange</h4>
+                <p id="less-content" class="text-muted">
+                  The Oxygen Economy represents a paradigm shift in how we think about our relationship...
+                </p>
+
+                <!-- Hidden extra content -->
+                <div class="extra-content d-none">
+                  <p class="text-muted">
+                    The Oxygen Economy represents a paradigm shift in how we think about our relationship with
+                    the planet. It challenges us to move beyond the notion of nature as an infinite resource
+                    and to recognize the true value of the Earth as an ecosystem that sustains life for all
+                    biota. By aligning economic practices with environmental stewardship, the Oxygen Economy
+                    offers a path towards a more equitable and sustainable future that backs the foundations
+                    of intergenerational wealth to reflect our contributions to cycling atmospheric gasses of
+                    the atmosphere and our Global Commons. Imagine a world where the air we breathe is not
+                    taken for granted but cherished and protected. Where farmers, communities, and ecosystems
+                    are rewarded for their contributions to the planet’s well-being. Where industries operate
+                    with this truly revolutionary framework of accountability to prioritize the health of our
+                    shared environment. This is the vision of the Oxygen Economy—a vision that is within our
+                    reach if we act together, with urgency and determination to lay its foundations.
+                  </p>
+                </div>
+
+                <a href="#" class="fw-bold text-secondary read-more-btn"
+                  >Read More <i class="fa fa-angle-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Blog End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-primary pt-4 wow fadeIn" data-wow-delay="0.2s">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-md-6 col-lg-6 col-xl-5">
+            <div class="footer-item d-flex flex-column">
+              <div class="footer-item">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p class="mb-3 text-light">
+                  Earth Restoration is dedicated to regenerating ecosystems, restoring biodiversity, and
+                  empowering communities to create a sustainable and thriving planet for future generations.
+                </p>
+                <div class="position-relative mx-auto rounded-pill">
+                  <input
+                    class="form-control rounded-sm w-100 py-3 ps-4 pe-5"
+                    type="text"
+                    placeholder="Enter your email" />
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-sm position-absolute top-0 end-0 py-2 mt-2 me-2">
+                    SignUp
+                  </button>
                 </div>
               </div>
             </div>
-                </nav>
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
+          </div>
 
-
-        <!-- Blog Start -->
-        <div class="container-fluid blog py-5 bg-light">
-            <div class="container">
-                <div class="text-center mx-auto pb-3 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary mb-4">Blogs</h4>
+          <div class="col-md-6 col-lg-6 col-xl-4">
+            <div class=" ">
+              <h4 class="text-white mb-4">Quick Links</h4>
+              <div class="row g-5">
+                <div class="col-6 footer-item d-flex flex-column">
+                  <a href="index.html#home" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Home</a
+                  >
+                  <a href="index.html#about" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> About</a
+                  >
+                  <a href="index.html#why-we-do-it" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Why we do it</a
+                  >
+                  <a href="index.html#how-we-do-it" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> How we do it</a
+                  >
+                  <a href="index.html#our-products" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Our Products</a
+                  >
                 </div>
-                
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div id="why-the-oxygen-economy" class="blog-item">
-                            <div class="blog-img">
-                                <img src="img/forest-1.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
-                            </div>
-                            <div class="blog-content rounded-bottom p-4">
-                                <h4 class="text-dark mb-4 fs-5">Why the Oxygen Economy?</h4>
-                                <p id="less-content" class="text-muted">The Air We Breathe Is  free but being rapidly degraded,  its protection should be  valued...</p>
-
-                                <!-- Hidden extra content -->
-                                <div class="extra-content d-none">
-                                    <p class="text-muted">The Air We Breathe Is  free but being rapidly degraded,  its protection should be  valued.</p>
-
-                                    <p class="text-muted">Its most critical component, Oxygen surrounds us, filling our lungs with every breath we take. For many of us, it’s an invisible gift of nature that we take for granted. But Why is  this essential resource—the very foundation of life— free to be exploited at present? Why could not  trees, plants, and photosynthetic organisms that  produce oxygen have  economic value ? Could  those who benefit most from  using the resources of the  Global Commons be required to contribute to its maintenance? This is the idea behind the Oxygen Economy, a bold and transformative concept that seeks to address environmental and social challenges in a way that is fair, sustainable, and forward-thinking beyond GDP value which measures the success of our societies today.</p>
-                                </div>
-
-                                <a href="#" class="fw-bold text-secondary read-more-btn">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                 <img src="img/forest-4.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
-                            </div>
-                            <div class="blog-content rounded-bottom p-4">
-                                <h4 class="text-dark mb-4 fs-5">How the Oxygen Economy Works?</h4>
-                                <p id="less-content" class="text-muted">The Oxygen Economy operates on the principles of private property being valued...</p>
-
-                                <!-- Hidden extra content -->
-                                <div class="extra-content d-none">
-                                    <p class="text-muted">The Oxygen Economy operates on the principles of private property being valued using financial tools such as Valuation guarantees, stakeholder Contracts and Insurances to monetize contractually produced  oxygen as a financial product . This involves three key components:</p>
-                                
-                                    <ol>
-                                        <li class="mb-2">MRV Guarantee : Assigning an economic value to the oxygen produced by contracted and registered units in identified geographical areas of production is based on the  MRV  of PES productivity by trees / plants or photosynthetic organisms such as Cyanobacteria.</li>
-                                        <li class="mb-2">Stakeholder Contracts and Compensation: Establishing formal agreements between oxygen consumers (e.g., corporations / Space exploration companies ) and  contracted oxygen producers (e.g., farmers, Local communities) to ensure optimal primary ecosystem services production are MRVd and Value Set as a financial tool.</li>
-                                        <li class="mb-2">Financial tool : The Validated quantity of Photosynthetic Biomass is Value Set using ER methodology and MArket peg approach based on Mining Oxygen from the Global Commons. <a href="https://livewell.com/finance/how-much-does-home-oxygen-cost-without-insurance/" target="_blank" class="text-primary">click</a></li>
-                                        <li class="mb-2">Policy and Regulation: Introducing legal frameworks at a regional scale to enforce accountability and prevent the exploitation of oxygen resources.The private contracts would play a key role in monitoring bioregional Oxygen production, ensuring compliance, and incentivizing sustainable practices to scale the Oxygen economy.</li>
-                                    </ol>
-                                </div>
-
-                                <a href="#" class="fw-bold text-secondary read-more-btn">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="img/forest-2.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
-                            </div>
-                            <div class="blog-content rounded-bottom p-4">
-                                <h4 class="text-dark mb-4 fs-5">Scaling the Oxygen Economy Globally </h4>
-                                <p id="less-content" class="text-muted">While our efforts in Sri Lanka are a promising start, the true potential of the Oxygen Economy ...</p>
-
-                                <!-- Hidden extra content -->
-                                <div class="extra-content d-none">
-                                    <p class="text-muted">While our efforts in Sri Lanka are a promising start, the true potential of the Oxygen Economy lies in its ability to scale globally. Imagine a world where farmers are compensated for the establishment of trees, where rural and even urban greenery projects could receive funding to expand their impact for this paradigm of business.Such a system would not only help combat climate change but also address economic inequalities of the current GDP paradigm, by together contracting the Oxygen economic asset tool to those who sustain the planet’s life-support systems.</p></p>
-                                </div>
-
-                                <a href="#" class="fw-bold text-secondary read-more-btn">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="img/forest-5.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
-                            </div>
-                            <div class="blog-content rounded-bottom p-4">
-                                <h4 class="text-dark mb-4 fs-5">Addressing Potential Challenges of marketing the Oxygen economy</h4>
-                                <p id="less-content" class="text-muted">Like any transformative idea, the Oxygen Economy faces potential challenges. Critics may...</p>
-
-                                <!-- Hidden extra content -->
-                                <div class="extra-content d-none">
-                                    <p class="text-muted">Like any transformative idea, the Oxygen Economy faces potential challenges. Critics may
-                                    argue that assigning a monetary value to Oxygen risks commodifying a natural resource that should remain freely accessible. Others may question the feasibility of measuring, validating and regulating oxygen production on a global scale. These concerns can be addressed by emphasizing the ethical principles behind the Oxygen Economy. The goal is not to charge people for breathing but to ensure that those who contribute to its sustainability profit from financial contracts for Oxygen production. Additionally, such transparent systems.    
-                                    for measuring and validating oxygen production will be crucial for building trust and ensuring fairness towards the vision of accounting for intergenerational wealth beyond the GDP framework that exists.</p>
-                                </div>
-
-                                <a href="#" class="fw-bold text-secondary read-more-btn">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div> 
-                    
-                     <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="img/forest-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
-                            </div>
-                            <div class="blog-content rounded-bottom p-4">
-                                <h4 class="text-dark mb-4 fs-5">A Vision for the Future : A Global Commons Exchange </h4>
-                                <p id="less-content" class="text-muted">The Oxygen Economy represents a paradigm shift in how we think about our relationship...</p>
-
-                                <!-- Hidden extra content -->
-                                <div class="extra-content d-none">
-                                    <p class="text-muted">The Oxygen Economy represents a paradigm shift in how we think about our relationship with the planet. It challenges us to move beyond the notion of nature as an infinite resource and to recognize the true value of the Earth as an ecosystem that sustains life for all biota. By aligning economic practices with environmental stewardship, the Oxygen Economy offers a path towards a more equitable and sustainable future that backs the foundations of intergenerational wealth to reflect our contributions to cycling atmospheric gasses of the atmosphere and our Global Commons. Imagine a world where the air we breathe is not taken for granted but cherished and protected. Where farmers, communities, and ecosystems are rewarded for their contributions to the planet’s well-being. Where industries operate with this truly revolutionary framework of accountability to prioritize the health of our shared environment. This is the vision of the Oxygen Economy—a vision that is within our reach if we act together, with urgency and determination to lay its foundations.</p>
-                                </div>
-
-                                <a href="#" class="fw-bold text-secondary read-more-btn">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div> 
+                <div class="col-6 footer-item d-flex flex-column">
+                  <a href="index.html#how-it-works" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> How it works</a
+                  >
+                  <a href="index.html#other-services" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Other Services</a
+                  >
+                  <a href="index.html#who-we-are" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Who We Are</a
+                  >
+                  <a href="blogs.html" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Blogs</a
+                  >
+                  <a href="oxygen-economy.html" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> OXYGEN ECONOMY</a
+                  >
                 </div>
+              </div>
             </div>
-        </div>
-        <!-- Blog End -->
+          </div>
 
-
-        <!-- Footer Start -->
-        <div class="container-fluid footer bg-primary pt-4 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-5">
-                        <div class="footer-item d-flex flex-column">
-                            <div class="footer-item">
-                                <h4 class="text-light mb-4">Newsletter</h4>
-                                <p class="mb-3 text-light">
-                                Earth Restoration is dedicated to regenerating ecosystems, restoring biodiversity, and empowering communities to create a sustainable and thriving planet for future generations.
-                                </p>
-                                <div class="position-relative mx-auto rounded-pill">
-                                    <input class="form-control rounded-sm w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                    <button type="button" class="btn btn-primary rounded-sm position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 col-xl-4">
-                        <div class=" ">
-                            <h4 class="text-white mb-4">Quick Links</h4>
-                            <div class="row g-5">
-                                <div class="col-6 footer-item d-flex flex-column">
-                                    <a href="index.html#home" class="text-light"><i class="fas fa-angle-right me-2 text-light"></i> Home</a>
-                                    <a href="index.html#about" class="text-light"><i class="fas fa-angle-right me-2 text-light"></i> About Us</a>
-                                    <a href="index.html#our-products" class="text-light"><i class="fas fa-angle-right me-2 text-light"></i> Our Products</a>
-                                    <a href="index.html#our-services" class="text-light"><i class="fas fa-angle-right me-2 text-light"></i> Our Services</a>
-                                </div>
-                                <div class="col-6 footer-item d-flex flex-column">
-                                    <a href="index.html#other-services" class="text-light"><i class="fas fa-angle-right me-2 text-light"></i> Other Services</a>
-                                    <a href="index.html#who-we-are" class="text-light"><i class="fas fa-angle-right me-2 text-light"></i> Who We Are</a>
-                                    <a href="index.html#how-we-do-it" class="text-light"><i class="fas fa-angle-right me-2 text-light"></i> How We Do It</a>
-                                    <a href="index.html#oxygen-economy" class="text-light"><i class="fas fa-angle-right me-2 text-light"></i> Oxygen Economy</a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Contact Info</h4>
-                            <a href="#" class="text-light"><i class="fa fa-map-marker-alt me-2"></i> Belipola Arboretum, Mirahawatte, Sri Lanka.</a>
-                            <a href="mailto:info@restore.earth" class="text-light"><i class="fas fa-envelope me-2"></i> info@restore.earth</a>
-                            <a href="tel:+94767191428" class="text-light"><i class="fas fa-phone me-2"></i> +94 76 719 1428</a>
-                            <div class="d-flex align-items-center mt-2">
-                                <a href="https://www.youtube.com/channel/UCL5dFM7Kr1dMapzjSJExftg?view_as=subscriber" target="_blank" class="btn nav-fill" style="padding-left: 0;"><i class="fab fa-youtube text-light"></i></a>
-                                <a href="https://www.facebook.com/profile.php?id=100045842366453" target="_blank" class="btn nav-fill"><i class="fab fa-facebook-f text-light"></i></a>
-                                <a href="https://www.linkedin.com/company/earth-restoration/" target="_blank" class="btn nav-fill"><i class="fab fa-linkedin-in text-light"></i></a>
-                            </div>
-                        </div>
-                    </div>           
-                </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item d-flex flex-column">
+              <h4 class="text-white mb-4">Contact Info</h4>
+              <a href="#" class="text-light"
+                ><i class="fa fa-map-marker-alt me-2"></i> Belipola Arboretum, Mirahawatte, Sri Lanka.</a
+              >
+              <a href="mailto:info@restore.earth" class="text-light"
+                ><i class="fas fa-envelope me-2"></i> info@restore.earth</a
+              >
+              <a href="tel:+94767191428" class="text-light"
+                ><i class="fas fa-phone me-2"></i> +94 76 719 1428</a
+              >
+              <div class="d-flex align-items-center mt-2">
+                <a
+                  href="https://www.youtube.com/channel/UCL5dFM7Kr1dMapzjSJExftg?view_as=subscriber"
+                  target="_blank"
+                  class="btn nav-fill"
+                  style="padding-left: 0"
+                  ><i class="fab fa-youtube text-light"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100045842366453"
+                  target="_blank"
+                  class="btn nav-fill"
+                  ><i class="fab fa-facebook-f text-light"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/company/earth-restoration/"
+                  target="_blank"
+                  class="btn nav-fill"
+                  ><i class="fab fa-linkedin-in text-light"></i
+                ></a>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Footer End -->
+      </div>
+    </div>
+    <!-- Footer End -->
 
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-primary py-4">
+      <div class="container text-center">
+        <p class="mb-1 text-light" style="font-size: 13px">
+          <a href="#home" class="border-bottom text-light">
+            <i class="fas fa-copyright text-light me-2"></i>EarthRestoration,
+          </a>
+          All rights reserved.
+        </p>
+        <p class="mb-0 text-light" style="font-size: 13px">
+          Designed By Digital Technology Partner
+          <a class="border-bottom text-light" href="https://agro.elzian.com/" target="_blank">Elzian Agro</a>
+        </p>
+      </div>
+    </div>
+    <!-- Copyright End -->
 
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright bg-primary py-4">
-            <div class="container text-center">
-                <p class="mb-1 text-light" style="font-size: 13px;">
-                    <a href="#home" class="border-bottom text-light">
-                        <i class="fas fa-copyright text-light me-2"></i>EarthRestoration,
-                    </a> All rights reserved.
-                </p>
-                <p class="mb-0 text-light" style="font-size: 13px;">
-                Designed By Digital Technology Partner 
-                <a class="border-bottom text-light" href="https://agro.elzian.com/" target="_blank">Elzian Agro</a>
-                </p>
-            </div>
-        </div>
-        <!-- Copyright End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
-        <script>
-            document.querySelectorAll('.read-more-btn').forEach(function(button) {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
+        function activateNavLink() {
+          let scrollPos = window.scrollY + 100; // Offset for navbar
 
-                    // Find the nearest parent blog-item
-                    const blogItem = this.closest('.blog-item');
-                    const extraContent = blogItem.querySelector('.extra-content');
-                    const lessContent = blogItem.querySelector('#less-content');
-                    const isVisible = !extraContent.classList.contains('d-none');
+          sections.forEach((section) => {
+            const top = section.offsetTop;
+            const bottom = top + section.offsetHeight;
+            const id = section.getAttribute("id");
 
-                    if (isVisible) {
-                        extraContent.classList.add('d-none');
-                        lessContent.classList.remove('d-none');
-                        this.innerHTML = 'Read More <i class="fa fa-angle-right"></i>';
-                    } else {
-                        extraContent.classList.remove('d-none');
-                        lessContent.classList.add('d-none');
-                        this.innerHTML = 'Read Less <i class="fa fa-angle-up"></i>';
-                    }
-                });
-            });
-        </script>
+            if (scrollPos >= top && scrollPos <= bottom) {
+              navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${id}`) {
+                  link.classList.add("active");
+                }
+              });
+            }
+          });
+        }
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+        window.addEventListener("scroll", activateNavLink);
+        activateNavLink(); // Run once on load
 
-                // Deactivate all nav links
-                navLinks.forEach(link => link.classList.remove("active"));
+        // On nav link click
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            navLinks.forEach((l) => l.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
 
-                // Activate "Oxygen Economy" link based on href
-                navLinks.forEach(link => {
-                    if (link.getAttribute("href").includes("#oxygen-economy")) {
-                        link.classList.add("active");
-                    }
-                });
-            });
-        </script>
-
-    </body>
+    <script>
+      document.getElementById("exploreBtn").addEventListener("click", function (e) {
+        e.preventDefault();
+        document.getElementById("quoteBox").classList.remove("d-none");
+      });
+    </script>
+  </body>
 </html>

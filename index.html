@@ -79,6 +79,12 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: 0.3s ease;
       }
+
+      .hover-shadow:hover {
+        box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+      }
     </style>
   </head>
 
@@ -159,15 +165,16 @@
               <a href="#how-it-works" class="nav-item nav-link">How it works</a>
               <a href="#other-services" class="nav-item nav-link">Other Services</a>
               <a href="#who-we-are" class="nav-item nav-link">Who We Are</a>
-              <a href="#oxygen-economy" class="nav-item nav-link">OXYGEN ECONOMY</a>
-              <div class="nav-item dropdown active">
+              <a href="blogs.html" class="nav-item nav-link">Blogs</a>
+              <!-- <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Other</a>
                 <div class="dropdown-menu m-0">
                   <a href="blogs.html" class="dropdown-item">Blogs</a>
-                  <a href="further-reading.html" class="dropdown-item active">Further reading</a>
-                  <a href="#faq" class="nav-item nav-link">Scientific Publications & FAQ</a>
+                  <a href="#further-reading" class="dropdown-item">Further reading</a>
+                  <a href="#faq" class="dropdown-item">Scientific Publications & FAQ</a>
                 </div>
-              </div>
+              </div> -->
+              <a href="oxygen-economy.html" class="nav-item nav-link">OXYGEN ECONOMY</a>
             </div>
           </div>
         </nav>
@@ -178,37 +185,60 @@
     <!-- Home Start -->
     <section id="home" class="bg-light py-5" style="border-top: 1px solid #79b083">
       <div class="container-fluid">
-        <div class="container py-3">
+        <div class="container py-5">
           <div class="row align-items-center">
-            <!-- Left Side: Text Content -->
             <div class="col-lg-8 wow fadeInLeft">
               <h1 class="display-4 text-capitalize text-dark mb-1">
                 Welcome To <br />
                 EarthRestoration
               </h1>
-              <p class="fs-6 mb-3 text-dark">In business to restore the life support system of our planet</p>
-              <p class="fs-7 mb-3 text-muted">
-                “We know that production of oxygen, and clean water cycling are carried out by the
+              <h1 class="display-5 text-dark mb-4 fs-3">
+                In business to restore the life support system of our planet
+              </h1>
+              <p class="fs-6 mb-4 text-muted">
+                “ We know that production of oxygen, and clean water cycling are carried out by the
                 photosynthesis of trees. These Primary Ecosystem Services (PES) are depleting at an
-                exponential rate globally because they have not been valued or economically recognized”
+                exponential rate globally because they have not been valued or economically recognized ”
                 <strong
                   >- Dr. Ranil Senanayake, Sri Lanka Position Paper UN Conference for Climate Change COP21
                   Paris 2015.</strong
                 >
               </p>
-              <!-- <p class="fs-7 mb-4 text-muted">
-                EarthRestoration and our LifeForce contracted tree establishment system allows you to
-                participate by activating a unique tree farming contract that Monitors, Records and Validates
-                (MRV) contracted volumes of Primary Ecosystem Services contracted and deposited to the Global
-                Commons.
-              </p>
+
               <div class="d-flex flex-wrap flex-column flex-sm-row gap-2">
                 <a class="btn btn-primary rounded-sm py-3 px-5" href="#who-we-are">Who We Are</a>
-                <a class="btn btn-primary rounded-sm py-3 px-5" href="#">Watch Video</a>
-              </div> -->
+                <button
+                  type="button"
+                  class="btn btn-primary rounded-sm py-3 px-5"
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoModal">
+                  Watch Introduction
+                </button>
+              </div>
+
+              <div
+                class="modal fade"
+                id="videoModal"
+                tabindex="-1"
+                aria-labelledby="videoModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-body p-0">
+                      <div class="ratio ratio-16x9">
+                        <iframe
+                          id="youtubePlayer"
+                          src="https://www.youtube.com/embed/Ha9rHIsiFpU"
+                          title="YouTube video"
+                          allow="autoplay; encrypted-media"
+                          allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Right Side: Static Image -->
             <div class="col-lg-4 text-sm-center text-md-start pt-4 pt-lg-0 wow fadeInRight">
               <img src="img/home-3.png" alt="home-1" class="img-fluid" />
             </div>
@@ -216,25 +246,16 @@
         </div>
       </div>
 
-      <div class="container pb-5">
-        <iframe
-          width="100%"
-          height="600"
-          src="https://www.youtube.com/embed/Ha9rHIsiFpU"
-          frameborder="0"
-          allowfullscreen></iframe>
-      </div>
-
-      <div class="container vi-mi pb-5">
+      <div class="container vi-mi py-5">
         <div class="row g-4 justify-content-center wow fadeInUp">
           <div class="col-md-6">
-            <div class="info-box text-center p-4 h-100 rounded shadow-sm bg-light">
+            <div class="info-box bg-white text-center p-5 h-100 rounded shadow-sm bg-light">
               <div class="info-content">
                 <div class="info-icon mb-3">
                   <i class="fas fa-eye fa-4x text-primary"></i>
                 </div>
                 <p class="fs-6 mb-3 fw-bold text-dark">VISION</p>
-                <p class="text-muted">
+                <p class="text-muted fs-6 px-2 mb-0">
                   To realize the productivity value of Photosynthetic Biomass as the basis of sustainable
                   wealth creation.
                 </p>
@@ -242,13 +263,13 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="info-box text-center p-4 h-100 shadow-sm bg-light">
+            <div class="info-box bg-white text-center p-5 h-100 shadow-sm bg-light">
               <div class="info-content">
                 <div class="info-icon mb-3">
                   <i class="fas fa-bullseye fa-4x text-primary"></i>
                 </div>
                 <p class="fs-6 mb-3 fw-bold text-dark">MISSION</p>
-                <p class="text-muted">
+                <p class="text-muted fs-6 px-2 mb-0">
                   To empower humanity to enrich our Global Commons by ‘onsetting’ Primary Ecosystem Services
                   as a contracted land service, with its value being your private ownership.
                 </p>
@@ -263,20 +284,18 @@
     <!-- About Start -->
     <section id="about" class="bg-white py-5">
       <div class="container-fluid">
-        <div class="container pt-5 pb-2 about">
-          <div class="row g-5">
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="about-img text-center text-md-start text-lg-center">
-                <img src="img/about.png" class="img-fluid w-40 rounded" alt="about-us" />
-              </div>
+        <div class="container py-5">
+          <h4 class="text-primary">About</h4>
+          <h1 class="display-5 text-dark mb-4 fs-3">
+            The nature of our business : CPES ‘positive externalities’ deposited to the Global Commons
+          </h1>
+          <div class="row">
+            <div class="col-lg-5 text-sm-center text-md-start pt-4 pt-lg-0 wow fadeInRight">
+              <img src="img/graph-2.png" alt="home-1" class="img-fluid" />
             </div>
-            <div class="col-lg-6 col-xl-8 wow fadeInUp" data-wow-delay="0.3s">
-              <h4 class="text-primary">About</h4>
-              <h1 class="display-5 text-dark mb-4 fs-2">
-                The nature of our business : <br />CPES ‘positive externalities’ deposited to the Global
-                Commons
-              </h1>
-              <p class="text ps-4 text-muted mb-4">
+
+            <div class="col-lg-7 wow fadeInLeft">
+              <p class="fs-6 mb-3 text-muted">
                 There is no ‘production technology’ that is more efficient than trees and plants to produce
                 primary ecosystem services sucha as Oxygen. But the amount of PES that they provide varies
                 greatly, depending on age, species, and the environment they grow in. While Oceanic
@@ -284,26 +303,22 @@
                 ecosystem service , the function of water purification through transpiration
                 <strong> - Dr. Ranil Senanayake.</strong>
               </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="container py-3">
-          <div class="row align-items-center">
-            <!-- Left Side: Text Content -->
-            <div class="col-lg-8 wow fadeInLeft">
-              <p class="fs-7 mb-3 text-muted">
+              <p class="fs-6 mb-3 text-muted">
                 Every tree as it grows eventually reaches a ‘compensation point’, where the accumulation of
                 Photosynthetic Biomass tapers off, net primary productivity ceases, and the tree has enough
                 turn over to respire for maintaining its mature state. EarthRestoration’s methodological
                 approach to validate the first 4 years of growth guarantees that the LifeForce validates net
-                primary productivity :
+                primary productivity.
               </p>
-            </div>
-
-            <!-- Right Side: Static Image -->
-            <div class="col-lg-4 text-sm-center text-md-start pt-4 pt-lg-0 wow fadeInRight">
-              <img src="img/graph.png" alt="home-1" class="img-fluid" />
+              <p class="fs-6 mb-3 text-muted">
+                Tree units we MRV for net primary productivity :
+                <a
+                  class="text-primary text-decoration-underline"
+                  href="https://docs.google.com/spreadsheets/d/1cjMuyBf2xflyYPe9vqd7NmDB5oiQ5T62/edit?usp=sharing&ouid=114287718403994648004&rtpof=true&sd=true"
+                  target="_blank"
+                  >View MRV Tree Species List</a
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -312,7 +327,7 @@
           <iframe
             width="100%"
             height="600"
-            src="https://www.youtube.com/embed/edUCXxEkRfrJW94M"
+            src="https://www.youtube.com/embed/0wYA-Ra37pg"
             frameborder="0"
             allowfullscreen></iframe>
         </div>
@@ -323,13 +338,13 @@
     <!-- Why we do it Start -->
     <section id="why-we-do-it" class="bg-light py-5">
       <div class="container-fluid">
-        <div class="container">
+        <div class="container pt-5">
           <div class="text-center mb-5 wow fadeInUp">
             <h4 class="text-primary mb-3">Why we do it</h4>
-            <h1 class="display-5 mb-3 text-dark fs-2">
+            <h1 class="display-5 mb-3 text-dark fs-3">
               CPES & the foundations of ‘onsetting’ Oxygen as a tangible economic opportunity
             </h1>
-            <p class="text-muted">
+            <p class="text-muted fs-6">
               The Oxygen that is present in the air that we breathe Is the birth right of every organism that
               lives on this planet. It is free for everyone. However, the action of some to take out more than
               their share, without replacement, has created a condition where the Global Commons of air is
@@ -337,20 +352,70 @@
               universe, it is found only in the atmosphere of planet earth. The only known The process that
               produces FMO biologically is photosynthesis.
             </p>
-            <p class="text-muted">
+            <p class="text-muted fs-6">
               Live feed :
               <a class="text-primary" href=" https://www.oxygenlevels.org" target="_blank">Click Here</a>
             </p>
-            <!-- Call to Action -->
-            <!-- <div class="text-center mt-2">
-              <a href="#how-we-do-it" class="btn btn-primary btn-lg rounded-sm px-5 py-3">
-                How We Do It <i class="fas fa-arrow-right ms-2"></i>
-              </a>
-            </div> -->
           </div>
         </div>
 
-        <div class="container">BLOG 3 tiles</div>
+        <div class="container">
+          <div class="row g-4 justify-content-center">
+            <div class="col-sm-4">
+              <div class="h-100">
+                <div class="bg-light rounded">
+                  <img
+                    src="img/forest-1.jpg"
+                    class="card-img-top"
+                    alt="Why the Oxygen Economy?"
+                    style="width: 100%" />
+                </div>
+                <div class="card-body" style="padding: 10px 0 5px 0">
+                  <h5 class="card-title">Why the Oxygen Economy?</h5>
+                  <a href="blogs.html" target="_blank" class="text-primary text-decoration-none"
+                    >Read More <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="h-100">
+                <div class="bg-light rounded">
+                  <img
+                    src="img/forest-4.jpg"
+                    class="card-img-top"
+                    alt="Why the Oxygen Economy?"
+                    style="width: 100%" />
+                </div>
+                <div class="card-body" style="padding: 10px 0 5px 0">
+                  <h5 class="card-title">How the Oxygen Economy Works?</h5>
+                  <a href="blog.html" class="text-primary text-decoration-none"
+                    >Read More <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="h-100">
+                <div class="bg-light rounded">
+                  <img
+                    src="img/forest-2.jpg"
+                    class="card-img-top"
+                    alt="Why the Oxygen Economy?"
+                    style="width: 100%" />
+                </div>
+                <div class="card-body" style="padding: 10px 0 5px 0">
+                  <h5 class="card-title">Scaling VI-Oxygen Economy Globally</h5>
+                  <a href="blog.html" class="text-primary text-decoration-none"
+                    >Read More <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Why we do it End -->
@@ -361,83 +426,107 @@
         <div class="container pt-5">
           <div class="text-center mb-5 wow fadeInUp">
             <h4 class="text-primary mb-3">How we do it</h4>
-            <h1 class="display-5 mb-3 text-dark fs-2">
+            <h1 class="display-5 mb-3 text-dark fs-3">
               LifeForce approach for Contracted Primary Ecosystem Services (CPES)
             </h1>
-            <p class="text-muted">
-              Each LifeForce token is Value Set to existing markets based on the volume of contractually
-              produced Primary Ecosystem Services (atmospheric elements). LifeForce tokens provide a traceable
-              ‘onset’ of primary ecosystem services backed by the new economic prospect of quantified
-              ‘positive externalities’.
-            </p>
           </div>
 
-          <!-- Feature Points -->
           <div class="row g-4 justify-content-center">
-            <div class="col-lg-6 wow fadeInLeft">
+            <!-- Intro Content -->
+            <div class="col-lg-10 wow fadeInUp">
               <div class="p-4 border rounded h-100 service-card shadow-sm bg-white">
-                <h5 class="text-dark">1. LifeForce Contract Escrow Allocation</h5>
-                <p class="text-muted">
-                  Each LifeForce contract has an escrow account 80% in favour of the tree guardian, 10 % for
-                  monitoring and 10% to admin and data management.
+                <p class="text-muted mb-2 fs-6">
+                  1. A tree unit will be contracted to the landowner of each approved LifeForce community
+                  development project site. Each enrolled landowner or farmer has agreed to maintain the tree
+                  unit in good health and in accordance with the LifeForce Tree Farming Contract — signified
+                  by the leaf mass accumulation on the tree over the contracted time (4 years).
+                </p>
+                <p class="text-muted mb-2 fs-6">
+                  Tree species we Monitor, Record and Validate (MRV) using LifeForce :
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1cjMuyBf2xflyYPe9vqd7NmDB5oiQ5T62/edit?usp=sharing&ouid=114287718403994648004&rtpof=true&sd=true"
+                    target="_blank"
+                    class="text-primary text-decoration-underline"
+                    >View MRV Tree Species List</a
+                  >
                 </p>
               </div>
             </div>
-            <div class="col-lg-6 wow fadeInRight">
+
+            <div class="col-lg-4 wow fadeUp">
               <div class="p-4 border rounded h-100 service-card shadow-sm bg-white">
-                <h5 class="text-dark">2. Tree Guardian Assignment and Maintenance Commitment</h5>
-                <p class="text-muted">
-                  A Unit (tree) will be given to the tree guardian of each approved LifeForce community
-                  development project design. Each enrolled farmer has agreed to maintain the plant in good
-                  health and in accordance to the LifeForce tree farming Contract --- signified by the leaf
-                  mass accumulation on the tree over time.
+                <p class="text-muted fs-6">
+                  2. Each LifeForce contract has an escrow account: 80% in favour of the tree guardian, 10%
+                  for monitoring, and 10% for admin and data management.
                 </p>
               </div>
             </div>
-            <div class="col-lg-6 wow fadeInLeft">
+            <div class="col-lg-4 wow fadeInRight">
               <div class="p-4 border rounded h-100 service-card shadow-sm bg-white">
-                <h5 class="text-dark">3. Annual Payment Based on Leaf Mass</h5>
-                <p class="text-muted">
-                  The tree guardian payment is done once a year for 4 years and is based on the weight of
-                  photosynthetic biomass (leaf mass) maintained.
+                <p class="text-muted fs-6">
+                  3. The tree guardian payment is done once a year for 4 years and is based on the weight of
+                  photosynthetic biomass (leaf mass) grown and maintained
                 </p>
               </div>
             </div>
-            <div class="col-lg-6 wow fadeInRight">
+            <div class="col-lg-4 wow fadeInLeft">
               <div class="p-4 border rounded h-100 service-card shadow-sm bg-white">
-                <h5 class="text-dark">4. Environmental Credits Assigned at Payouts</h5>
-                <p class="text-muted">
-                  At every payout, the Oxygen and clean water generated by the photosynthetic biomass will be
-                  ceded to the investors LifeForce ledger.
+                <p class="text-muted fs-6">
+                  4. At each annual MRV the PB accumulation = Oxygen and clean water generated will be ceded
+                  to the investors LifeForce ledger
                 </p>
               </div>
             </div>
-            <div class="col-lg-6 wow fadeInLeft">
-              <div class="p-4 border rounded h-100 service-card shadow-sm bg-white">
-                <h5 class="text-dark">5. Global Commons Deposit via Ledger</h5>
-                <p class="text-muted">
-                  This production will be deposited in the Global Commons by the owner who through his or her
-                  LifeForce ledger ‘transaction certificate’ will maintain his/her personal stocks as a
-                  deposit into the Global Commons.
-                </p>
-              </div>
+          </div>
+        </div>
+
+        <div class="container my-5">
+          <div class="text-center mb-5 wow fadeInUp">
+            <h1 class="display-5 mb-3 text-dark fs-3">
+              The LifeForce tree farming contract aligns outcomes expected of the following SDGs
+            </h1>
+            <p class="text-muted fs-6 fw-bold">Our Sustainable Development Goals</p>
+          </div>
+
+          <div class="row justify-content-center text-center g-3">
+            <!-- SDG Icons Left Side -->
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 1" class="img-fluid" />
             </div>
-            <div class="col-lg-6 wow fadeInRight">
-              <div class="p-4 border rounded h-100 service-card shadow-sm bg-white">
-                <h5 class="text-dark">6. Ledger Capped with Final MRV Data Block</h5>
-                <p class="text-muted">
-                  At the end of the four year contract term the ledger is capped and an immutable DATA block
-                  of the LifeForce MRV record is created.
-                </p>
-              </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 2" class="img-fluid" />
             </div>
-            <div class="col-lg-6 wow fadeInUp">
-              <div class="p-4 border rounded h-100 service-card shadow-sm bg-white">
-                <h5 class="text-dark">7. Ownership Record Transferable via QR Code</h5>
-                <p class="text-muted">
-                  This record of ownership issued as a QR code could be sold or transferred on select markets.
-                </p>
-              </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 3" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 4" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 5" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 6" class="img-fluid" />
+            </div>
+
+            <!-- SDG Icons Right Side -->
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 7" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 8" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 9" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 13" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 14" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 15" class="img-fluid" />
             </div>
           </div>
         </div>
@@ -564,66 +653,62 @@
         <div class="container">
           <div class="text-center mb-5 wow fadeInUp pt-5">
             <h4 class="text-primary mb-3">Our Products</h4>
-            <h1 class="display-5 mb-3 text-dark fs-2">Validated CPES certificate</h1>
-            <p class="text-muted">
+            <h1 class="display-5 mb-3 text-dark fs-3">Validated CPES certificate</h1>
+            <p class="text-muted fs-6">
               At the end of the four year LifeForce CPES term the owners ledger is capped and the MRV record
               made immutable. The validated quantity of CPES is value set as a baseline peg to existing
               markets for these atmospheric elements.
             </p>
           </div>
 
-          <div class="py-4">
-            <h1 class="display-5 mb-3 text-dark fs-2 wow fadeInUp">OUR PRODUCTS</h1>
-            <h4 class="text-dark mb-3 wow fadeInUp">What You Receive from Every LifeForce Unit</h4>
-            <div class="row g-4 py-2">
-              <div class="col-lg-6 wow fadeInLeft">
-                <div class="card product-card h-100 bg-white">
-                  <div class="card-body">
-                    <h4 class="text-dark mb-4">LifeForce C-PES Token</h4>
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 120px"></div>
-                      </div>
-                      <div class="col-sm-8">
-                        <ul class="text-start">
-                          <li class="mb-2">Verified Oxygen Production</li>
-                          <li class="mb-2">Water Transpiration Credrsing Value</li>
-                          <li class="mb-2">Carbon Seoverstration Reference</li>
-                          <li class="mb-2">Location and Biomass Metadata</li>
-                        </ul>
-                      </div>
+          <div class="row g-4 py-2">
+            <div class="col-lg-6 wow fadeInLeft">
+              <div class="card product-card h-100 bg-white">
+                <div class="card-body">
+                  <h4 class="text-dark mb-4">LifeForce C-PES Token</h4>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 120px"></div>
                     </div>
-
-                    <p class="text-start text-muted">
-                      <strong>From: </strong>Blockchain token—downloadable @4 - coded certificate
-                    </p>
+                    <div class="col-sm-8">
+                      <ul class="text-start">
+                        <li class="mb-2">Verified Oxygen Production</li>
+                        <li class="mb-2">Water Transpiration Credrsing Value</li>
+                        <li class="mb-2">Carbon Seoverstration Reference</li>
+                        <li class="mb-2">Location and Biomass Metadata</li>
+                      </ul>
+                    </div>
                   </div>
+
+                  <!-- <p class="text-start text-muted">
+                    <strong>From: </strong>Blockchain token—downloadable @4 - coded certificate
+                  </p> -->
                 </div>
               </div>
+            </div>
 
-              <div class="col-lg-6 wow fadeInRight">
-                <div class="card product-card h-100 bg-white">
-                  <div class="card-body">
-                    <h4 class="text-dark mb-4">Value set of Ecosystem Services</h4>
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 120px"></div>
-                      </div>
-                      <div class="col-sm-8">
-                        <ul class="text-start">
-                          <li class="mb-2">
-                            Recorded; inodable value enquiring_aniginsising'.lofe_.--values cre
-                            integoate.saush com your Global Certital Commons Combution Loode
-                          </li>
-                        </ul>
-                      </div>
+            <div class="col-lg-6 wow fadeInRight">
+              <div class="card product-card h-100 bg-white">
+                <div class="card-body">
+                  <h4 class="text-dark mb-4">Value set of Ecosystem Services</h4>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 120px"></div>
                     </div>
-
-                    <p class="text-start text-muted">
-                      <strong>Note: </strong>At the end of 4 years, your taken can be held. Sold, or
-                      transferred— with hul MRV history tnatek.
-                    </p>
+                    <div class="col-sm-8">
+                      <ul class="text-start">
+                        <li class="mb-2">
+                          Recorded; inodable value enquiring_aniginsising'.lofe_.--values cre integoate.saush
+                          com your Global Certital Commons Combution Loode
+                        </li>
+                      </ul>
+                    </div>
                   </div>
+
+                  <!-- <p class="text-start text-muted">
+                    <strong>Note: </strong>At the end of 4 years, your taken can be held. Sold, or
+                    transferred— with hul MRV history tnatek.
+                  </p> -->
                 </div>
               </div>
             </div>
@@ -639,82 +724,156 @@
         <div class="container">
           <div class="text-center pt-5">
             <h4 class="text-primary wow fadeInUp">How it works</h4>
-            <div class="">
-              <div class="py-3">
-                <h4 class="text-dark mb-3 wow fadeInUp">
-                  What we do in terms of servicing each LifeForce unit is identified through Climate smart
-                  agriculture and Analog Forestry intervention modules that are accessible to the community of
-                  LifeForce landowners . The thematic areas of education for year 1 to 4 are identified.
-                </h4>
-                <div class="row g-4 py-3">
-                  <!-- Year 1 -->
-                  <div class="col-md-6 col-xl-3 wow fadeInLeft">
-                    <div class="card service-card shadow-sm bg-white">
-                      <div class="card-body text-center">
-                        <p>1 YEAR</p>
-                        <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 150px"></div>
-                        <h4 class="text-dark mb-2 fs-6">Tree Maintenance Oversight</h4>
+            <p class="text-muted fs-6">
+              What we do in terms of servicing each LifeForce unit is identified through Climate smart
+              agriculture and Analog Forestry intervention modules that are accessible to the community of
+              LifeForce landowners . The thematic areas of education for year 1 to 4 are identified.
+            </p>
 
-                        <ul class="text-start px-3">
-                          <li>Collaborating with the tree production team to ensure optimal health.</li>
-                          <li>Customs based on industry best practices.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+            <div class="row g-4 py-3">
+              <div class="col-md-6 col-xl-3 wow fadeInLeft">
+                <div class="card service-card shadow-sm bg-white">
+                  <div class="card-body">
+                    <p>1 YEAR</p>
+                    <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 150px"></div>
+                    <p class="text-start text-dark fs-6">
+                      <strong>Thematic knowledge & Practice 1 : </strong>Soil management and farmland
+                      activities schedule
+                    </p>
 
-                  <!-- Year 2 -->
-                  <div class="col-md-6 col-xl-3 wow fadeInLeft">
-                    <div class="card service-card shadow-sm bg-white">
-                      <div class="card-body text-center">
-                        <p>2 YEAR</p>
-                        <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 150px"></div>
-                        <h4 class="text-dark mb-2 fs-6">Biomass Measurement (Annual)</h4>
-
-                        <ul class="text-start px-3">
-                          <li>Photos from the biomass site which recorded daily.</li>
-                          <li>Crown spread and growth marks indicated.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Year 3 -->
-                  <div class="col-md-6 col-xl-3 wow fadeInRight">
-                    <div class="card service-card shadow-sm bg-white">
-                      <div class="card-body text-center">
-                        <p>3 YEAR</p>
-                        <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 150px"></div>
-                        <h4 class="text-dark mb-2 fs-6">Validation & Certification</h4>
-
-                        <ul class="text-start px-3">
-                          <li>
-                            MRV (Monitoring, Reporting, and Verification) of Scope and future mensuration
-                            outputs.
-                          </li>
-                          <li>Data backed ecosystem service confirmation.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Year 4 -->
-                  <div class="col-md-6 col-xl-3 wow fadeInRight">
-                    <div class="card service-card shadow-sm bg-white">
-                      <div class="card-body text-center">
-                        <p>4 YEAR</p>
-                        <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 150px"></div>
-                        <h4 class="text-dark mb-2 fs-6">Transaction Recordkeeping</h4>
-
-                        <ul class="text-start px-3">
-                          <li>Blockchain-based digital utility.</li>
-                          <li>Escrow payment tied to service delivery milestone.</li>
-                        </ul>
-                      </div>
-                    </div>
+                    <ul class="text-start px-3">
+                      <li>Soil bunds terraces.</li>
+                      <li>Economic estimation of LifeForce contract.</li>
+                      <li>Organic Manure compost : In every managed farmland.</li>
+                      <li>
+                        Mulching : Bi-annual intermonsoon practice identified on a farming ‘activities
+                        calendar.
+                      </li>
+                      <li>BioChar : Integrate value chains that collect and pelletize.</li>
+                    </ul>
                   </div>
                 </div>
               </div>
+
+              <div class="col-md-6 col-xl-3 wow fadeInLeft">
+                <div class="card service-card shadow-sm bg-white">
+                  <div class="card-body text-center">
+                    <p>2 YEAR</p>
+                    <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 150px"></div>
+                    <p class="text-start text-dark fs-6">
+                      <strong>Thematic knowledge & Practice 2 : </strong>Water Management
+                    </p>
+
+                    <ul class="text-start px-3">
+                      <li>Identify water flow patterns in the farmed area.</li>
+                      <li>Economic estimation of LifeForce contract.</li>
+                      <li>
+                        Establish percolation pits and pond habitats analogous to natural habitats found in
+                        the region.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xl-3 wow fadeInRight">
+                <div class="card service-card shadow-sm bg-white">
+                  <div class="card-body text-center">
+                    <p>3 YEAR</p>
+                    <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 150px"></div>
+                    <p class="text-start text-dark fs-6">
+                      <strong>Thematic knowledge & Practice 3 : </strong>Agroforestry / Perennial Crop
+                      Production
+                    </p>
+
+                    <ul class="text-start px-3">
+                      <li>Economic estimation of LifeForce contract.</li>
+                      <li>
+                        Boundary trees and hedgerows : native trees and shrubs / multi-purpose N-Fixing trees
+                        / EarthRestoration tree farming manual .
+                      </li>
+                      <li>Food Forest / orchard design .</li>
+                      <li>
+                        Reduce post harvest losses value add fruits and vegetables : Food preserving manual
+                        for annual crops in the tropics : Food and Drug Admin approved
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xl-3 wow fadeInRight">
+                <div class="card service-card shadow-sm bg-white">
+                  <div class="card-body text-center">
+                    <p>4 YEAR</p>
+                    <div class="mx-auto mb-3 bg-primary" style="width: 100%; height: 150px"></div>
+                    <p class="text-start text-dark fs-6">
+                      <strong
+                        >Additional benefits can be scaled through income affording the database of homegarden
+                        farmers
+                      </strong>
+                    </p>
+
+                    <ul class="text-start px-3">
+                      <li>Clean energy : Solar pumps.</li>
+                      <li>Weather forecasting tools : Elzian AgroTec partners.</li>
+                      <li>Organic Manure compost : In every managed farmland.</li>
+                      <li>Pest and disease forecasting tools : Elzian AgroTec partners.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container my-5">
+          <div class="text-center mb-5 wow fadeInUp">
+            <h1 class="display-5 mb-3 text-dark fs-3">
+              The LifeForce tree farming contract aligns outcomes expected of the following SDGs
+            </h1>
+            <p class="text-muted fs-6 fw-bold">Our Sustainable Development Goals</p>
+          </div>
+
+          <div class="row justify-content-center text-center g-3">
+            <!-- SDG Icons Left Side -->
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 1" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 2" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 3" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 4" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 5" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 6" class="img-fluid" />
+            </div>
+
+            <!-- SDG Icons Right Side -->
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 7" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 8" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 9" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 13" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 14" class="img-fluid" />
+            </div>
+            <div class="col-4 col-sm-2">
+              <img src="img/SDGs/SDG1.png" alt="SDG 15" class="img-fluid" />
             </div>
           </div>
         </div>
@@ -728,14 +887,19 @@
         <div class="container">
           <div class="text-center mb-5 wow fadeInUp pt-5">
             <h4 class="text-primary mb-3">Other Services</h4>
-            <h1 class="display-5 mb-3 text-dark fs-2">Aquae Lab Ecosystems Conservation Index (ALECI)</h1>
-            <p class="text-muted">
+            <h1 class="display-5 mb-3 text-dark fs-3">Aquae Lab Ecosystems Conservation Index (ALECI)</h1>
+            <p class="text-muted fs-6">
               ALECI’s replicable MRV protocols asses realtime landscape and ecosystem performance DATA across
               seven service domains by combining the values of biomass, oxygen production, water purification,
               microclimate & cooling effect, soil organic matter (SOM), water retention, and relative species
               biodiversity value using unique smart contracts that protect or restore measured conservation
-              baselines of any landscape or habitat type.
-              <a class="text-primary" href="https://labs.aquaeimpact.com/aleci/" target="_blank">click</a>
+              baselines of any landscape or habitat type :
+              <a
+                href="https://labs.aquaeimpact.com/aleci/"
+                target="_blank"
+                class="text-primary text-decoration-underline">
+                ALECI Labs.</a
+              >
             </p>
           </div>
         </div>
@@ -747,141 +911,243 @@
     <section id="who-we-are" class="bg-white py-5">
       <div class="container-fluid">
         <div class="container">
-          <div class="text-center mb-5 wow fadeInUp pt-5">
-            <h4 class="text-primary mb-3">Who We Are</h4>
-            <p class="text-muted">
-              We are a group of scientists and traditionalists seeking to invoke a new appreciation of nature
-              through a synthesis of such knowledge that can facilitate the emergence of truly sustainable
-              trade and development.
-            </p>
-            <p class="text-muted">
-              We summarise our diverse traditions and understandings through science expressed by the
-              ‘Creation Formula’ the ‘Satanic Formula’
-            </p>
+          <div class="text-center wow fadeInUp pt-5">
+            <h4 class="text-primary">Who We Are</h4>
+          </div>
+
+          <div class="container py-5">
+            <div class="row">
+              <!-- Left Text Column -->
+              <div class="col-lg-6 mb-4 mb-lg-0 wow fadeInLeft">
+                <p class="text-muted fs-6">
+                  We are a group of scientists and traditionalists seeking to invoke a new appreciation of
+                  nature through a synthesis of such knowledge that can facilitate the emergence of truly
+                  sustainable trade and development.
+                </p>
+                <p class="text-muted fs-6">
+                  We summarise our diverse traditions and understandings through science expressed by the
+                  <strong>‘Creation Formula’</strong> and the <strong>‘Satanic Formula’</strong>.
+                </p>
+              </div>
+
+              <!-- Right Formula Boxes -->
+              <div class="col-lg-6 wow fadeInRight">
+                <div class="row g-3 d-flex align-items-stretch">
+                  <!-- Creation Formula -->
+                  <div class="col-md-6 d-flex">
+                    <a
+                      href="https://labs.aquaeimpact.com/aleci/"
+                      target="_blank"
+                      class="text-decoration-none w-100">
+                      <div
+                        class="p-3 rounded shadow-sm bg-white hover-shadow h-100"
+                        style="border: 2px solid #79b083">
+                        <h5 class="text-primary mb-2">🌱 Creation Formula</h5>
+                        <p class="text-muted mb-0">
+                          A synthesis of science and tradition expressing a nature-positive pathway.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Satanic Formula -->
+                  <div class="col-md-6 d-flex">
+                    <a
+                      href="https://labs.aquaeimpact.com/aleci/"
+                      target="_blank"
+                      class="text-decoration-none w-100">
+                      <div
+                        class="p-3 rounded shadow-sm bg-white hover-shadow h-100"
+                        style="border: 2px solid #79b083">
+                        <h5 class="text-primary mb-2">🔥 Satanic Formula</h5>
+                        <p class="text-muted mb-0">
+                          A framework highlighting practices that undermine ecological and social harmony.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="container team py-5">
+      <div class="container team pb-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px">
           <h4 class="text-primary">Our Team</h4>
-          <!-- <h1 class="display-4">Our Investa Company Dedicated Team Member</h1> -->
         </div>
         <div class="row g-4 justify-content-center">
           <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item rounded">
+            <div class="team-item">
               <div class="team-img">
-                <img src="img/team-1.jpg" class="img-fluid w-100 rounded-top" alt="Image" />
-                <div class="team-icon">
-                  <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                    <p>frffffffffffff</p>
-                  </div>
+                <img src="img/team-1.jpg" alt="Team Member" />
+
+                <!-- Always visible LinkedIn icon -->
+                <div class="linkedin-icon">
+                  <a href="https://www.linkedin.com/in/example" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+
+                <!-- Hover description -->
+                <div class="overlay-content">
+                  <p>
+                    A pioneering systems ecologist, the founder of Analog Forestry method. His vision for
+                    Earth Restoration has paved the foundations for wealth backed by ecological health.
+                  </p>
                 </div>
               </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Mark D. Brock</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
-                </div>
+
+              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
+                <h4 class="text-dark">Dr. F. Ranil Senanayake</h4>
+                <p class="text-light fs-6 mb-0">Senior Systems Ecologist - Founder</p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="team-item rounded">
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-item">
               <div class="team-img">
-                <img src="img/team-2.jpg" class="img-fluid w-100 rounded-top" alt="Image" />
-                <div class="team-icon">
-                  <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
+                <img src="img/team-1.jpg" alt="Team Member" />
+
+                <!-- Always visible LinkedIn icon -->
+                <div class="linkedin-icon">
+                  <a href="https://www.linkedin.com/in/example" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+
+                <!-- Hover description -->
+                <div class="overlay-content">
+                  <p>
+                    A pioneering systems ecologist, the founder of Analog Forestry method. His vision for
+                    Earth Restoration has paved the foundations for wealth backed by ecological health.
+                  </p>
                 </div>
               </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Mark D. Brock</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
-                </div>
+
+              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
+                <h4 class="text-dark">Dr. F. Ranil Senanayake</h4>
+                <p class="text-light fs-6 mb-0">Senior Systems Ecologist - Founder</p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="team-item rounded">
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-item">
               <div class="team-img">
-                <img src="img/team-3.jpg" class="img-fluid w-100 rounded-top" alt="Image" />
-                <div class="team-icon">
-                  <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
+                <img src="img/team-1.jpg" alt="Team Member" />
+
+                <!-- Always visible LinkedIn icon -->
+                <div class="linkedin-icon">
+                  <a href="https://www.linkedin.com/in/example" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+
+                <!-- Hover description -->
+                <div class="overlay-content">
+                  <p>
+                    A pioneering systems ecologist, the founder of Analog Forestry method. His vision for
+                    Earth Restoration has paved the foundations for wealth backed by ecological health.
+                  </p>
                 </div>
               </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Mark D. Brock</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
-                </div>
+
+              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
+                <h4 class="text-dark">Dr. F. Ranil Senanayake</h4>
+                <p class="text-light fs-6 mb-0">Senior Systems Ecologist - Founder</p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-            <div class="team-item rounded">
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-item">
               <div class="team-img">
-                <img src="img/team-4.jpg" class="img-fluid w-100 rounded-top" alt="Image" />
-                <div class="team-icon">
-                  <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
+                <img src="img/team-1.jpg" alt="Team Member" />
+
+                <!-- Always visible LinkedIn icon -->
+                <div class="linkedin-icon">
+                  <a href="https://www.linkedin.com/in/example" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+
+                <!-- Hover description -->
+                <div class="overlay-content">
+                  <p>
+                    A pioneering systems ecologist, the founder of Analog Forestry method. His vision for
+                    Earth Restoration has paved the foundations for wealth backed by ecological health.
+                  </p>
                 </div>
               </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Mark D. Brock</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
+
+              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
+                <h4 class="text-dark">Dr. F. Ranil Senanayake</h4>
+                <p class="text-light fs-6 mb-0">Senior Systems Ecologist - Founder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container team pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px">
+          <h4 class="text-primary">Technology Affiliate - Elzian Agro</h4>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-item">
+              <div class="team-img">
+                <img src="img/team-1.jpg" alt="Team Member" />
+
+                <!-- Always visible LinkedIn icon -->
+                <div class="linkedin-icon">
+                  <a href="https://www.linkedin.com/in/example" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
                 </div>
+              </div>
+
+              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
+                <p class="text-dark fs-6 mb-0">Dr. F. Ranil Senanayake</p>
+                <p class="text-light fs-6 mb-0">Senior Systems Ecologist - Founder</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-item">
+              <div class="team-img">
+                <img src="img/team-1.jpg" alt="Team Member" />
+
+                <!-- Always visible LinkedIn icon -->
+                <div class="linkedin-icon">
+                  <a href="https://www.linkedin.com/in/example" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
+                <p class="text-dark fs-6 mb-0">Dr. F. Ranil Senanayake</p>
+                <p class="text-light fs-6 mb-0">Senior Systems Ecologist - Founder</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-item">
+              <div class="team-img">
+                <img src="img/team-1.jpg" alt="Team Member" />
+
+                <!-- Always visible LinkedIn icon -->
+                <div class="linkedin-icon">
+                  <a href="https://www.linkedin.com/in/example" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
+                <p class="text-dark fs-6 mb-0">Dr. F. Ranil Senanayake</p>
+                <p class="text-light fs-6 mb-0">Senior Systems Ecologist - Founder</p>
               </div>
             </div>
           </div>
@@ -895,7 +1161,6 @@
       <div class="container-fluid">
         <div class="container">
           <div class="row align-items-center pb-4">
-            <!-- Left Side: Text Content -->
             <div class="col-lg-8 wow fadeInLeft">
               <h1 class="display-4 text-capitalize text-dark mb-3">
                 Realizing value for<br />
@@ -916,7 +1181,6 @@
               </div>
             </div>
 
-            <!-- Right Side: Static Image -->
             <div class="col-lg-4 text-center pt-0 pt-lg-0 text-sm-center text-md-start wow fadeInRight">
               <img src="img/oxygen-economy.png" alt="home-1" class="img-fluid" />
             </div>
@@ -983,14 +1247,13 @@
               <div class="bg-white rounded h-100 shadow-sm">
                 <div class="card-body p-0 h-100 d-flex flex-column">
                   <div class="row g-0 h-100 align-items-stretch">
-                    <!-- Image Column -->
                     <div class="col-sm-6">
                       <div
                         class="h-100 w-100 bg-light rounded d-flex align-items-center justify-content-center p-3">
                         <img src="img/tree.png" alt="home-1" class="img-fluid" />
                       </div>
                     </div>
-                    <!-- Text Column -->
+
                     <div class="col-sm-6 d-flex flex-column justify-content-center p-4">
                       <h1 class="display-4 text-capitalize text-dark mb-2 fs-2">$250-450</h1>
                       <h4 class="text-dark">per acre/year</h4>
@@ -1303,7 +1566,7 @@
     <!--  Oxygen Economy End -->
 
     <!-- FAQs Start -->
-    <div id="faq" class="container-fluid faq py-5">
+    <!-- <div id="faq" class="container-fluid faq py-5">
       <div class="container py-5">
         <div class="row g-5 align-items-center">
           <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
@@ -1436,7 +1699,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- FAQs End -->
 
     <!-- Footer Start -->
@@ -1475,27 +1738,33 @@
                     ><i class="fas fa-angle-right me-2 text-light"></i> Home</a
                   >
                   <a href="#about" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> About Us</a
+                    ><i class="fas fa-angle-right me-2 text-light"></i> About</a
+                  >
+                  <a href="#why-we-do-it" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Why we do it</a
+                  >
+                  <a href="#how-we-do-it" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> How we do it</a
                   >
                   <a href="#our-products" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> Our Products</a
                   >
-                  <a href="#our-services" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> Our Services</a
-                  >
                 </div>
                 <div class="col-6 footer-item d-flex flex-column">
+                  <a href="#how-it-works" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> How it works</a
+                  >
                   <a href="#other-services" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> Other Services</a
                   >
                   <a href="#who-we-are" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> Who We Are</a
                   >
-                  <a href="#how-we-do-it" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> How We Do It</a
+                  <a href="blogs.html" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Blogs</a
                   >
-                  <a href="#oxygen-economy" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> Oxygen Economy</a
+                  <a href="oxygen-economy.html" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> OXYGEN ECONOMY</a
                   >
                 </div>
               </div>

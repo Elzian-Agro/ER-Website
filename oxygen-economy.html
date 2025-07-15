@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>EarthRestoration</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      .service-card {
+        border: none;
+        transition: transform 0.3s;
+        height: 100%;
+        cursor: pointer;
+      }
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
+      .product-card {
+        border-left: 4px solid #79b083;
+        transition: transform 0.3s;
+      }
+      .product-card:hover {
+        transform: translateY(-5px);
+      }
+      .flow-arrow {
+        font-size: 1.5rem;
+        color: #79b083;
+        text-align: center;
+      }
+      .quote {
+        border: 3px solid #79b083;
+      }
+      .contract-table {
+        max-width: 600px;
+        margin: 0rem auto;
+      }
+      .table-header {
+        background-color: #79b083;
+        color: #e7ebe7;
+      }
+      .total-row {
+        font-weight: bold;
+        background-color: #f9f9f7;
+      }
+
+      .custom-bg-shape {
+        background-color: #e7ebe7;
+        padding: 1.5rem;
+        border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease;
+      }
+
+      .hover-shadow:hover {
+        box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar bg-primary px-0 d-none d-lg-block">
+      <div class="container px-0">
+        <div class="row gx-0 align-items-center" style="height: 35px">
+          <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+            <div class="d-flex flex-wrap">
+              <a href="mailto:info@restore.earth" class="text-light me-4">
+                <i class="fas fa-envelope text-light me-2"></i>info@restore.earth
+              </a>
+              <a href="tel:+94767191428" class="text-light me-4">
+                <i class="fas fa-phone-alt text-light me-2"></i>+94 76 719 1428
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center text-lg-end">
+            <div class="d-flex align-items-center justify-content-end">
+              <a
+                href="https://www.youtube.com/channel/UCL5dFM7Kr1dMapzjSJExftg?view_as=subscriber"
+                target="_blank"
+                class="btn nav-fill"
+                ><i class="fab fa-youtube text-light"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100045842366453"
+                target="_blank"
+                class="btn nav-fill"
+                ><i class="fab fa-facebook-f text-light"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/earth-restoration/"
+                target="_blank"
+                class="btn nav-fill"
+                ><i class="fab fa-linkedin-in text-light"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid sticky-top px-0">
+      <div class="position-absolute bg-primary" style="left: 0; top: 0; width: 100%; height: 100%"></div>
+      <div class="container px-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+          <a href="index.html" class="navbar-brand p-0">
+            <img class="nav-logo" src="img/logo.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+              <a href="index.html#home" class="nav-item nav-link active">Home</a>
+              <a href="index.html#about" class="nav-item nav-link">About</a>
+              <a href="index.html#why-we-do-it" class="nav-item nav-link">Why we do it</a>
+              <a href="index.html#how-we-do-it " class="nav-item nav-link">How we do it</a>
+              <a href="index.html#our-products " class="nav-item nav-link">Our Products</a>
+              <a href="index.html#how-it-works" class="nav-item nav-link">How it works</a>
+              <a href="index.html#other-services" class="nav-item nav-link">Other Services</a>
+              <a href="index.html#who-we-are" class="nav-item nav-link">Who We Are</a>
+              <a href="blogs.html" class="nav-item nav-link">Blogs</a>
+              <!-- <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Other</a>
+                <div class="dropdown-menu m-0">
+                  <a href="blogs.html" class="dropdown-item">Blogs</a>
+                  <a href="#further-reading" class="dropdown-item">Further reading</a>
+                  <a href="#faq" class="dropdown-item">Scientific Publications & FAQ</a>
+                </div>
+              </div> -->
+              <a href="oxygen-economy.html" class="nav-item nav-link">OXYGEN ECONOMY</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <section class="py-5 bg-light">
+      <div class="container-fluid">
+        <div class="container py-5">
+          <div class="row align-items-center">
+            <div class="col-lg-8 wow fadeInLeft">
+              <h1 class="display-4 text-capitalize text-dark mb-3">
+                Realizing value for<br />
+                Photosynthetic Biomass
+              </h1>
+              <h1 class="display-5 text-dark mb-4 fs-3">
+                Transforming oxygen production into a financial asset for a sustainable future
+              </h1>
+              <p class="fs-6 mb-4 text-muted">
+                Primary Ecosystem Services (PES) are produced by the action of photosynthesis in
+                Photosynthetic Biomass (leaf). These services are, Oxygen generation, Carbon Dioxide
+                sequestration, Oxygen production and Water purification function . Recent studies on this
+                aspect of vegetation suggests a value of between USD $ 80-200 per tree unit over 4 years.
+              </p>
+              <div class="d-flex flex-wrap flex-column flex-sm-row gap-2">
+                <a id="exploreBtn" class="btn btn-primary rounded-sm py-3 px-5" href="#"
+                  >Explore the Oxygen Economy</a
+                >
+                <a class="btn btn-primary rounded-sm py-3 px-5" href="#">Watch Our Story</a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 text-center pt-0 pt-lg-0 text-sm-center text-md-start wow fadeInRight">
+              <img src="img/oxygen-economy.png" alt="home-1" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row g-4 py-2">
+            <div class="col-lg-6 wow fadeInUp">
+              <div class="bg-white rounded h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                  <h4 class="text-dark mb-4">Primary Ecosystem Services (PES) <br />of Photosynthetic</h4>
+                  <div class="row flex-grow-1">
+                    <div class="col-6 col-sm-3 d-flex flex-column justify-content-between">
+                      <div class="p-3 custom-bg-shape">
+                        <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                      </div>
+                      <p class="text-muted text-center mt-3">Oxygen<br />Generation</p>
+                    </div>
+                    <div class="col-6 col-sm-3 d-flex flex-column justify-content-between">
+                      <div class="p-3 custom-bg-shape">
+                        <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                      </div>
+                      <p class="text-muted text-center mt-3">CSs<br />Segrestiation</p>
+                    </div>
+                    <div class="col-6 col-sm-3 d-flex flex-column justify-content-between">
+                      <div class="p-3 custom-bg-shape">
+                        <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                      </div>
+                      <p class="text-muted text-center mt-3">Curtishydretd<br />Creactting</p>
+                    </div>
+                    <div class="col-6 col-sm-3 d-flex flex-column justify-content-between">
+                      <div class="p-3 custom-bg-shape">
+                        <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                      </div>
+                      <p class="text-muted text-center mt-3">Ambient<br />Cooling</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-5 wow fadeInUp">
+              <div class="bg-white rounded h-100 shadow-sm">
+                <div class="card-body p-0 h-100 d-flex flex-column">
+                  <div class="row g-0 h-100 align-items-stretch">
+                    <div class="col-sm-6">
+                      <div
+                        class="h-100 w-100 bg-light rounded d-flex align-items-center justify-content-center p-3">
+                        <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 d-flex flex-column justify-content-center p-4">
+                      <h1 class="display-4 text-capitalize text-dark mb-2 fs-2">$250-450</h1>
+                      <h4 class="text-dark">per acre/year</h4>
+                      <p class="text-muted fs-5">
+                        for mature, diverse <br />
+                        forests
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 py-5 wow fadeInUp">
+            <div class="col-lg-6">
+              <h4 class="text-dark mb-4">The Oxygen Economy Explained</h4>
+              <div class="row g-4">
+                <div class="col-sm-6">
+                  <div class="h-100">
+                    <div class="bg-light rounded">
+                      <img
+                        src="img/forest-1.jpg"
+                        class="card-img-top"
+                        alt="Why the Oxygen Economy?"
+                        style="width: 100%" />
+                    </div>
+                    <div class="card-body" style="padding: 10px 0 5px 0">
+                      <h5 class="card-title">Why the Oxygen Economy?</h5>
+                      <a href="blog.html" class="text-primary text-decoration-none"
+                        >Read More <i class="bi bi-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="h-100">
+                    <div class="bg-light rounded">
+                      <img
+                        src="img/forest-4.jpg"
+                        class="card-img-top"
+                        alt="Why the Oxygen Economy?"
+                        style="width: 100%" />
+                    </div>
+                    <div class="card-body" style="padding: 10px 0 5px 0">
+                      <h5 class="card-title">How the Oxygen Economy Works?</h5>
+                      <a href="blog.html" class="text-primary text-decoration-none"
+                        >Read More <i class="bi bi-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="h-100">
+                    <div class="bg-light rounded">
+                      <img
+                        src="img/forest-2.jpg"
+                        class="card-img-top"
+                        alt="Why the Oxygen Economy?"
+                        style="width: 100%" />
+                    </div>
+                    <div class="card-body" style="padding: 10px 0 5px 0">
+                      <h5 class="card-title">Scaling VI-Oxygen Economy Globally</h5>
+                      <a href="blog.html" class="text-primary text-decoration-none"
+                        >Read More <i class="bi bi-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="h-100">
+                    <div class="bg-light rounded">
+                      <img
+                        src="img/forest-3.jpg"
+                        class="card-img-top"
+                        alt="Why the Oxygen Economy?"
+                        style="width: 100%" />
+                    </div>
+                    <div class="card-body" style="padding: 10px 0 5px 0">
+                      <h5 class="card-title">A Vision for the Future JIS Global Commons Exchange</h5>
+                      <a href="blog.html" class="text-primary text-decoration-none"
+                        >Read More <i class="bi bi-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="text-muted" />
+
+              <div class="py-3">
+                <h4 class="text-dark mb-4">Antective Intervi</h4>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item border-0 mb-4">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button text-dark fs-6 rounded-top"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseTOne">
+                        Register Your Land
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body my-2">
+                        <p class="text-muted">
+                          add description add description add description add description add description add
+                          description add description add description add description add description add
+                          description add description add description
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item border-0 mb-4">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button collapsed text-dark fs-6 rounded-top"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo">
+                        Measure & Validate Biomass (MFV)
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body my-2">
+                        <p class="text-muted">
+                          add description add description add description add description add description add
+                          description add description add description add description add description add
+                          description add description add description
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item border-0 mb-4">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button
+                        class="accordion-button collapsed text-dark fs-6 rounded-top"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree">
+                        Contract with Oxygen Consumers
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body my-2">
+                        <p class="text-muted">
+                          add description add description add description add description add description add
+                          description add description add description add description add description add
+                          description add description add description
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item border-0 mb-4">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button
+                        class="accordion-button collapsed text-dark fs-6 rounded-top"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour">
+                        Receive Payments via Financial Tools
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body my-2">
+                        <p class="text-muted">
+                          add description add description add description add description add description add
+                          description add description add description add description add description add
+                          description add description add description
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item border-0 mb-0">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button
+                        class="accordion-button collapsed text-dark fs-6 rounded-top"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive">
+                        Scale & Sustain
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFive"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body my-2">
+                        <p class="text-muted">
+                          add description add description add description add description add description add
+                          description add description add description add description add description add
+                          description add description add description
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-5 wow fadeInUp">
+              <h4 class="text-dark mb-4">The Oxygen Economy Explained</h4>
+
+              <div class="row g-4 pb-3">
+                <div class="col-4">
+                  <div class="bg-light rounded">
+                    <img src="img/avator.png" class="card-img-top" alt="" style="width: 100%" />
+                  </div>
+                </div>
+                <div class="col-8">
+                  <p class="text-muted fw-bold mb-2">A Commitment to Organizations</p>
+                  <p class="txt-muted">
+                    We are a committed organization to support oxygen producers by dedicated ecosystem service
+                    agents.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row g-4 pb-3">
+                <div class="col-4">
+                  <div class="bg-light rounded">
+                    <img src="img/building.png" class="card-img-top" alt="" style="width: 100%" />
+                  </div>
+                </div>
+                <div class="col-8">
+                  <p class="text-muted fw-bold mb-2">Scaling Oxygen Economy Globally</p>
+                  <p class="txt-muted">Fostering and pioneering an Oxygen product and service.</p>
+                </div>
+              </div>
+
+              <div class="row g-4 pb-2">
+                <div class="col-4">
+                  <div class="bg-light rounded">
+                    <img src="img/growth.png" class="card-img-top" alt="" style="width: 100%" />
+                  </div>
+                </div>
+                <div class="col-8">
+                  <p class="text-muted fw-bold mb-2">Challenges in Marketing the Oxygen Economy</p>
+                  <p class="txt-muted">Foreseeing opportunities and challenges for an oxygen service.</p>
+                </div>
+              </div>
+
+              <hr class="text-muted" />
+
+              <h4 class="text-dark mb-4 pt-3">Ready to Joing the Movement?</h4>
+
+              <div class="row g-4 pb-2">
+                <div class="col-sm-6">
+                  <a class="btn btn-primary rounded-sm py-3 px-5 w-100" href="#"
+                    >Register as a <br />Oxygen Producer</a
+                  >
+                </div>
+                <div class="col-sm-6">
+                  <a class="btn btn-primary rounded-sm py-3 px-5 w-100" href="#"
+                    >Partner as <br />Oxygen Consumer</a
+                  >
+                </div>
+              </div>
+
+              <hr class="text-muted" />
+
+              <h4 class="text-dark mb-4 pt-3">Optional Additions</h4>
+
+              <div>
+                <ul class="ps-3">
+                  <li class="text-muted mb-2">Live Chat Widget for questions about the Oxygen Economy</li>
+                  <li class="text-muted mb-2">
+                    Interactive World Map showing where initiatives are in progress
+                  </li>
+                  <li class="text-muted">Forum or Discussion Board for the Oxygen Economy community</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-primary pt-4 wow fadeIn" data-wow-delay="0.2s">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-md-6 col-lg-6 col-xl-5">
+            <div class="footer-item d-flex flex-column">
+              <div class="footer-item">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p class="mb-3 text-light">
+                  Earth Restoration is dedicated to regenerating ecosystems, restoring biodiversity, and
+                  empowering communities to create a sustainable and thriving planet for future generations.
+                </p>
+                <div class="position-relative mx-auto rounded-pill">
+                  <input
+                    class="form-control rounded-sm w-100 py-3 ps-4 pe-5"
+                    type="text"
+                    placeholder="Enter your email" />
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-sm position-absolute top-0 end-0 py-2 mt-2 me-2">
+                    SignUp
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-4">
+            <div class=" ">
+              <h4 class="text-white mb-4">Quick Links</h4>
+              <div class="row g-5">
+                <div class="col-6 footer-item d-flex flex-column">
+                  <a href="#home" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Home</a
+                  >
+                  <a href="#about" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> About</a
+                  >
+                  <a href="#why-we-do-it" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Why we do it</a
+                  >
+                  <a href="#how-we-do-it" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> How we do it</a
+                  >
+                  <a href="#our-products" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Our Products</a
+                  >
+                </div>
+                <div class="col-6 footer-item d-flex flex-column">
+                  <a href="#how-it-works" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> How it works</a
+                  >
+                  <a href="#other-services" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Other Services</a
+                  >
+                  <a href="#who-we-are" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Who We Are</a
+                  >
+                  <a href="blogs.html" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Blogs</a
+                  >
+                  <a href="oxygen-economy.html" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> OXYGEN ECONOMY</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item d-flex flex-column">
+              <h4 class="text-white mb-4">Contact Info</h4>
+              <a href="#" class="text-light"
+                ><i class="fa fa-map-marker-alt me-2"></i> Belipola Arboretum, Mirahawatte, Sri Lanka.</a
+              >
+              <a href="mailto:info@restore.earth" class="text-light"
+                ><i class="fas fa-envelope me-2"></i> info@restore.earth</a
+              >
+              <a href="tel:+94767191428" class="text-light"
+                ><i class="fas fa-phone me-2"></i> +94 76 719 1428</a
+              >
+              <div class="d-flex align-items-center mt-2">
+                <a
+                  href="https://www.youtube.com/channel/UCL5dFM7Kr1dMapzjSJExftg?view_as=subscriber"
+                  target="_blank"
+                  class="btn nav-fill"
+                  style="padding-left: 0"
+                  ><i class="fab fa-youtube text-light"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100045842366453"
+                  target="_blank"
+                  class="btn nav-fill"
+                  ><i class="fab fa-facebook-f text-light"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/company/earth-restoration/"
+                  target="_blank"
+                  class="btn nav-fill"
+                  ><i class="fab fa-linkedin-in text-light"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-primary py-4">
+      <div class="container text-center">
+        <p class="mb-1 text-light" style="font-size: 13px">
+          <a href="#home" class="border-bottom text-light">
+            <i class="fas fa-copyright text-light me-2"></i>EarthRestoration,
+          </a>
+          All rights reserved.
+        </p>
+        <p class="mb-0 text-light" style="font-size: 13px">
+          Designed By Digital Technology Partner
+          <a class="border-bottom text-light" href="https://agro.elzian.com/" target="_blank">Elzian Agro</a>
+        </p>
+      </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        function activateNavLink() {
+          let scrollPos = window.scrollY + 100; // Offset for navbar
+
+          sections.forEach((section) => {
+            const top = section.offsetTop;
+            const bottom = top + section.offsetHeight;
+            const id = section.getAttribute("id");
+
+            if (scrollPos >= top && scrollPos <= bottom) {
+              navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${id}`) {
+                  link.classList.add("active");
+                }
+              });
+            }
+          });
+        }
+
+        window.addEventListener("scroll", activateNavLink);
+        activateNavLink(); // Run once on load
+
+        // On nav link click
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            navLinks.forEach((l) => l.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+
+    <script>
+      document.getElementById("exploreBtn").addEventListener("click", function (e) {
+        e.preventDefault();
+        document.getElementById("quoteBox").classList.remove("d-none");
+      });
+    </script>
+  </body>
+</html>
