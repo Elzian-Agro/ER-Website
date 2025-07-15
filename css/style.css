@@ -803,6 +803,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  height: 100%;
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }

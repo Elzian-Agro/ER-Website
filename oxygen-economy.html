@@ -157,7 +157,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-              <a href="index.html#home" class="nav-item nav-link active">Home</a>
+              <a href="index.html#home" class="nav-item nav-link">Home</a>
               <a href="index.html#about" class="nav-item nav-link">About</a>
               <a href="index.html#why-we-do-it" class="nav-item nav-link">Why we do it</a>
               <a href="index.html#how-we-do-it " class="nav-item nav-link">How we do it</a>
@@ -174,7 +174,7 @@
                   <a href="#faq" class="dropdown-item">Scientific Publications & FAQ</a>
                 </div>
               </div> -->
-              <a href="oxygen-economy.html" class="nav-item nav-link">OXYGEN ECONOMY</a>
+              <a href="oxygen-economy.html" class="nav-item nav-link active">OXYGEN ECONOMY</a>
             </div>
           </div>
         </nav>
@@ -718,49 +718,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll("section[id]");
-        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-
-        function activateNavLink() {
-          let scrollPos = window.scrollY + 100; // Offset for navbar
-
-          sections.forEach((section) => {
-            const top = section.offsetTop;
-            const bottom = top + section.offsetHeight;
-            const id = section.getAttribute("id");
-
-            if (scrollPos >= top && scrollPos <= bottom) {
-              navLinks.forEach((link) => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === `#${id}`) {
-                  link.classList.add("active");
-                }
-              });
-            }
-          });
-        }
-
-        window.addEventListener("scroll", activateNavLink);
-        activateNavLink(); // Run once on load
-
-        // On nav link click
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            navLinks.forEach((l) => l.classList.remove("active"));
-            this.classList.add("active");
-          });
-        });
-      });
-    </script>
-
-    <script>
-      document.getElementById("exploreBtn").addEventListener("click", function (e) {
-        e.preventDefault();
-        document.getElementById("quoteBox").classList.remove("d-none");
-      });
-    </script>
   </body>
 </html>
