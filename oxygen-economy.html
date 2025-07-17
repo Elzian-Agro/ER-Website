@@ -35,55 +35,56 @@
     <link href="css/style.css" rel="stylesheet" />
 
     <style>
-      .service-card {
-        border: none;
-        transition: transform 0.3s;
+      .flip-card {
+        perspective: 1000px;
+        height: 250px;
+        border-radius: 10px;
+      }
+
+      .card-inner {
+        position: relative;
+        width: 100%;
         height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
         cursor: pointer;
       }
-      .service-card:hover {
-        transform: translateY(-5px);
+
+      .flip-card:hover .card-inner {
+        transform: rotateY(180deg);
       }
-      .product-card {
-        border-left: 4px solid #79b083;
-        transition: transform 0.3s;
+
+      .card-front,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        backface-visibility: hidden;
+        top: 0;
+        left: 0;
       }
-      .product-card:hover {
-        transform: translateY(-5px);
-      }
-      .flow-arrow {
-        font-size: 1.5rem;
-        color: #79b083;
-        text-align: center;
-      }
-      .quote {
-        border: 3px solid #79b083;
-      }
-      .contract-table {
-        max-width: 600px;
-        margin: 0rem auto;
-      }
-      .table-header {
-        background-color: #79b083;
-        color: #e7ebe7;
-      }
-      .total-row {
-        font-weight: bold;
+
+      .card-front {
         background-color: #f9f9f7;
+        z-index: 2;
       }
 
-      .custom-bg-shape {
-        background-color: #e7ebe7;
-        padding: 1.5rem;
-        border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: 0.3s ease;
+      .card-back {
+        background-color: #f9f9f7;
+        transform: rotateY(180deg);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
       }
 
-      .hover-shadow:hover {
-        box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.1);
-        transform: translateY(-2px);
-        transition: all 0.3s ease;
+      /* blog */
+      .btn-close:focus {
+        outline: none;
+        box-shadow: none;
       }
     </style>
   </head>
@@ -160,21 +161,21 @@
               <a href="index.html#home" class="nav-item nav-link">Home</a>
               <a href="index.html#about" class="nav-item nav-link">About</a>
               <a href="index.html#why-we-do-it" class="nav-item nav-link">Why we do it</a>
-              <a href="index.html#how-we-do-it " class="nav-item nav-link">How we do it</a>
-              <a href="index.html#our-products " class="nav-item nav-link">Our Products</a>
+              <a href="index.html#how-we-do-it" class="nav-item nav-link">How we do it</a>
+              <a href="index.html#our-products" class="nav-item nav-link">Our Products</a>
               <a href="index.html#how-it-works" class="nav-item nav-link">How it works</a>
               <a href="index.html#other-services" class="nav-item nav-link">Other Services</a>
               <a href="index.html#who-we-are" class="nav-item nav-link">Who We Are</a>
-              <a href="blogs.html" class="nav-item nav-link">Blogs</a>
-              <!-- <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Other</a>
-                <div class="dropdown-menu m-0">
-                  <a href="blogs.html" class="dropdown-item">Blogs</a>
-                  <a href="#further-reading" class="dropdown-item">Further reading</a>
-                  <a href="#faq" class="dropdown-item">Scientific Publications & FAQ</a>
-                </div>
-              </div> -->
               <a href="oxygen-economy.html" class="nav-item nav-link active">OXYGEN ECONOMY</a>
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
+                  >Further reading</a
+                >
+                <div class="dropdown-menu m-0">
+                  <a href="global.html" class="dropdown-item">Global</a>
+                  <a href="local.html" class="dropdown-item">Local in Sri Lanka </a>
+                </div>
+              </div>
             </div>
           </div>
         </nav>
@@ -182,7 +183,7 @@
     </div>
     <!-- Navbar & Hero End -->
 
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" style="border-top: 1px solid #79b083">
       <div class="container-fluid">
         <div class="container py-5">
           <div class="row align-items-center">
@@ -201,7 +202,7 @@
                 aspect of vegetation suggests a value of between USD $ 80-200 per tree unit over 4 years.
               </p>
               <div class="d-flex flex-wrap flex-column flex-sm-row gap-2">
-                <a id="exploreBtn" class="btn btn-primary rounded-sm py-3 px-5" href="#"
+                <a class="btn btn-primary rounded-sm py-3 px-5" href="#oxygen-economy"
                   >Explore the Oxygen Economy</a
                 >
                 <a class="btn btn-primary rounded-sm py-3 px-5" href="#">Watch Our Story</a>
@@ -216,16 +217,16 @@
       </div>
     </section>
 
-    <section class="py-5 bg-white">
+    <section id="oxygen-economy" class="py-5 bg-white">
       <div class="container-fluid">
-        <div class="container">
+        <div class="container py-5">
           <div class="row align-items-center">
             <div class="col-lg-4 wow fadeInUp">
               <img src="img/oxygen flow.png" alt="Oxygen Flow" style="max-width: 100%; height: auto" />
             </div>
 
             <div class="col-lg-8 wow fadeInUp">
-              <h4 class="text-dark mb-4">The Oxygen Economy Explained</h4>
+              <h4 class="text-dark mb-4">The Oxygen Economy</h4>
 
               <p class="text-muted fs-6">
                 The Oxygen Economy is a framework based on EarthRestorations vision that assigns economic
@@ -245,7 +246,7 @@
                 to the sustainability of the resource.
               </p>
               <blockquote
-                class="text-muted fw-bold italic fs-6"
+                class="text-muted fw-bold fs-6"
                 style="
                   margin: 20px 0;
                   padding-left: 20px;
@@ -265,21 +266,23 @@
         <div class="container py-5">
           <div class="row">
             <div class="col-lg-6 wow fadeInUp" style="padding-right: 60px">
-              <div class="row">
-                <h4 class="text-dark mb-4">Primary Ecosystem Services (PES) of Photosynthetic</h4>
+              <div class="row g-4">
+                <h4 class="text-dark">Primary Ecosystem Services <br />(PES) of Photosynthetic</h4>
                 <!-- Oxygen Generation -->
                 <div class="col-md-4">
-                  <div class="card h-100 shadow-sm border-0 bg-white">
-                    <div class="card-body p-0">
-                      <div
-                        class="d-flex flex-column justify-content-between"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Photosynthesis releases oxygen, which supports all aerobic life on Earth.">
+                  <div class="flip-card bg-white shadow-sm rounded-4 overflow-hidden">
+                    <div class="card-inner">
+                      <div class="card-front">
                         <div class="bg-light">
-                          <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                          <img src="img/tree.png" class="img-fluid rounded-top-4" alt="tree" />
                         </div>
                         <p class="text-muted text-center mt-3">Oxygen<br />Generation</p>
+                      </div>
+                      <div class="card-back p-3">
+                        <p class="text-muted fs-7">
+                          Trees release oxygen through photosynthesis, which is essential for sustaining all
+                          aerobic life on Earth.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -287,17 +290,20 @@
 
                 <!-- CO₂ Sequestration -->
                 <div class="col-md-4">
-                  <div class="card h-100 shadow-sm border-0 bg-white">
-                    <div class="card-body p-0">
-                      <div
-                        class="d-flex flex-column justify-content-between rounded"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Plants absorb atmospheric CO₂, mitigating climate change impacts.">
+                  <div class="flip-card bg-white shadow-sm rounded-4">
+                    <div class="card-inner">
+                      <div class="card-front">
                         <div class="bg-light">
-                          <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                          <img src="img/tree.png" class="img-fluid rounded-top-4" alt="tree" />
                         </div>
-                        <p class="text-muted text-center mt-3">CO₂ <br />Sequestration</p>
+                        <p class="text-muted text-center mt-3">CO₂<br />Sequestration</p>
+                      </div>
+
+                      <div class="card-back p-3">
+                        <p class="text-muted fs-7">
+                          Plants absorb atmospheric CO₂, helping to reduce greenhouse gas concentrations and
+                          combat climate change.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -305,29 +311,31 @@
 
                 <!-- Water Purification -->
                 <div class="col-md-4">
-                  <div class="card h-100 shadow-sm border-0 bg-white">
-                    <div class="card-body p-0">
-                      <div
-                        class="d-flex flex-column justify-content-between rounded"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Root systems and biomass help filter water and improve watershed health.">
+                  <div class="flip-card bg-white shadow-sm rounded-4 overflow-hidden">
+                    <div class="card-inner">
+                      <div class="card-front">
                         <div class="bg-light">
-                          <img src="img/tree.png" alt="home-1" class="img-fluid" />
+                          <img src="img/tree.png" class="img-fluid rounded-top-4" alt="tree" />
                         </div>
-                        <p class="text-muted text-center mt-3">Water <br />Purification</p>
+                        <p class="text-muted text-center mt-3">Water<br />Purification</p>
+                      </div>
+
+                      <div class="card-back p-3">
+                        <p class="text-muted fs-7">
+                          Root systems and biomass help filter water and improve watershed health.
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="bg-white rounded shadow-sm mt-4">
+              <div class="bg-white rounded shadow-sm mt-5">
                 <div class="card-body p-0 d-flex flex-column rounded">
                   <div class="row g-0 align-items-stretch">
                     <div class="col-sm-6">
                       <div
-                        class="h-100 w-100 bg-light rounded d-flex align-items-center justify-content-center p-3">
+                        class="h-100 w-100 bg-light rounded-start d-flex align-items-center justify-content-center p-3">
                         <img src="img/tree.png" alt="home-1" class="img-fluid" />
                       </div>
                     </div>
@@ -363,26 +371,157 @@
                   <div class="card-body" style="padding: 10px 0 5px 0">
                     <p class="fw-bold mb-1">Why the Oxygen Economy?</p>
 
-                    <a href="blog.html" class="text-primary text-decoration-none"
-                      >Read More <i class="bi bi-arrow-right"></i
-                    ></a>
+                    <a
+                      href="#"
+                      class="text-primary text-decoration-none"
+                      data-bs-toggle="modal"
+                      data-bs-target="#blogOne">
+                      Read More <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  class="modal fade"
+                  id="blogOne"
+                  tabindex="-1"
+                  aria-labelledby="blogModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-white">
+                      <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="blogModalLabel">Why the Oxygen Economy?</h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body p-4">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img
+                              src="img/blogs/why-the-oxygen-economy.jpg"
+                              alt="blog"
+                              class="img-fluid rounded mb-3" />
+                          </div>
+                          <div class="col-lg-6">
+                            <p class="fs-7 text-muted mb-0">
+                              The Air We Breathe Is free but being rapidly degraded, its protection should be
+                              valued. Its most critical component, Oxygen surrounds us, filling our lungs with
+                              every breath we take. For many of us, it’s an invisible gift of nature that we
+                              take for granted. But Why is this essential resource—the very foundation of
+                              life— free to be exploited at present?
+                            </p>
+                          </div>
+                        </div>
+
+                        <p class="fs-7 text-muted">
+                          Why could not trees, plants, and photosynthetic organisms that produce oxygen have
+                          economic value ? Could those who benefit most from using the resources of the Global
+                          Commons be required to contribute to its maintenance? This is the idea behind the
+                          Oxygen Economy, a bold and transformative concept that seeks to address
+                          environmental and social challenges in a way that is fair, sustainable, and
+                          forward-thinking beyond GDP value which measures the success of our societies today.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 <div class="col-lg-6">
                   <div class="bg-light rounded">
                     <img
-                      src="img/blogs/why-the-oxygen-economy.jpg"
+                      src="img/blogs/how-the-oxygen-economy-works.jpg"
                       class="card-img-top"
                       alt="Why the Oxygen Economy?"
                       style="width: 100%" />
                   </div>
                   <div class="card-body" style="padding: 10px 0 5px 0">
-                    <p class="fw-bold mb-1">Why the Oxygen Economy?</p>
+                    <p class="fw-bold mb-1">How the Oxygen Economy Works?</p>
 
-                    <a href="blog.html" class="text-primary text-decoration-none"
-                      >Read More <i class="bi bi-arrow-right"></i
-                    ></a>
+                    <a
+                      href="#"
+                      class="text-primary text-decoration-none"
+                      data-bs-toggle="modal"
+                      data-bs-target="#blogTwo">
+                      Read More <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  class="modal fade"
+                  id="blogTwo"
+                  tabindex="-1"
+                  aria-labelledby="blogModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-white">
+                      <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="blogModalLabel">
+                          How the Oxygen Economy Works?
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body p-4">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img
+                              src="img/blogs/how-the-oxygen-economy-works.jpg"
+                              alt="blog"
+                              class="img-fluid rounded mb-3" />
+                          </div>
+                          <div class="col-lg-6">
+                            <p class="fs-7 text-muted mb-0">
+                              The Oxygen Economy operates on the principles of private property being valued
+                              using financial tools such as Valuation guarantees, stakeholder Contracts and
+                              Insurances to monetize contractually produced oxygen as a financial product .
+                              This involves three key components:
+                            </p>
+                          </div>
+                        </div>
+
+                        <ol>
+                          <li class="text-muted mb-2 fs-7">
+                            MRV Guarantee : Assigning an economic value to the oxygen produced by contracted
+                            and registered units in identified geographical areas of production is based on
+                            the MRV of PES productivity by trees / plants or photosynthetic organisms such as
+                            Cyanobacteria.
+                          </li>
+                          <li class="text-muted mb-2 fs-7">
+                            Stakeholder Contracts and Compensation: Establishing formal agreements between
+                            oxygen consumers (e.g., corporations / Space exploration companies ) and
+                            contracted oxygen producers (e.g., farmers, Local communities) to ensure optimal
+                            primary ecosystem services
+                          </li>
+                          <li class="text-muted mb-2 fs-7">
+                            TheFinancial Tool: The validated quantity of photosynthetic biomass is value-set
+                            using ER methodology and a market peg approach, based on the concept of mining
+                            oxygen from the Global Commons. For an example of how oxygen is valued in
+                            practical scenarios, see
+                            <a
+                              href="https://livewell.com/finance/how-much-does-home-oxygen-cost-without-insurance/"
+                              target="_blank"
+                              rel="noopener"
+                              class="text-primary text-decoration-underline"
+                              >oxygen cost without insurance</a
+                            >.
+                          </li>
+                          <li class="text-muted mb-0 fs-7">
+                            Policy and Regulation: Introducing legal frameworks at a regional scale to enforce
+                            accountability and prevent the exploitation of oxygen resources.The private
+                            contracts would play a key role in monitoring bioregional Oxygen production,
+                            ensuring compliance, and incentivizing sustainable practices to scale the Oxygen
+                            economy.
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -391,34 +530,167 @@
                 <div class="col-lg-6">
                   <div class="bg-light rounded">
                     <img
-                      src="img/blogs/why-the-oxygen-economy.jpg"
+                      src="img/blogs/scaling-the-oxygen-economy-globally.jpg"
                       class="card-img-top"
-                      alt="Why the Oxygen Economy?"
+                      alt="blog"
                       style="width: 100%" />
                   </div>
                   <div class="card-body" style="padding: 10px 0 5px 0">
-                    <p class="fw-bold mb-1">Why the Oxygen Economy?</p>
+                    <p class="fw-bold mb-1">Scaling the Oxygen Economy Globally</p>
 
-                    <a href="blog.html" class="text-primary text-decoration-none"
-                      >Read More <i class="bi bi-arrow-right"></i
-                    ></a>
+                    <a
+                      href="#"
+                      class="text-primary text-decoration-none"
+                      data-bs-toggle="modal"
+                      data-bs-target="#blogThree">
+                      Read More <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  class="modal fade"
+                  id="blogThree"
+                  tabindex="-1"
+                  aria-labelledby="blogModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content bg-white">
+                      <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="blogModalLabel">
+                          Scaling the Oxygen Economy Globally
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body p-4">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img
+                              src="img/blogs/scaling-the-oxygen-economy-globally.jpg"
+                              alt="blog"
+                              class="img-fluid rounded mb-3" />
+                          </div>
+                          <div class="col-lg-6">
+                            <p class="fs-7 text-muted mb-0">
+                              While our efforts in Sri Lanka are a promising start, the true potential of the
+                              Oxygen Economy lies in its ability to scale globally. Imagine a world where
+                              farmers are compensated for the establishment of trees, where rural and even
+                              urban greenery projects could receive funding to expand their impact for this
+                              paradigm of business. Such a system would not only help combat climate change
+                              but also address economic inequalities of the current GDP paradigm, by together
+                              contracting the Oxygen economic asset tool to those who sustain the planet’s
+                              life-support systems.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="row mb-2">
+                          <div class="col-md-6">
+                            <div class="ratio ratio-16x9">
+                              <iframe
+                                src="https://www.youtube.com/embed/Ha9rHIsiFpU"
+                                title="Interview with Local Farmers"
+                                allowfullscreen></iframe>
+                            </div>
+                            <p class="mt-3 text-center fw-bold">Interview with Local Farmers</p>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="ratio ratio-16x9">
+                              <iframe
+                                src="https://www.youtube.com/embed/Ha9rHIsiFpU"
+                                title="Sri Lankan Oxygen Economy Overview"
+                                allowfullscreen></iframe>
+                            </div>
+                            <p class="mt-3 text-center fw-bold">Sri Lankan Oxygen Economy Model</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 <div class="col-lg-6">
                   <div class="bg-light rounded">
                     <img
-                      src="img/blogs/why-the-oxygen-economy.jpg"
+                      src="img/blogs/addressing-potential-challenges-of-marketing-the-oxygen-economy.jpg"
                       class="card-img-top"
-                      alt="Why the Oxygen Economy?"
+                      alt="blog"
                       style="width: 100%" />
                   </div>
                   <div class="card-body" style="padding: 10px 0 5px 0">
-                    <p class="fw-bold mb-1">Why the Oxygen Economy?</p>
+                    <p class="fw-bold mb-1">
+                      Addressing Potential Challenges of marketing the Oxygen economy
+                    </p>
 
-                    <a href="blog.html" class="text-primary text-decoration-none"
-                      >Read More <i class="bi bi-arrow-right"></i
-                    ></a>
+                    <a
+                      href="#"
+                      class="text-primary text-decoration-none"
+                      data-bs-toggle="modal"
+                      data-bs-target="#blogFour">
+                      Read More <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  class="modal fade"
+                  id="blogFour"
+                  tabindex="-1"
+                  aria-labelledby="blogModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-white">
+                      <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="blogModalLabel">
+                          Addressing Potential Challenges of marketing the Oxygen economy
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body p-4">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img
+                              src="img/blogs/addressing-potential-challenges-of-marketing-the-oxygen-economy.jpg"
+                              alt="blog"
+                              class="img-fluid rounded mb-3" />
+                          </div>
+                          <div class="col-lg-6">
+                            <p class="fs-7 text-muted mb-0">
+                              Like any transformative idea, the Oxygen Economy faces potential challenges.
+                              Critics may argue that assigning a monetary value to Oxygen risks commodifying a
+                              natural resource that should remain freely accessible. Others may question the
+                              feasibility of measuring, validating and regulating oxygen production on a
+                              global scale.
+                            </p>
+                          </div>
+                        </div>
+
+                        <p class="fs-7 text-muted">
+                          These concerns can be addressed by emphasizing the ethical principles behind the
+                          Oxygen Economy. The goal is not to charge people for breathing but to ensure that
+                          those who contribute to its sustainability profit from financial contracts for
+                          Oxygen production. Additionally, such transparent systems for measuring and
+                          validating oxygen production will be crucial for building trust and ensuring
+                          fairness towards the vision of accounting for intergenerational wealth beyond the
+                          GDP framework that exists.
+                          <a
+                            href="https://www.sciencedirect.com/science/article/pii/S209592731830375X?via%3Dihub"
+                            target="_blank"
+                            rel="noopener"
+                            class="text-primary text-decoration-underline"
+                            >this ScienceDirect article on the Oxygen Economy</a
+                          >.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -427,17 +699,77 @@
                 <div class="col-lg-6">
                   <div class="bg-light rounded">
                     <img
-                      src="img/blogs/why-the-oxygen-economy.jpg"
+                      src="img/blogs/a-vision-for-the-future.jpg"
                       class="card-img-top"
-                      alt="Why the Oxygen Economy?"
+                      alt="blog"
                       style="width: 100%" />
                   </div>
                   <div class="card-body" style="padding: 10px 0 5px 0">
-                    <p class="fw-bold mb-1">Why the Oxygen Economy?</p>
+                    <p class="fw-bold mb-1">
+                      A Vision for the Future : Cycling Atmospheric Gasses (CAG’s) , A Global Commons Exchange
+                    </p>
 
-                    <a href="blog.html" class="text-primary text-decoration-none"
-                      >Read More <i class="bi bi-arrow-right"></i
-                    ></a>
+                    <a
+                      href="#"
+                      class="text-primary text-decoration-none"
+                      data-bs-toggle="modal"
+                      data-bs-target="#blogFive">
+                      Read More <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  class="modal fade"
+                  id="blogFive"
+                  tabindex="-1"
+                  aria-labelledby="blogModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-white">
+                      <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="blogModalLabel">
+                          A Vision for the Future : Cycling Atmospheric Gasses (CAG’s) , A Global Commons
+                          Exchange
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body p-4">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img
+                              src="img/blogs/a-vision-for-the-future.jpg"
+                              alt="blog"
+                              class="img-fluid rounded mb-3" />
+                          </div>
+                          <div class="col-lg-6">
+                            <p class="fs-7 text-muted mb-0">
+                              The Oxygen Economy represents a paradigm shift in how we think about our
+                              relationship with the planet. It challenges us to move beyond the notion of
+                              nature as an infinite resource and to recognize the true value of the Earth as
+                              an ecosystem that sustains life for all biota.
+                            </p>
+                          </div>
+                        </div>
+
+                        <p class="fs-7 text-muted">
+                          By aligning economic practices with environmental stewardship, the Oxygen Economy
+                          offers a path towards a more equitable and sustainable future that backs the
+                          foundations of intergenerational wealth to reflect our contributions to cycling
+                          atmospheric gasses of the atmosphere and our Global Commons. Imagine a world where
+                          the air we breathe is not taken for granted but cherished and protected. Where
+                          farmers, communities, and ecosystems are rewarded for their contributions to the
+                          planet’s well-being. Where industries operate with this truly revolutionary
+                          framework of accountability to prioritize the health of our shared environment. This
+                          is the vision of the Oxygen Economy—a vision that is within our reach if we act
+                          together, with urgency and determination to lay its foundations.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -452,7 +784,7 @@
         <div class="container">
           <div class="row g-4 py-5 wow fadeInUp">
             <div class="col-lg-7" style="padding-right: 60px">
-              <h4 class="text-dark mb-4">Case Study: Sri Lanka Pilot Project</h4>
+              <h4 class="text-dark mb-4">Sri Lanka Pilot Project</h4>
               <div class="row mb-2">
                 <div class="col-md-6">
                   <div class="ratio ratio-16x9">
@@ -518,14 +850,7 @@
             <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
               <div class="h-100 rounded">
                 <h4 class="text-primary">Our Feedbacks</h4>
-                <h1 class="display-4 mb-4">Clients are Talking</h1>
-                <p class="mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum atque soluta unde itaque.
-                  Consequatur quam odit blanditiis harum veritatis porro.
-                </p>
-                <!-- <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#"
-                  >Read All Reviews <i class="fas fa-arrow-right ms-2"></i
-                ></a> -->
+                <h1 class="display-4 mb-4">Quotes from stakeholders and beneficiaries</h1>
               </div>
             </div>
             <div class="col-xl-8">
@@ -534,8 +859,8 @@
                   <div class="d-flex">
                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
                     <p class="mt-4">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet
-                      dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
+                      add feedback. add feedback. add feedback. add feedback. add feedback. add feedback. add
+                      feedback.
                     </p>
                   </div>
                   <div class="d-flex justify-content-end">
@@ -545,19 +870,20 @@
                     </div>
                     <div class="bg-white rounded-circle ms-3">
                       <img
-                        src="img/testimonial-1.jpg"
+                        src="img/avator.png"
                         class="rounded-circle p-2"
                         style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary)"
                         alt="" />
                     </div>
                   </div>
                 </div>
-                <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.5s">
+
+                <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.3s">
                   <div class="d-flex">
                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
                     <p class="mt-4">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet
-                      dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
+                      add feedback. add feedback. add feedback. add feedback. add feedback. add feedback. add
+                      feedback.
                     </p>
                   </div>
                   <div class="d-flex justify-content-end">
@@ -567,19 +893,20 @@
                     </div>
                     <div class="bg-white rounded-circle ms-3">
                       <img
-                        src="img/testimonial-2.jpg"
+                        src="img/avator.png"
                         class="rounded-circle p-2"
                         style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary)"
                         alt="" />
                     </div>
                   </div>
                 </div>
-                <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
+
+                <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.3s">
                   <div class="d-flex">
                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
                     <p class="mt-4">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet
-                      dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
+                      add feedback. add feedback. add feedback. add feedback. add feedback. add feedback. add
+                      feedback.
                     </p>
                   </div>
                   <div class="d-flex justify-content-end">
@@ -589,7 +916,7 @@
                     </div>
                     <div class="bg-white rounded-circle ms-3">
                       <img
-                        src="img/testimonial-3.jpg"
+                        src="img/avator.png"
                         class="rounded-circle p-2"
                         style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary)"
                         alt="" />
@@ -604,305 +931,6 @@
     </section>
     <!-- Testimonial End -->
 
-    <!-- <section class="py-2 bg-white">
-      <div class="container-fluid">
-        <div class="container">
-          <div class="row g-4 py-5 wow fadeInUp">
-            <div class="col-lg-6">
-              <h4 class="text-dark mb-4">The Oxygen Economy Explained</h4>
-              <div class="row g-4">
-                <div class="col-sm-6">
-                  <div class="h-100">
-                    <div class="bg-light rounded">
-                      <img
-                        src="img/forest-1.jpg"
-                        class="card-img-top"
-                        alt="Why the Oxygen Economy?"
-                        style="width: 100%" />
-                    </div>
-                    <div class="card-body" style="padding: 10px 0 5px 0">
-                      <h5 class="card-title">Why the Oxygen Economy?</h5>
-                      <a href="blog.html" class="text-primary text-decoration-none"
-                        >Read More <i class="bi bi-arrow-right"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-6">
-                  <div class="h-100">
-                    <div class="bg-light rounded">
-                      <img
-                        src="img/forest-4.jpg"
-                        class="card-img-top"
-                        alt="Why the Oxygen Economy?"
-                        style="width: 100%" />
-                    </div>
-                    <div class="card-body" style="padding: 10px 0 5px 0">
-                      <h5 class="card-title">How the Oxygen Economy Works?</h5>
-                      <a href="blog.html" class="text-primary text-decoration-none"
-                        >Read More <i class="bi bi-arrow-right"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-6">
-                  <div class="h-100">
-                    <div class="bg-light rounded">
-                      <img
-                        src="img/forest-2.jpg"
-                        class="card-img-top"
-                        alt="Why the Oxygen Economy?"
-                        style="width: 100%" />
-                    </div>
-                    <div class="card-body" style="padding: 10px 0 5px 0">
-                      <h5 class="card-title">Scaling VI-Oxygen Economy Globally</h5>
-                      <a href="blog.html" class="text-primary text-decoration-none"
-                        >Read More <i class="bi bi-arrow-right"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-6">
-                  <div class="h-100">
-                    <div class="bg-light rounded">
-                      <img
-                        src="img/forest-3.jpg"
-                        class="card-img-top"
-                        alt="Why the Oxygen Economy?"
-                        style="width: 100%" />
-                    </div>
-                    <div class="card-body" style="padding: 10px 0 5px 0">
-                      <h5 class="card-title">A Vision for the Future JIS Global Commons Exchange</h5>
-                      <a href="blog.html" class="text-primary text-decoration-none"
-                        >Read More <i class="bi bi-arrow-right"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <hr class="text-muted" />
-
-              <div class="py-3">
-                <h4 class="text-dark mb-4">Antective Intervi</h4>
-                <div class="accordion" id="accordionExample">
-                  <div class="accordion-item border-0 mb-4">
-                    <h2 class="accordion-header" id="headingOne">
-                      <button
-                        class="accordion-button text-dark fs-6 rounded-top"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseTOne">
-                        Register Your Land
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      class="accordion-collapse collapse show"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body my-2">
-                        <p class="text-muted">
-                          add description add description add description add description add description add
-                          description add description add description add description add description add
-                          description add description add description
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item border-0 mb-4">
-                    <h2 class="accordion-header" id="headingTwo">
-                      <button
-                        class="accordion-button collapsed text-dark fs-6 rounded-top"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo">
-                        Measure & Validate Biomass (MFV)
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body my-2">
-                        <p class="text-muted">
-                          add description add description add description add description add description add
-                          description add description add description add description add description add
-                          description add description add description
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item border-0 mb-4">
-                    <h2 class="accordion-header" id="headingThree">
-                      <button
-                        class="accordion-button collapsed text-dark fs-6 rounded-top"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree">
-                        Contract with Oxygen Consumers
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body my-2">
-                        <p class="text-muted">
-                          add description add description add description add description add description add
-                          description add description add description add description add description add
-                          description add description add description
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item border-0 mb-4">
-                    <h2 class="accordion-header" id="headingFour">
-                      <button
-                        class="accordion-button collapsed text-dark fs-6 rounded-top"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour">
-                        Receive Payments via Financial Tools
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body my-2">
-                        <p class="text-muted">
-                          add description add description add description add description add description add
-                          description add description add description add description add description add
-                          description add description add description
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item border-0 mb-0">
-                    <h2 class="accordion-header" id="headingFive">
-                      <button
-                        class="accordion-button collapsed text-dark fs-6 rounded-top"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive">
-                        Scale & Sustain
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingFive"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body my-2">
-                        <p class="text-muted">
-                          add description add description add description add description add description add
-                          description add description add description add description add description add
-                          description add description add description
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-1"></div>
-
-            <div class="col-lg-5 wow fadeInUp">
-              <h4 class="text-dark mb-4">The Oxygen Economy Explained</h4>
-
-              <div class="row g-4 pb-3">
-                <div class="col-4">
-                  <div class="bg-light rounded">
-                    <img src="img/avator.png" class="card-img-top" alt="" style="width: 100%" />
-                  </div>
-                </div>
-                <div class="col-8">
-                  <p class="text-muted fw-bold mb-2">A Commitment to Organizations</p>
-                  <p class="txt-muted">
-                    We are a committed organization to support oxygen producers by dedicated ecosystem service
-                    agents.
-                  </p>
-                </div>
-              </div>
-
-              <div class="row g-4 pb-3">
-                <div class="col-4">
-                  <div class="bg-light rounded">
-                    <img src="img/building.png" class="card-img-top" alt="" style="width: 100%" />
-                  </div>
-                </div>
-                <div class="col-8">
-                  <p class="text-muted fw-bold mb-2">Scaling Oxygen Economy Globally</p>
-                  <p class="txt-muted">Fostering and pioneering an Oxygen product and service.</p>
-                </div>
-              </div>
-
-              <div class="row g-4 pb-2">
-                <div class="col-4">
-                  <div class="bg-light rounded">
-                    <img src="img/growth.png" class="card-img-top" alt="" style="width: 100%" />
-                  </div>
-                </div>
-                <div class="col-8">
-                  <p class="text-muted fw-bold mb-2">Challenges in Marketing the Oxygen Economy</p>
-                  <p class="txt-muted">Foreseeing opportunities and challenges for an oxygen service.</p>
-                </div>
-              </div>
-
-              <hr class="text-muted" />
-
-              <h4 class="text-dark mb-4 pt-3">Ready to Joing the Movement?</h4>
-
-              <div class="row g-4 pb-2">
-                <div class="col-sm-6">
-                  <a class="btn btn-primary rounded-sm py-3 px-5 w-100" href="#"
-                    >Register as a <br />Oxygen Producer</a
-                  >
-                </div>
-                <div class="col-sm-6">
-                  <a class="btn btn-primary rounded-sm py-3 px-5 w-100" href="#"
-                    >Partner as <br />Oxygen Consumer</a
-                  >
-                </div>
-              </div>
-
-              <hr class="text-muted" />
-
-              <h4 class="text-dark mb-4 pt-3">Optional Additions</h4>
-
-              <div>
-                <ul class="ps-3">
-                  <li class="text-muted mb-2">Live Chat Widget for questions about the Oxygen Economy</li>
-                  <li class="text-muted mb-2">
-                    Interactive World Map showing where initiatives are in progress
-                  </li>
-                  <li class="text-muted">Forum or Discussion Board for the Oxygen Economy community</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <!-- Footer Start -->
     <div class="container-fluid footer bg-primary pt-4 wow fadeIn" data-wow-delay="0.2s">
       <div class="container py-5">
@@ -910,12 +938,21 @@
           <div class="col-md-6 col-lg-6 col-xl-5">
             <div class="footer-item d-flex flex-column">
               <div class="footer-item">
-                <h4 class="text-light mb-4">Newsletter</h4>
-                <p class="mb-3 text-light">
-                  Earth Restoration is dedicated to regenerating ecosystems, restoring biodiversity, and
-                  empowering communities to create a sustainable and thriving planet for future generations.
-                </p>
-                <div class="position-relative mx-auto rounded-pill">
+                <div class="row">
+                  <div class="col-lg-5">
+                    <img src="../img/logo.png" alt="logo" class="w-100" />
+                  </div>
+                  <div class="col-lg-7">
+                    <h4 class="text-light mb-4 fw-bold">Earth Restoration</h4>
+                    <p class="mb-3 text-light">
+                      Earth Restoration is dedicated to regenerating ecosystems, restoring biodiversity, and
+                      empowering communities to create a sustainable and thriving planet for future
+                      generations.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <div class="position-relative mx-auto rounded-pill">
                   <input
                     class="form-control rounded-sm w-100 py-3 ps-4 pe-5"
                     type="text"
@@ -925,7 +962,7 @@
                     class="btn btn-primary rounded-sm position-absolute top-0 end-0 py-2 mt-2 me-2">
                     SignUp
                   </button>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -935,37 +972,38 @@
               <h4 class="text-white mb-4">Quick Links</h4>
               <div class="row g-5">
                 <div class="col-6 footer-item d-flex flex-column">
-                  <a href="#home" class="text-light"
+                  <a href="index.html#home" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> Home</a
                   >
-                  <a href="#about" class="text-light"
+                  <a href="index.html#about" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> About</a
                   >
-                  <a href="#why-we-do-it" class="text-light"
+                  <a href="index.html#why-we-do-it" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> Why we do it</a
                   >
-                  <a href="#how-we-do-it" class="text-light"
+                  <a href="index.html#how-we-do-it" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> How we do it</a
                   >
-                  <a href="#our-products" class="text-light"
+                  <a href="index.html#our-products" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> Our Products</a
                   >
                 </div>
                 <div class="col-6 footer-item d-flex flex-column">
-                  <a href="#how-it-works" class="text-light"
+                  <a href="index.html#how-it-works" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> How it works</a
                   >
-                  <a href="#other-services" class="text-light"
+                  <a href="index.html#other-services" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> Other Services</a
                   >
-                  <a href="#who-we-are" class="text-light"
+                  <a href="index.html#who-we-are" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> Who We Are</a
                   >
-                  <a href="blogs.html" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> Blogs</a
-                  >
+
                   <a href="oxygen-economy.html" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> OXYGEN ECONOMY</a
+                  >
+                  <a href="index.html#contact" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Contact</a
                   >
                 </div>
               </div>
@@ -975,9 +1013,11 @@
           <div class="col-md-6 col-lg-6 col-xl-3">
             <div class="footer-item d-flex flex-column">
               <h4 class="text-white mb-4">Contact Info</h4>
-              <a href="#" class="text-light"
-                ><i class="fa fa-map-marker-alt me-2"></i> Belipola Arboretum, Mirahawatte, Sri Lanka.</a
-              >
+              <a href="#" class="text-light">
+                <i class="fa fa-map-marker-alt me-2"></i> Belipola Arboretum, Mirahawatte,<br />
+                <span style="padding-left: 22px">Sri Lanka.</span>
+              </a>
+
               <a href="mailto:info@restore.earth" class="text-light"
                 ><i class="fas fa-envelope me-2"></i> info@restore.earth</a
               >

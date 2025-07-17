@@ -73,10 +73,7 @@
       }
 
       .custom-bg-shape {
-        background-color: #e7ebe7;
-        padding: 1.5rem;
-        border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 90% 50% 90% 50% / 20% 80% 20% 80%;
         transition: 0.3s ease;
       }
 
@@ -84,6 +81,105 @@
         box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.1);
         transform: translateY(-2px);
         transition: all 0.3s ease;
+      }
+
+      .hover-card {
+        border: none;
+        transition: transform 0.3s;
+        cursor: pointer;
+      }
+      .hover-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .flip-card-sdg {
+        perspective: 1000px;
+        border-radius: 10px;
+        height: 200px;
+      }
+
+      .card-inner-sdg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+      }
+
+      .flip-card-sdg:hover .card-inner-sdg {
+        transform: rotateY(180deg);
+      }
+
+      .card-front-sdg,
+      .card-back-sdg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        backface-visibility: hidden;
+        top: 0;
+        left: 0;
+      }
+
+      .card-front-sdg {
+        background-color: #f9f9f7;
+        z-index: 2;
+      }
+
+      .card-back-sdg {
+        background-color: #f9f9f7;
+        transform: rotateY(180deg);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      /* Flip card setup */
+      .flip-card-img-wrapper {
+        perspective: 1000px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .flip-card-img-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+
+      .team-card:hover .flip-card-img-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Front */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        border-radius: 0.75rem 0.75rem 0 0;
+      }
+
+      /* Back */
+      .flip-card-back {
+        background-color: #f9f9f9;
+        transform: rotateY(180deg);
+        text-align: center;
+      }
+
+      /* blog */
+      .btn-close:focus {
+        outline: none;
+        box-shadow: none;
       }
     </style>
   </head>
@@ -165,16 +261,16 @@
               <a href="#how-it-works" class="nav-item nav-link">How it works</a>
               <a href="#other-services" class="nav-item nav-link">Other Services</a>
               <a href="#who-we-are" class="nav-item nav-link">Who We Are</a>
-              <a href="blogs.html" class="nav-item nav-link">Blogs</a>
-              <!-- <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Other</a>
-                <div class="dropdown-menu m-0">
-                  <a href="blogs.html" class="dropdown-item">Blogs</a>
-                  <a href="#further-reading" class="dropdown-item">Further reading</a>
-                  <a href="#faq" class="dropdown-item">Scientific Publications & FAQ</a>
-                </div>
-              </div> -->
               <a href="oxygen-economy.html" class="nav-item nav-link">OXYGEN ECONOMY</a>
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
+                  >Further reading</a
+                >
+                <div class="dropdown-menu m-0">
+                  <a href="global.html" class="dropdown-item">Global</a>
+                  <a href="local.html" class="dropdown-item">Local in Sri Lanka </a>
+                </div>
+              </div>
             </div>
           </div>
         </nav>
@@ -248,8 +344,8 @@
 
       <div class="container vi-mi py-5">
         <div class="row g-4 justify-content-center wow fadeInUp">
-          <div class="col-md-6">
-            <div class="info-box bg-white text-center p-5 h-100 rounded shadow-sm bg-light">
+          <div class="col-md-5">
+            <div class="info-box hover-card bg-white text-center p-5 h-100 rounded shadow-sm bg-light">
               <div class="info-content">
                 <div class="info-icon mb-3">
                   <i class="fas fa-eye fa-4x text-primary"></i>
@@ -262,8 +358,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="info-box bg-white text-center p-5 h-100 shadow-sm bg-light">
+          <div class="col-md-5">
+            <div class="info-box hover-card bg-white text-center p-5 h-100 shadow-sm bg-light">
               <div class="info-content">
                 <div class="info-icon mb-3">
                   <i class="fas fa-bullseye fa-4x text-primary"></i>
@@ -286,18 +382,18 @@
       <div class="container-fluid">
         <div class="container py-5">
           <div class="wow fadeInUp">
-            <h4 class="text-primary">About</h4>
-            <h1 class="display-5 text-dark mb-4 fs-3">
+            <h4 class="text-primary mb-3">About</h4>
+            <h1 class="display-5 text-dark fs-3">
               The nature of our business : <br />CPES ‘positive externalities’ deposited to the Global Commons
             </h1>
           </div>
 
-          <div class="row">
+          <div class="row pt-4">
             <div class="col-lg-5 text-sm-center text-md-start pt-4 pt-lg-0 wow fadeInLeft">
               <img src="img/graph-2.png" alt="home-1" class="img-fluid" />
             </div>
 
-            <div class="col-lg-7 wow fadeInRight">
+            <div class="col-lg-7 wow fadeInRight" style="padding-left: 40px">
               <p class="fs-6 mb-3 text-muted">
                 There is no ‘production technology’ that is more efficient than trees and plants to produce
                 primary ecosystem services sucha as Oxygen. But the amount of PES that they provide varies
@@ -368,57 +464,248 @@
         </div>
 
         <div class="container wow fadeInUp">
-          <div class="row g-4 justify-content-center">
-            <div class="col-sm-4">
-              <div class="h-100">
-                <div class="bg-light rounded">
-                  <img
-                    src="img/forest-1.jpg"
-                    class="card-img-top"
-                    alt="Why the Oxygen Economy?"
-                    style="width: 100%" />
-                </div>
-                <div class="card-body" style="padding: 10px 0 5px 0">
-                  <h5 class="card-title">Why the Oxygen Economy?</h5>
-                  <a href="blogs/blog-1.html" class="text-primary text-decoration-none"
-                    >Read More <i class="bi bi-arrow-right"></i
-                  ></a>
+          <div class="row g-5 justify-content-center">
+            <div class="col-lg-4">
+              <div class="bg-light rounded">
+                <img
+                  src="img/blogs/why-the-oxygen-economy.jpg"
+                  class="card-img-top"
+                  alt="Why the Oxygen Economy?"
+                  style="width: 100%" />
+              </div>
+              <div class="card-body" style="padding: 10px 0 5px 0">
+                <p class="fw-bold mb-1">Why the Oxygen Economy?</p>
+
+                <a
+                  href="#"
+                  class="text-primary text-decoration-none"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogOne">
+                  Read More <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="modal fade"
+              id="blogOne"
+              tabindex="-1"
+              aria-labelledby="blogModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-white">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="blogModalLabel">Why the Oxygen Economy?</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body p-4">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <img
+                          src="img/blogs/why-the-oxygen-economy.jpg"
+                          alt="blog"
+                          class="img-fluid rounded mb-3" />
+                      </div>
+                      <div class="col-lg-6">
+                        <p class="fs-7 text-muted mb-0">
+                          The Air We Breathe Is free but being rapidly degraded, its protection should be
+                          valued. Its most critical component, Oxygen surrounds us, filling our lungs with
+                          every breath we take. For many of us, it’s an invisible gift of nature that we take
+                          for granted. But Why is this essential resource—the very foundation of life— free to
+                          be exploited at present?
+                        </p>
+                      </div>
+                    </div>
+
+                    <p class="fs-7 text-muted">
+                      Why could not trees, plants, and photosynthetic organisms that produce oxygen have
+                      economic value ? Could those who benefit most from using the resources of the Global
+                      Commons be required to contribute to its maintenance? This is the idea behind the Oxygen
+                      Economy, a bold and transformative concept that seeks to address environmental and
+                      social challenges in a way that is fair, sustainable, and forward-thinking beyond GDP
+                      value which measures the success of our societies today.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-sm-4">
-              <div class="h-100">
-                <div class="bg-light rounded">
-                  <img
-                    src="img/forest-4.jpg"
-                    class="card-img-top"
-                    alt="Why the Oxygen Economy?"
-                    style="width: 100%" />
-                </div>
-                <div class="card-body" style="padding: 10px 0 5px 0">
-                  <h5 class="card-title">How the Oxygen Economy Works?</h5>
-                  <a href="blogs/blog-1.html" class="text-primary text-decoration-none"
-                    >Read More <i class="bi bi-arrow-right"></i
-                  ></a>
+            <div class="col-lg-4">
+              <div class="bg-light rounded">
+                <img
+                  src="img/blogs/how-the-oxygen-economy-works.jpg"
+                  class="card-img-top"
+                  alt="Why the Oxygen Economy?"
+                  style="width: 100%" />
+              </div>
+              <div class="card-body" style="padding: 10px 0 5px 0">
+                <p class="fw-bold mb-1">How the Oxygen Economy Works?</p>
+
+                <a
+                  href="#"
+                  class="text-primary text-decoration-none"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogTwo">
+                  Read More <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="modal fade"
+              id="blogTwo"
+              tabindex="-1"
+              aria-labelledby="blogModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-white">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="blogModalLabel">How the Oxygen Economy Works?</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body p-4">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <img
+                          src="img/blogs/how-the-oxygen-economy-works.jpg"
+                          alt="blog"
+                          class="img-fluid rounded mb-3" />
+                      </div>
+                      <div class="col-lg-6">
+                        <p class="fs-7 text-muted mb-0">
+                          The Oxygen Economy operates on the principles of private property being valued using
+                          financial tools such as Valuation guarantees, stakeholder Contracts and Insurances
+                          to monetize contractually produced oxygen as a financial product . This involves
+                          three key components:
+                        </p>
+                      </div>
+                    </div>
+
+                    <ol>
+                      <li class="text-muted mb-2 fs-7">
+                        MRV Guarantee : Assigning an economic value to the oxygen produced by contracted and
+                        registered units in identified geographical areas of production is based on the MRV of
+                        PES productivity by trees / plants or photosynthetic organisms such as Cyanobacteria.
+                      </li>
+                      <li class="text-muted mb-2 fs-7">
+                        Stakeholder Contracts and Compensation: Establishing formal agreements between oxygen
+                        consumers (e.g., corporations / Space exploration companies ) and contracted oxygen
+                        producers (e.g., farmers, Local communities) to ensure optimal primary ecosystem
+                        services
+                      </li>
+                      <li class="text-muted mb-2 fs-7">
+                        TheFinancial Tool: The validated quantity of photosynthetic biomass is value-set using
+                        ER methodology and a market peg approach, based on the concept of mining oxygen from
+                        the Global Commons. For an example of how oxygen is valued in practical scenarios, see
+                        <a
+                          href="https://livewell.com/finance/how-much-does-home-oxygen-cost-without-insurance/"
+                          target="_blank"
+                          rel="noopener"
+                          class="text-primary text-decoration-underline"
+                          >oxygen cost without insurance</a
+                        >.
+                      </li>
+                      <li class="text-muted mb-0 fs-7">
+                        Policy and Regulation: Introducing legal frameworks at a regional scale to enforce
+                        accountability and prevent the exploitation of oxygen resources.The private contracts
+                        would play a key role in monitoring bioregional Oxygen production, ensuring
+                        compliance, and incentivizing sustainable practices to scale the Oxygen economy.
+                      </li>
+                    </ol>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-sm-4">
-              <div class="h-100">
-                <div class="bg-light rounded">
-                  <img
-                    src="img/forest-2.jpg"
-                    class="card-img-top"
-                    alt="Why the Oxygen Economy?"
-                    style="width: 100%" />
-                </div>
-                <div class="card-body" style="padding: 10px 0 5px 0">
-                  <h5 class="card-title">Scaling VI-Oxygen Economy Globally</h5>
-                  <a href="blogs/blog-1.html" class="text-primary text-decoration-none"
-                    >Read More <i class="bi bi-arrow-right"></i
-                  ></a>
+            <div class="col-lg-4">
+              <div class="bg-light rounded">
+                <img
+                  src="img/blogs/scaling-the-oxygen-economy-globally.jpg"
+                  class="card-img-top"
+                  alt="blog"
+                  style="width: 100%" />
+              </div>
+              <div class="card-body" style="padding: 10px 0 5px 0">
+                <p class="fw-bold mb-1">Scaling the Oxygen Economy Globally</p>
+
+                <a
+                  href="#"
+                  class="text-primary text-decoration-none"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogThree">
+                  Read More <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="modal fade"
+              id="blogThree"
+              tabindex="-1"
+              aria-labelledby="blogModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-white">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="blogModalLabel">
+                      Scaling the Oxygen Economy Globally
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body p-4">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <img
+                          src="img/blogs/scaling-the-oxygen-economy-globally.jpg"
+                          alt="blog"
+                          class="img-fluid rounded mb-3" />
+                      </div>
+                      <div class="col-lg-6">
+                        <p class="fs-7 text-muted mb-0">
+                          While our efforts in Sri Lanka are a promising start, the true potential of the
+                          Oxygen Economy lies in its ability to scale globally. Imagine a world where farmers
+                          are compensated for the establishment of trees, where rural and even urban greenery
+                          projects could receive funding to expand their impact for this paradigm of business.
+                          Such a system would not only help combat climate change but also address economic
+                          inequalities of the current GDP paradigm, by together contracting the Oxygen
+                          economic asset tool to those who sustain the planet’s life-support systems.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="row mb-2">
+                      <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                          <iframe
+                            src="https://www.youtube.com/embed/Ha9rHIsiFpU"
+                            title="Interview with Local Farmers"
+                            allowfullscreen></iframe>
+                        </div>
+                        <p class="mt-3 text-center fw-bold">Interview with Local Farmers</p>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                          <iframe
+                            src="https://www.youtube.com/embed/Ha9rHIsiFpU"
+                            title="Sri Lankan Oxygen Economy Overview"
+                            allowfullscreen></iframe>
+                        </div>
+                        <p class="mt-3 text-center fw-bold">Sri Lankan Oxygen Economy Model</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -496,45 +783,201 @@
             <p class="text-muted mb-4 fs-6 fw-bold">Our Sustainable Development Goals</p>
           </div>
 
-          <div class="row justify-content-center text-center g-3 wow fadeInUp">
-            <!-- SDG Icons Left Side -->
+          <div class="row justify-content-center text-center g-4 wow fadeInUp">
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 1" class="img-fluid" />
-            </div>
-            <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 2" class="img-fluid" />
-            </div>
-            <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 3" class="img-fluid" />
-            </div>
-            <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 4" class="img-fluid" />
-            </div>
-            <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 5" class="img-fluid" />
-            </div>
-            <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 6" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- SDG Icons Right Side -->
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 7" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 8" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 9" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="row justify-content-center text-center g-4 wow fadeInUp pt-4">
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 13" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 14" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 15" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4 col-sm-2">
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4 col-sm-2">
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center text-center g-4 pt-4 wow fadeInUp">
+            <div class="col-4 col-sm-2">
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4 col-sm-2">
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4 col-sm-2">
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -852,45 +1295,201 @@
             <p class="text-muted fs-6 mb-4 fw-bold">Our Sustainable Development Goals</p>
           </div>
 
-          <div class="row justify-content-center text-center g-3 wow fadeInUp">
-            <!-- SDG Icons Left Side -->
+          <div class="row justify-content-center text-center g-4 wow fadeInUp">
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 1" class="img-fluid" />
-            </div>
-            <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 2" class="img-fluid" />
-            </div>
-            <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 3" class="img-fluid" />
-            </div>
-            <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 4" class="img-fluid" />
-            </div>
-            <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 5" class="img-fluid" />
-            </div>
-            <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 6" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- SDG Icons Right Side -->
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 7" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 8" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 9" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="row justify-content-center text-center g-4 wow fadeInUp pt-4">
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 13" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 14" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="col-4 col-sm-2">
-              <img src="img/SDGs/SDG1.png" alt="SDG 15" class="img-fluid" />
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4 col-sm-2">
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4 col-sm-2">
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center text-center g-4 pt-4 wow fadeInUp">
+            <div class="col-4 col-sm-2">
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4 col-sm-2">
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4 col-sm-2">
+              <div class="flip-card-sdg bg-white shadow-sm rounded-4 overflow-hidden">
+                <div class="card-inner-sdg">
+                  <div class="card-front-sdg">
+                    <img src="img/SDGs/SDG1.png" class="img-fluid rounded-top-4" alt="tree" />
+                  </div>
+                  <div class="card-back-sdg">
+                    <p class="text-muted fs-7">
+                      Trees release oxygen through photosynthesis, which is essential for sustaining all
+                      aerobic life on Earth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -994,132 +1593,150 @@
         <div class="text-center mx-auto pb-3 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px">
           <h4 class="text-dark">Our Team</h4>
         </div>
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4 justify-content-center" style="padding: 0 80px">
           <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="team-img">
-                <img src="img/team/Ranil.jpg" alt="Team Member" />
+            <div class="team-card rounded-4 shadow-sm overflow-hidden">
+              <div class="flip-card-img-wrapper">
+                <div class="flip-card-img-inner">
+                  <div class="flip-card-front position-relative">
+                    <img
+                      src="img/team/Ranil.jpg"
+                      class="img-fluid w-100 rounded-top-4 custom-bg-shape p-4"
+                      alt="Team Member" />
+                  </div>
 
-                <!-- Always visible LinkedIn icon -->
-                <div class="linkedin-icon">
-                  <a href="https://www.linkedin.com/in/ranil-senanayake-7a097313/" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </div>
-
-                <!-- Hover description -->
-                <div class="overlay-content">
-                  <p>
-                    A pioneering systems ecologist, the founder of Analog Forestry method, Dr. Senanayake’s
-                    vision for EarthRestoration has paved the foundations for wealth backed by ecological
-                    health for all beings.
-                  </p>
+                  <div
+                    class="flip-card-back d-flex align-items-center justify-content-center p-3 rounded-top-4">
+                    <p class="text-muted mb-0 px-2 small">
+                      A pioneering systems ecologist, the founder of Analog Forestry method, Dr. Senanayake’s
+                      vision for EarthRestoration has paved the foundations for wealth backed by ecological
+                      health for all beings.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
-                <h4 class="text-dark fs-5">Dr. F. Ranil Senanayake</h4>
-                <p class="text-light fs-6 mb-0">
-                  Senior Systems Ecologist <br />
-                  Founder
-                </p>
+              <div class="text-center text-light pb-2">
+                <h4 class="text-dark fs-5 mb-1">Dr. F. Ranil Senanayake</h4>
+                <p class="mb-0 text-muted">Senior Systems Ecologist <br />Founder</p>
+                <a
+                  href="https://www.linkedin.com/in/ranil-senanayake-7a097313/"
+                  target="_blank"
+                  class="btn nav-fill"
+                  ><i class="fab fa-linkedin-in text-primary"></i
+                ></a>
               </div>
             </div>
           </div>
+
           <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="team-img">
-                <img src="img/team/dejan.jpg" alt="Team Member" />
+            <div class="team-card rounded-4 shadow-sm overflow-hidden">
+              <div class="flip-card-img-wrapper">
+                <div class="flip-card-img-inner">
+                  <div class="flip-card-front position-relative">
+                    <img
+                      src="img/team/dejan.jpg"
+                      class="img-fluid w-100 rounded-top-4 custom-bg-shape p-4"
+                      alt="Team Member" />
+                  </div>
 
-                <!-- Always visible LinkedIn icon -->
-                <div class="linkedin-icon">
-                  <a href="https://www.linkedin.com/in/dejan-dezoysa-8a3a72163/" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </div>
-
-                <!-- Hover description -->
-                <div class="overlay-content">
-                  <p>
-                    Dejan is the system and operations architect of EarthRestoration methodology. He designed
-                    the PILOT intervention demonstrating community benefits and educational modules for
-                    LifeForce interventions and outcomes using the LifeForce system. His passionate founding
-                    role and leadership stems from the intention of alleviating rural poverty by using
-                    ecosystem services as a proxy for wealth generation.
-                  </p>
+                  <div
+                    class="flip-card-back d-flex align-items-center justify-content-center p-3 rounded-top-4">
+                    <p class="text-muted mb-0 px-2 small">
+                      Dejan is the system and operations architect of EarthRestoration methodology. He
+                      designed the PILOT intervention demonstrating community benefits and educational modules
+                      for LifeForce interventions and outcomes using the LifeForce system. His passionate
+                      founding role and leadership stems from the intention of alleviating rural poverty by
+                      using ecosystem services as a proxy for wealth generation.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
-                <h4 class="text-dark fs-5">Dejan de Zoysa</h4>
-                <p class="text-light fs-6 mb-0">
+              <div class="text-center text-light pb-2">
+                <h4 class="text-dark fs-5 mb-1">Dejan de Zoysa</h4>
+                <p class="mb-0 text-muted">
                   Managing Director <br />
                   Co. Founder
                 </p>
+                <a
+                  href="https://www.linkedin.com/company/earth-restoration/"
+                  target="_blank"
+                  class="btn nav-fill"
+                  ><i class="fab fa-linkedin-in text-primary"></i
+                ></a>
               </div>
             </div>
           </div>
+
           <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="team-img">
-                <img src="img/team/dejan.jpg" alt="Team Member" />
+            <div class="team-card rounded-4 shadow-sm overflow-hidden">
+              <div class="flip-card-img-wrapper">
+                <div class="flip-card-img-inner">
+                  <div class="flip-card-front position-relative">
+                    <img
+                      src="img/avator.png"
+                      class="img-fluid w-100 rounded-top-4 custom-bg-shape p-4"
+                      alt="Team Member" />
+                  </div>
 
-                <!-- Always visible LinkedIn icon -->
-                <div class="linkedin-icon">
-                  <a href="" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </div>
-
-                <!-- Hover description -->
-                <div class="overlay-content">
-                  <p>
-                    Nimesh leads DATA retrieval and designs ground-based Monitoring, Reporting, and
-                    Verification (MRV) outcomes of LifeForce interventions. His work specializes in developing
-                    and refining field data collection and analysis techniques to ensure accurate, scalable,
-                    and transparent assessments of Photosynthetic Biomass and Value Setting market approaches
-                    for Primary Ecosystem Services (PES) .
-                  </p>
+                  <div
+                    class="flip-card-back d-flex align-items-center justify-content-center p-3 rounded-top-4">
+                    <p class="text-muted mb-0 px-2 small">
+                      Nimesh leads DATA retrieval and designs ground-based Monitoring, Reporting, and
+                      Verification (MRV) outcomes of LifeForce interventions. His work specializes in
+                      developing and refining field data collection and analysis techniques to ensure
+                      accurate, scalable, and transparent assessments of Photosynthetic Biomass and Value
+                      Setting market approaches for Primary Ecosystem Services (PES).
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
-                <h4 class="text-dark fs-5">Nimesh Chathuranga</h4>
-                <p class="text-light fs-6 mb-0">
-                  Senior Executive <br />
-                  Research and Development
-                </p>
+              <div class="text-center text-light pb-2">
+                <h4 class="text-dark fs-5 mb-1">Nimesh Chathuranga</h4>
+                <p class="mb-0 text-muted">Senior Executive <br />Research and Development</p>
+                <a
+                  href="https://www.linkedin.com/company/earth-restoration/"
+                  target="_blank"
+                  class="btn nav-fill"
+                  ><i class="fab fa-linkedin-in text-primary"></i
+                ></a>
               </div>
             </div>
           </div>
+
           <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="team-img">
-                <img src="img/team/dejan.jpg" alt="Team Member" />
+            <div class="team-card rounded-4 shadow-sm overflow-hidden">
+              <div class="flip-card-img-wrapper">
+                <div class="flip-card-img-inner">
+                  <div class="flip-card-front position-relative">
+                    <img
+                      src="img/avator.png"
+                      class="img-fluid w-100 rounded-top-4 custom-bg-shape p-4"
+                      alt="Team Member" />
+                  </div>
 
-                <!-- Always visible LinkedIn icon -->
-                <div class="linkedin-icon">
-                  <a href="https://www.linkedin.com/in/example" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </div>
-
-                <!-- Hover description -->
-                <div class="overlay-content">
-                  <p>
-                    Chandana leads the DATA management and analysis aspects for value setting Photosynthetic
-                    Biomass. His passion is in development of field-based MRV systems for assessing ecosystem
-                    health aligned with nature-based solutions and rural development goals.
-                  </p>
+                  <div
+                    class="flip-card-back d-flex align-items-center justify-content-center p-3 rounded-top-4">
+                    <p class="text-muted mb-0 px-2 small">
+                      Chandana leads the DATA management and analysis aspects for value setting Photosynthetic
+                      Biomass. His passion is in development of field-based MRV systems for assessing
+                      ecosystem health aligned with nature-based solutions and rural development goals.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
-                <h4 class="text-dark fs-5">MKL Chandana</h4>
-                <p class="text-light fs-6 mb-0">
-                  Senior Executive <br />
-                  Data Management & Analysis
-                </p>
+              <div class="text-center text-light pb-2">
+                <h4 class="text-dark fs-5 mb-1">MKL Chandana</h4>
+                <p class="mb-0 text-muted">Senior Executive <br />Data Management & Analysis</p>
+                <a
+                  href="https://www.linkedin.com/company/earth-restoration/"
+                  target="_blank"
+                  class="btn nav-fill"
+                  ><i class="fab fa-linkedin-in text-primary"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -1128,62 +1745,82 @@
 
       <div class="container team pb-5">
         <div class="text-center mx-auto pb-3 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px">
-          <h4 class="text-dark">
-            Technology Affiliate -
+          <h4 class="text-dark">Technology Affiliate</h4>
+          <p class="fs-6">
             <a href="https://agro.elzian.com/" target="_blank" class="text-primary text-decoration-underline"
               >Elzian Agro</a
             >
-          </h4>
+          </p>
         </div>
         <div class="row g-4 justify-content-center">
           <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="team-img">
-                <img src="img/team/lilan.jpg" alt="Team Member" />
-
-                <div class="linkedin-icon">
-                  <a href="https://www.linkedin.com/in/lilanofficial/" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
+            <div class="team-card rounded-4 shadow-sm overflow-hidden">
+              <div class="">
+                <div class="">
+                  <div class="position-relative">
+                    <img
+                      src="img/team/lilan.jpg"
+                      class="img-fluid w-100 rounded-top-4 custom-bg-shape p-4"
+                      alt="Team Member" />
+                  </div>
                 </div>
               </div>
 
-              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
-                <p class="text-dark fs-6 mb-0 fw-bold">Lilan Dayananda</p>
+              <div class="text-center pb-2">
+                <p class="mb-0 text-dark fw-bold">Lilan Dayananda</p>
+                <a
+                  href="https://www.linkedin.com/company/earth-restoration/"
+                  target="_blank"
+                  class="btn nav-fill"
+                  ><i class="fab fa-linkedin-in text-primary"></i
+                ></a>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="team-img">
-                <img src="img/team/pankajan.jpg" alt="Team Member" />
 
-                <div class="linkedin-icon">
-                  <a href="https://www.linkedin.com/in/pankajan05/" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-card rounded-4 shadow-sm overflow-hidden">
+              <div class="">
+                <div class="">
+                  <div class="position-relative">
+                    <img
+                      src="img/team/pankajan.jpg"
+                      class="img-fluid w-100 rounded-top-4 custom-bg-shape p-4"
+                      alt="Team Member" />
+                  </div>
                 </div>
               </div>
 
-              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
-                <p class="text-dark fs-6 mb-0 fw-bold">Pankajan Satkunam</p>
+              <div class="text-center pb-2">
+                <p class="mb-0 text-dark fw-bold">Pankajan Satkunam</p>
+                <a href="https://www.linkedin.com/in/pankajan05/" target="_blank" class="btn nav-fill"
+                  ><i class="fab fa-linkedin-in text-primary"></i
+                ></a>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="team-img">
-                <img src="img/team/tharindu.jpg" alt="Team Member" />
 
-                <div class="linkedin-icon">
-                  <a href="https://www.linkedin.com/in/tharindu-priyankara-0b4486152/" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-card rounded-4 shadow-sm overflow-hidden">
+              <div class="">
+                <div class="">
+                  <div class="position-relative">
+                    <img
+                      src="img/team/tharindu.jpg"
+                      class="img-fluid w-100 rounded-top-4 custom-bg-shape p-4"
+                      alt="Team Member" />
+                  </div>
                 </div>
               </div>
 
-              <div class="team-content bg-primary text-center rounded-bottom py-3 px-2">
-                <p class="text-dark fs-6 mb-0 fw-bold">Tharindu Dissanayake</p>
+              <div class="text-center pb-2">
+                <p class="mb-0 text-dark fw-bold">Tharindu Dissanayake</p>
+                <a
+                  href="https://www.linkedin.com/in/tharindu-priyankara-0b4486152/"
+                  target="_blank"
+                  class="btn nav-fill"
+                  ><i class="fab fa-linkedin-in text-primary"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -1197,46 +1834,40 @@
       <div id="faq" class="container-fluid faq">
         <div class="container py-5">
           <div class="row g-5">
-            <div class="col-lg-3 wow fadeInLeft" data-wow-delay="0.1s">
+            <div class="col-lg-4 wow fadeInLeft" data-wow-delay="0.1s">
               <h4 class="text-primary mb-3">Scientific Publications</h4>
 
-              <div class="mb-3">
+              <div class="p-4 bg-white shadow-sm rounded mb-4 hover-card">
+                <h4 class="text-dark fs-5">Science Publication 1</h4>
+                <p class="text-muted fs-6">Realizing the Value of Photosynthetic Biomass</p>
                 <a
                   href="pdf/Realizing_the_Value_of_Photosynthetic_Bi.pdf"
-                  target="_blank"
-                  class="text-decoration-none w-100">
-                  <div
-                    class="p-3 rounded shadow-sm bg-light hover-shadow h-100"
-                    style="border: 2px solid #79b083">
-                    <h5 class="text-primary mb-2">Science Publication 1</h5>
-                    <p class="text-muted mb-0">Realizing the Value of Photosynthetic Biomass</p>
-                  </div>
+                  class="text-primary text-decoration-none"
+                  target="_blank">
+                  Read More <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
 
-              <div class="">
+              <div class="p-4 bg-white shadow-sm rounded hover-card">
+                <h4 class="text-dark fs-5">Science Publication 2</h4>
+                <p class="text-muted fs-6">ER Methodology for Mangrove Species</p>
                 <a
                   href="pdf/ER methodology, Mangrove Species.pdf"
-                  target="_blank"
-                  class="text-decoration-none w-100">
-                  <div
-                    class="p-3 rounded shadow-sm bg-light hover-shadow h-100"
-                    style="border: 2px solid #79b083">
-                    <h5 class="text-primary mb-2">Science Publication 2</h5>
-                    <p class="text-muted mb-0">ER Methodology for Mangrove Species</p>
-                  </div>
+                  class="text-primary text-decoration-none"
+                  target="_blank">
+                  Read More <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
             </div>
-            <div class="col-lg-9 wow fadeInRight" data-wow-delay="0.3s" style="padding-left: 100px">
+            <div class="col-lg-8 wow fadeInRight" data-wow-delay="0.3s" style="padding-left: 40px">
               <h4 class="text-primary">FAQs</h4>
               <h1 class="display-5 text-dark fs-3 mb-3">Get the Answers to Common Questions</h1>
 
               <div class="accordion" id="accordionExample">
                 <div class="accordion-item border-0 mb-4">
-                  <h2 class="accordion-header" id="headingOne">
+                  <h2 class="accordion-header bg-light" id="headingOne">
                     <button
-                      class="accordion-button text-dark fs-6 rounded-top bg-primary"
+                      class="accordion-button text-dark fs-6 rounded-top"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseOne"
@@ -1247,11 +1878,11 @@
                   </h2>
                   <div
                     id="collapseOne"
-                    class="accordion-collapse collapse show"
+                    class="accordion-collapse collapse"
                     aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body bg-white">
-                      <p class="text-muted">
+                      <p class="text-muted mb-0">
                         LifeForce can be used as a solution to bridge contractual benefits and transparently
                         manage payments for ecosystem services (PES) to farmers during the initial and
                         valueless early growth stages of a trees establishment phase. As photosynthetic
@@ -1262,138 +1893,9 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="accordion-item border-0 mb-4">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button
-                      class="accordion-button text-dark fs-6 rounded-top"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseTOne">
-                      1. What is LifeForce?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body my-2">
-                      <p class="text-muted">
-                        add description add description add description add description add description add
-                        description add description add description add description add description add
-                        description add description add description
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item border-0 mb-4">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button
-                      class="accordion-button text-dark fs-6 rounded-top"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseTOne">
-                      Register Your Land
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body my-2">
-                      <p class="text-muted">
-                        add description add description add description add description add description add
-                        description add description add description add description add description add
-                        description add description add description
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item border-0 mb-4">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button
-                      class="accordion-button text-dark fs-6 rounded-top"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseTOne">
-                      Register Your Land
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body my-2">
-                      <p class="text-muted">
-                        add description add description add description add description add description add
-                        description add description add description add description add description add
-                        description add description add description
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item border-0 mb-4">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button
-                      class="accordion-button text-dark fs-6 rounded-top"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseTOne">
-                      Register Your Land
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body my-2">
-                      <p class="text-muted">
-                        add description add description add description add description add description add
-                        description add description add description add description add description add
-                        description add description add description
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item border-0 mb-4">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button
-                      class="accordion-button text-dark fs-6 rounded-top"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseTOne">
-                      Register Your Land
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body my-2">
-                      <p class="text-muted">
-                        add description add description add description add description add description add
-                        description add description add description add description add description add
-                        description add description add description
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item border-0 mb-4">
-                  <h2 class="accordion-header" id="headingTwo">
+                  <h2 class="accordion-header bg-light" id="headingTwo">
                     <button
                       class="accordion-button collapsed text-dark fs-6 rounded-top"
                       type="button"
@@ -1401,7 +1903,7 @@
                       data-bs-target="#collapseTwo"
                       aria-expanded="false"
                       aria-controls="collapseTwo">
-                      Measure & Validate Biomass (MFV)
+                      2. What are the 3 main benefits of me buying access to a Lifeforce ledger?
                     </button>
                   </h2>
                   <div
@@ -1409,17 +1911,24 @@
                     class="accordion-collapse collapse"
                     aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body my-2">
-                      <p class="text-muted">
-                        add description add description add description add description add description add
-                        description add description add description add description add description add
-                        description add description add description
-                      </p>
+                    <div class="accordion-body bg-white">
+                      <ol type="a">
+                        <li class="mb-2 text-muted">
+                          Pays the farmer up to $100 per tree at the end of the contract.
+                        </li>
+                        <li class="mb-2 text-muted">
+                          The LifeForce certificate ensures the survival of new trees planted on farms.
+                        </li>
+                        <li class="mb-2 text-muted">
+                          The LifeForce ledger is a transparent management mechanism for achieving SDGs
+                        </li>
+                      </ol>
                     </div>
                   </div>
                 </div>
+
                 <div class="accordion-item border-0 mb-4">
-                  <h2 class="accordion-header" id="headingThree">
+                  <h2 class="accordion-header bg-light" id="headingThree">
                     <button
                       class="accordion-button collapsed text-dark fs-6 rounded-top"
                       type="button"
@@ -1427,7 +1936,7 @@
                       data-bs-target="#collapseThree"
                       aria-expanded="false"
                       aria-controls="collapseThree">
-                      Contract with Oxygen Consumers
+                      3. Where does this happen?
                     </button>
                   </h2>
                   <div
@@ -1435,17 +1944,14 @@
                     class="accordion-collapse collapse"
                     aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body my-2">
-                      <p class="text-muted">
-                        add description add description add description add description add description add
-                        description add description add description add description add description add
-                        description add description add description
-                      </p>
+                    <div class="accordion-body bg-white">
+                      <p class="text-muted mb-0">In Sri Lanka - Project 1</p>
                     </div>
                   </div>
                 </div>
+
                 <div class="accordion-item border-0 mb-4">
-                  <h2 class="accordion-header" id="headingFour">
+                  <h2 class="accordion-header bg-light" id="headingFour">
                     <button
                       class="accordion-button collapsed text-dark fs-6 rounded-top"
                       type="button"
@@ -1453,7 +1959,7 @@
                       data-bs-target="#collapseFour"
                       aria-expanded="false"
                       aria-controls="collapseFour">
-                      Receive Payments via Financial Tools
+                      4. Is any tree species applicable?
                     </button>
                   </h2>
                   <div
@@ -1461,17 +1967,17 @@
                     class="accordion-collapse collapse"
                     aria-labelledby="headingFour"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body my-2">
-                      <p class="text-muted">
-                        add description add description add description add description add description add
-                        description add description add description add description add description add
-                        description add description add description
+                    <div class="accordion-body bg-white">
+                      <p class="text-muted mb-0">
+                        Select from our TREE UNIT inventories and landscapes (LINK to IT platform / (how our
+                        algorithms work))
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item border-0 mb-0">
-                  <h2 class="accordion-header" id="headingFive">
+
+                <div class="accordion-item border-0 mb-4">
+                  <h2 class="accordion-header bg-light" id="headingFive">
                     <button
                       class="accordion-button collapsed text-dark fs-6 rounded-top"
                       type="button"
@@ -1479,7 +1985,7 @@
                       data-bs-target="#collapseFive"
                       aria-expanded="false"
                       aria-controls="collapseFive">
-                      Scale & Sustain
+                      5. How does LifeForce plant trees?
                     </button>
                   </h2>
                   <div
@@ -1487,38 +1993,178 @@
                     class="accordion-collapse collapse"
                     aria-labelledby="headingFive"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body my-2">
-                      <p class="text-muted">
-                        add description add description add description add description add description add
-                        description add description add description add description add description add
-                        description add description add description
+                    <div class="accordion-body bg-white">
+                      <p class="text-muted mb-0">
+                        By activating a digital smart contract for each tree and managing 4 years of
+                        contractual tree-care together with the owner. One consequence of climate change is
+                        the predicted rise in global temperatures. If ambient temperatures exceed 40 degrees ,
+                        which has become the reality in many places even today, food production will be
+                        compromised. All the food we eat originates with plants and plants produce using
+                        photosynthesis. Photosynthesis, or the capture of solar energy by plants, is done with
+                        chlorophyll, the thing that makes plants green and chlorophyll begins to break down
+                        after 40 degrees. Landscapes whose summer temperatures go beyond this limit will have
+                        smaller and smaller crops as the temperatures increase. The only solution to this
+                        oncoming crisis, is to begin introducing trees at strategic points on the landscape.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="faqHeading1">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faqCollapse1"
-                      aria-expanded="false"
-                      aria-controls="faqCollapse1">
-                      What is Photosynthetic Biomass valuation?
-                    </button>
-                  </h2>
-                  <div
-                    id="faqCollapse1"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="faqHeading1"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      It is the process of assigning measurable economic value to the ecological functions of
-                      biomass that converts sunlight and CO₂ into oxygen and carbon storage.
+                <!-- Hidden accordion items -->
+                <div id="moreItems" class="d-none">
+                  <div class="accordion-item border-0 mb-4">
+                    <h2 class="accordion-header bg-light" id="headingSix">
+                      <button
+                        class="accordion-button text-dark fs-6 rounded-top"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="true"
+                        aria-controls="collapseSix">
+                        6. What methods do we use to design the landscape and improve sustainability?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingSix"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body bg-white">
+                        <p class="text-muted mb-0">
+                          What methods do we use to design the landscape and improve sustainability? Use
+                          applied restoration methodologies such as Analog Forestry (AF) / Agroforestry /
+                          Permaculture / Assisted Natural Regenerative (ANR) / and other traditional forms of
+                          natural farming in order to select the most appropriate species and engage farmers
+                          and ecosystem designers in sustainable landscape development.
+                        </p>
+                      </div>
                     </div>
                   </div>
+
+                  <div class="accordion-item border-0 mb-4">
+                    <h2 class="accordion-header bg-light" id="headingSeven">
+                      <button
+                        class="accordion-button collapsed text-dark fs-6 rounded-top"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven"
+                        aria-expanded="false"
+                        aria-controls="collapseSeven">
+                        7. How can we utilize tree UNITS to cool the planet?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSeven"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingSeven"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body bg-white">
+                        <p class="text-muted mb-0">
+                          Trees and all other forms of vegetation cool the environment around them through the
+                          transpiration process, which takes place in the leaves. The water absorbed by the
+                          roots is detoxified and sent up to the leaves which release it as vapor, cooling the
+                          air around it. All LiferForce UNITS are measured for this transpiration phenomena
+                          based on the weight of photosynthetic biomass that has been accumulated through the
+                          contract period.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item border-0 mb-4">
+                    <h2 class="accordion-header bg-light" id="headingEight">
+                      <button
+                        class="accordion-button collapsed text-dark fs-6 rounded-top"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseEight"
+                        aria-expanded="false"
+                        aria-controls="collapseEight">
+                        8. What's so special about the LifeForce™ project?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseEight"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingEight"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body bg-white">
+                        <p class="text-muted mb-0">
+                          We pay the most for tree-care in the world: making this a very potent solution by
+                          which to positively affect human behavioral changes that are more conducive to a
+                          sustainable planet for humans and biodiversity.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item border-0 mb-4">
+                    <h2 class="accordion-header bg-light" id="headingNine">
+                      <button
+                        class="accordion-button collapsed text-dark fs-6 rounded-top"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseNine"
+                        aria-expanded="false"
+                        aria-controls="collapseNine">
+                        9. How much contracted primary ecosystem services such as OXYGEN is produced when I
+                        buy a tree UNIT?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseNine"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingNine"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body bg-white">
+                        <p class="text-muted mb-0">
+                          Depends on the selection of species and annual verification : Select from our TREE
+                          UNIT inventories and landscapes (LINK to IT platform / (how our algorithms work))
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item border-0 mb-4">
+                    <h2 class="accordion-header bg-light" id="headingTen">
+                      <button
+                        class="accordion-button collapsed text-dark fs-6 rounded-top"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTen"
+                        aria-expanded="false"
+                        aria-controls="collapseTen">
+                        10. How is this different from Carbon Credits?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTen"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTen"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body bg-white">
+                        <p class="text-muted mb-0">
+                          he value of net Oxygen production is discounted and not recognized by carbon
+                          credits. Also read to understand : <br />
+                          <a
+                            href="https://news.mongabay.com/2007/12/forest-carbon-may-not-fully-offset-fossil-carbon-says-expert/"
+                            target="_blank"
+                            class="text-primary text-decoration-underline"
+                            >- Click Here -</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Show More Button -->
+                <div class="text-start mt-4">
+                  <button
+                    id="showMoreBtn"
+                    class="btn btn-link text-primary text-decoration-none p-0 border-0">
+                    Show More <i class="bi bi-arrow-down"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1528,72 +2174,100 @@
     </section>
     <!-- FAQs End -->
 
-    <section class="py-5 bg-light">
-      <div class="container">
-        <h2 class="mb-4 text-center">Scientific Publications & FAQ</h2>
-
-        <!-- Publications -->
-        <div class="row mb-5">
-          <div class="col-md-6 mb-4">
-            <div class="p-4 bg-white shadow-sm rounded h-100">
-              <h5 class="fw-bold">Science Publication 1</h5>
-              <p>Realizing the Value of Photosynthetic Biomass</p>
-              <a
-                href="https://restore.earth/assets/Realizing_the_Value_of_Photosynthetic_Bi.pdf"
-                target="_blank"
-                class="btn btn-success btn-sm">
-                View PDF
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6 mb-4">
-            <div class="p-4 bg-white shadow-sm rounded h-100">
-              <h5 class="fw-bold">Science Publication 2</h5>
-              <p>ER Methodology for Mangrove Species</p>
-              <a
-                href="https://restore.earth/assets/ER%20methodology,%20Mangrove%20Species.pdf"
-                target="_blank"
-                class="btn btn-success btn-sm">
-                View PDF
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ Accordion -->
-        <div class="accordion" id="faqAccordion">
-          <h5 class="mb-3">Frequently Asked Questions</h5>
-
-          <!-- Example FAQ item -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faqHeading1">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#faqCollapse1"
-                aria-expanded="false"
-                aria-controls="faqCollapse1">
-                What is Photosynthetic Biomass valuation?
-              </button>
-            </h2>
-            <div
-              id="faqCollapse1"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqHeading1"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                It is the process of assigning measurable economic value to the ecological functions of
-                biomass that converts sunlight and CO₂ into oxygen and carbon storage.
+    <!-- Contact Start -->
+    <section id="contact" class="bg-white py-5">
+      <div class="container-fluid contact">
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+              <div class="contact-item">
+                <div class="pb-5">
+                  <h4 class="text-primary">Contact Us</h4>
+                  <h1 class="display-4 text-dark">Contact Us anytime for more Information</h1>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <div class="bg-primary btn-lg-square rounded-circle p-4">
+                    <i class="fa fa-home text-white"></i>
+                  </div>
+                  <div class="ms-4">
+                    <h4>Addresses</h4>
+                    <p class="mb-0">Belipola Arboretum, Mirahawatte, Sri Lanka</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <div class="bg-primary btn-lg-square rounded-circle p-2">
+                    <i class="fa fa-phone-alt text-white"></i>
+                  </div>
+                  <div class="ms-4">
+                    <h4>Mobile</h4>
+                    <p class="mb-0">+94 76 719 1428</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <div class="bg-primary btn-lg-square rounded-circle p-2">
+                    <i class="fa fa-envelope-open text-white"></i>
+                  </div>
+                  <div class="ms-4">
+                    <h4>Email</h4>
+                    <p class="mb-0">info@restore.earth</p>
+                  </div>
+                </div>
               </div>
             </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+              <form>
+                <div class="row g-3">
+                  <div class="col-lg-12 col-xl-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="name" placeholder="Your Name" />
+                      <label for="name">Your Name</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-xl-6">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="email" placeholder="Your Email" />
+                      <label for="email">Your Email</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-xl-6">
+                    <div class="form-floating">
+                      <input type="phone" class="form-control" id="phone" placeholder="Phone" />
+                      <label for="phone">Your Phone</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-xl-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="project" placeholder="Project" />
+                      <label for="project">Your Project</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="subject" placeholder="Subject" />
+                      <label for="subject">Subject</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control"
+                        placeholder="Leave a message here"
+                        id="message"
+                        style="height: 160px"></textarea>
+                      <label for="message">Message</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-
-          <!-- Add more FAQ items below -->
-          <!-- ... -->
         </div>
       </div>
     </section>
+    <!-- Contact End -->
 
     <!-- Footer Start -->
     <div class="container-fluid footer bg-primary pt-4 wow fadeIn" data-wow-delay="0.2s">
@@ -1602,12 +2276,21 @@
           <div class="col-md-6 col-lg-6 col-xl-5">
             <div class="footer-item d-flex flex-column">
               <div class="footer-item">
-                <h4 class="text-light mb-4">Newsletter</h4>
-                <p class="mb-3 text-light">
-                  Earth Restoration is dedicated to regenerating ecosystems, restoring biodiversity, and
-                  empowering communities to create a sustainable and thriving planet for future generations.
-                </p>
-                <div class="position-relative mx-auto rounded-pill">
+                <div class="row">
+                  <div class="col-lg-5">
+                    <img src="img/logo.png" alt="logo" class="w-100" />
+                  </div>
+                  <div class="col-lg-7">
+                    <h4 class="text-light mb-4 fw-bold">Earth Restoration</h4>
+                    <p class="mb-3 text-light">
+                      Earth Restoration is dedicated to regenerating ecosystems, restoring biodiversity, and
+                      empowering communities to create a sustainable and thriving planet for future
+                      generations.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <div class="position-relative mx-auto rounded-pill">
                   <input
                     class="form-control rounded-sm w-100 py-3 ps-4 pe-5"
                     type="text"
@@ -1617,7 +2300,7 @@
                     class="btn btn-primary rounded-sm position-absolute top-0 end-0 py-2 mt-2 me-2">
                     SignUp
                   </button>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -1653,11 +2336,12 @@
                   <a href="#who-we-are" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> Who We Are</a
                   >
-                  <a href="blogs.html" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> Blogs</a
-                  >
+
                   <a href="oxygen-economy.html" class="text-light"
                     ><i class="fas fa-angle-right me-2 text-light"></i> OXYGEN ECONOMY</a
+                  >
+                  <a href="#contact" class="text-light"
+                    ><i class="fas fa-angle-right me-2 text-light"></i> Contact</a
                   >
                 </div>
               </div>
@@ -1777,9 +2461,17 @@
     </script>
 
     <script>
-      document.getElementById("exploreBtn").addEventListener("click", function (e) {
-        e.preventDefault();
-        document.getElementById("quoteBox").classList.remove("d-none");
+      document.getElementById("showMoreBtn").addEventListener("click", function () {
+        const moreItems = document.getElementById("moreItems");
+        const btn = this;
+
+        if (moreItems.classList.contains("d-none")) {
+          moreItems.classList.remove("d-none");
+          btn.innerHTML = 'Show Less <i class="bi bi-arrow-up"></i>';
+        } else {
+          moreItems.classList.add("d-none");
+          btn.innerHTML = 'Show More <i class="bi bi-arrow-down"></i>';
+        }
       });
     </script>
   </body>
