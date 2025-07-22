@@ -35,24 +35,62 @@
     <link href="css/style.css" rel="stylesheet" />
 
     <style>
-      .staggered-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 40px;
-        align-items: start;
+      .overlay-wrapper {
+        position: relative;
+        display: inline-block;
       }
 
-      .staggered-grid > div:nth-child(even) {
-        margin-top: 40px; /* Create stagger effect */
+      .color-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #79b083;
+        opacity: 0.5; /* Adjust as needed */
+
+        pointer-events: none; /* Ensures it doesn't block interactions */
       }
 
-      @media (max-width: 768px) {
-        .staggered-grid {
-          grid-template-columns: 1fr;
+      .overlay-wrapper img {
+        display: block;
+      }
+
+      .pulse-ring {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .pulse-ring::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: rgba(121, 176, 131, 0.9); /* #79b083 with opacity */
+        animation: pulse 2s infinite;
+        z-index: 0;
+      }
+
+      .pulse-ring i {
+        position: relative;
+        z-index: 1;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(0.7);
+          opacity: 0.6;
         }
-
-        .staggered-grid > div:nth-child(even) {
-          margin-top: 0;
+        70% {
+          transform: scale(1.4);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(0.7);
+          opacity: 0;
         }
       }
     </style>
@@ -165,133 +203,149 @@
     <!-- Header End -->
 
     <section class="py-5 bg-light" style="border-top: 1px solid #79b083">
-      <div class="container-fluid blog py-5">
+      <div class="container-fluid blog">
         <div class="container">
-          <div class="staggered-grid">
-            <!-- Card 1 -->
-            <div class="bg-white rounded shadow-sm p-4 mb-4">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-4 position-relative">
-                  <img src="img/logo.png" alt="Video 1" class="w-100 rounded" />
-                  <div
-                    class="position-absolute top-50 start-50 translate-middle"
-                    style="cursor: pointer"
-                    data-bs-toggle="modal"
-                    data-bs-target="#videoModal"
-                    data-video-url="https://www.youtube.com/embed/tinG2ZWF544">
-                    <i class="bi bi-play-circle-fill text-dark" style="font-size: 3rem"></i>
-                  </div>
-                </div>
-                <div class="col-lg-8">
-                  <h1 class="display-5 text-dark fs-3">Primary Ecosystem Services (PES)</h1>
+          <div class="row g-5 py-3 align-items-center">
+            <div class="col-lg-4">
+              <div class="position-relative overlay-wrapper">
+                <img src="asset/img/further-reading/pes.jpeg" alt="Video 1" class="w-100 rounded shadow" />
+                <div class="color-overlay rounded"></div>
 
-                  <p class="text-muted">
-                    Primary Ecosystem Services are measured into the EarthRestoration system as a net positive
-                    externality to the Global Commons of Atmosphere. We see the climate problem from a whole
-                    system perspective based on the falling levels of
-                    <a
-                      href="https://www.oxygenlevels.org/"
-                      target="_blank"
-                      class="text-primary text-decoration-underline"
-                      >Oxygen</a
-                    >.
-                  </p>
-
-                  <a href="#" class="text-primary text-decoration-none">
-                    More Info <i class="bi bi-arrow-right"></i>
-                  </a>
+                <!-- Animated play icon -->
+                <div
+                  class="position-absolute top-50 start-50 translate-middle pulse-ring"
+                  style="cursor: pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoModal"
+                  data-video-url="https://www.youtube.com/embed/tinG2ZWF544">
+                  <i class="bi bi-play-circle-fill text-light" style="font-size: 3rem"></i>
                 </div>
               </div>
             </div>
 
-            <!-- Card 1 -->
-            <div class="bg-white rounded shadow-sm p-4 mb-4">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-4 position-relative">
-                  <img src="img/logo.png" alt="Video 1" class="w-100 rounded" />
-                  <div
-                    class="position-absolute top-50 start-50 translate-middle"
-                    style="cursor: pointer"
-                    data-bs-toggle="modal"
-                    data-bs-target="#videoModal"
-                    data-video-url="https://www.youtube.com/embed/U3Lj6T_WNkA">
-                    <i class="bi bi-play-circle-fill text-dark" style="font-size: 3rem"></i>
-                  </div>
-                </div>
-                <div class="col-lg-8">
-                  <h1 class="display-5 text-dark fs-3">Realizing the Value of Ecosystem Servicess</h1>
+            <div class="col-lg-6">
+              <h1 class="display-5 text-dark fs-3 mb-4">Primary Ecosystem Services (PES)</h1>
+              <p class="text-muted mb-4 fs-6">
+                Primary Ecosystem Services are measured into the EarthRestoration system as a net positive
+                externality to the Global Commons of Atmosphere. We see the climate problem from a whole
+                system perspective based on the falling levels of
+                <a
+                  href="https://www.oxygenlevels.org/"
+                  target="_blank"
+                  class="text-primary text-decoration-underline"
+                  >Oxygen</a
+                >.
+              </p>
 
-                  <p class="text-muted">
-                    Seniormost systems ecologist Dr. Ranil Senanayake brings up a case that ecosystem services
-                    should be measured on biological activities that are Monitored / Recorded and Validated
-                    over time and not by using subjective 'humanistic' approaches to evaluate them.
-                  </p>
+              <a href="#" class="text-primary text-decoration-none fs-6">
+                More Info <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="row g-5 py-3 align-items-center justify-content-end">
+            <div class="col-lg-6">
+              <h1 class="display-5 text-dark fs-3 mb-4 text-lg-end">
+                Realizing the Value of Ecosystem Services
+              </h1>
+
+              <p class="text-muted text-lg-end fs-6">
+                Seniormost systems ecologist Dr. Ranil Senanayake brings up a case that ecosystem services
+                should be measured on biological activities that are Monitored / Recorded and Validated over
+                time and not by using subjective 'humanistic' approaches to evaluate them.
+              </p>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="position-relative overlay-wrapper">
+                <img
+                  src="asset/img/further-reading/realizing-the-value.jpg"
+                  alt="Video 1"
+                  class="w-100 rounded shadow" />
+                <div class="color-overlay rounded"></div>
+
+                <!-- Animated play icon -->
+                <div
+                  class="position-absolute top-50 start-50 translate-middle pulse-ring"
+                  style="cursor: pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoModal"
+                  data-video-url="https://www.youtube.com/embed/U3Lj6T_WNkA">
+                  <i class="bi bi-play-circle-fill text-light" style="font-size: 3rem"></i>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Card 1 -->
-            <div class="bg-white rounded shadow-sm p-4 mb-4">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-4 position-relative">
-                  <img src="img/logo.png" alt="Video 1" class="w-100 rounded" />
-                </div>
-                <div class="col-lg-8">
-                  <h1 class="display-5 text-dark fs-3">Forest Garden Products</h1>
-
-                  <p class="text-muted">
-                    In a world where restoring our forest is an ever more pressing necessity,there is an
-                    urgent need to reconcile forest restoration with economic imperatives. Diverse and
-                    ecologically mature agroforestry systems, or forest gardens, are essential to ensuring
-                    that bringing bck forests can be profitable for the people who are restoring them. The
-                    Forest Garden Product concept was born out of this necessity, showcasing the products that
-                    come from mature and biodiverse forest gardens.
-                  </p>
-                </div>
+          <div class="row g-5 py-3 align-items-center">
+            <div class="col-lg-4">
+              <div class="position-relative overlay-wrapper">
+                <img
+                  src="asset/img/further-reading/forest-garden-products.png"
+                  alt="Video 1"
+                  class="w-100 rounded shadow" />
+                <div class="color-overlay rounded"></div>
               </div>
             </div>
 
-            <!-- Card 1 -->
-            <div class="bg-white rounded shadow-sm p-4 mb-4">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-4 position-relative">
-                  <img src="img/logo.png" alt="Video 1" class="w-100 rounded" />
-                </div>
-                <div class="col-lg-8">
-                  <h1 class="display-5 text-dark fs-3">Analog forestry</h1>
+            <div class="col-lg-6">
+              <h1 class="display-5 text-dark fs-3 mb-4">Forest Garden Products</h1>
+              <p class="text-muted mb-4 fs-6">
+                In a world where restoring our forest is an ever more pressing necessity,there is an urgent
+                need to reconcile forest restoration with economic imperatives. Diverse and ecologically
+                mature agroforestry systems, or forest gardens, are essential to ensuring that bringing bck
+                forests can be profitable for the people who are restoring them. The Forest Garden Product
+                concept was born out of this necessity, showcasing the products that come from mature and
+                biodiverse forest gardens.
+              </p>
+            </div>
+          </div>
 
-                  <p class="text-muted">
-                    Analog forestry is a system of ecological restoration that focuses on increasing
-                    biodiversity by imitating natural forest systems in order to create economically
-                    productive and environmentally mature forests. The methodology is based on traditional
-                    forest gardens, which are human-created analogs of the natural forest that serve needs
-                    such as food, fiber, timber, medicine and water. By taking inspiration from analog
-                    forestry, FGP certificate affirms its commitment to mature, biodiverse ecosystems that are
-                    in harmony with human needs.
-                  </p>
-                </div>
+          <div class="row g-5 py-3 align-items-center justify-content-end">
+            <div class="col-lg-6">
+              <h1 class="display-5 text-dark fs-3 mb-4 text-lg-end">Analog forestry</h1>
+
+              <p class="text-muted text-lg-end fs-6">
+                Analog forestry is a system of ecological restoration that focuses on increasing biodiversity
+                by imitating natural forest systems in order to create economically productive and
+                environmentally mature forests. The methodology is based on traditional forest gardens, which
+                are human-created analogs of the natural forest that serve needs such as food, fiber, timber,
+                medicine and water. By taking inspiration from analog forestry, FGP certificate affirms its
+                commitment to mature, biodiverse ecosystems that are in harmony with human needs.
+              </p>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="position-relative overlay-wrapper">
+                <img
+                  src="asset/img/further-reading/analog-foresty.jpg"
+                  alt="Video 1"
+                  class="w-100 rounded shadow" />
+                <div class="color-overlay rounded"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-5 pt-3 pb-5 align-items-center">
+            <div class="col-lg-4">
+              <div class="position-relative overlay-wrapper">
+                <img
+                  src="asset/img/further-reading/scientific-publications.jpg"
+                  alt="Video 1"
+                  class="w-100 rounded shadow" />
+                <div class="color-overlay rounded"></div>
               </div>
             </div>
 
-            <!-- Card 1 -->
-            <div class="bg-white rounded shadow-sm p-4 mb-4">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-4 position-relative">
-                  <img src="img/logo.png" alt="Video 1" class="w-100 rounded" />
-                </div>
-                <div class="col-lg-8">
-                  <h1 class="display-5 text-dark fs-3">Scientific Publications</h1>
-
-                  <p class="text-muted">
-                    Photosynthetic biomass performs the act of primary production, the initial step in the
-                    manifestation of life. The biomass so termed has the ability to increase in mass through
-                    the absorption of solar or other electromagnetic radiation while releasing oxygen and
-                    water vapour into the atmosphere. Respiring biomass is that component of living biomass
-                    that uses the output of photosynthesis to make the complicated biological patterns of
-                    life.
-                  </p>
-                </div>
-              </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 text-dark fs-3 mb-4">Scientific Publications</h1>
+              <p class="text-muted mb-4 fs-6">
+                Photosynthetic biomass performs the act of primary production, the initial step in the
+                manifestation of life. The biomass so termed has the ability to increase in mass through the
+                absorption of solar or other electromagnetic radiation while releasing oxygen and water vapour
+                into the atmosphere. Respiring biomass is that component of living biomass that uses the
+                output of photosynthesis to make the complicated biological patterns of life.
+              </p>
             </div>
           </div>
 
@@ -312,6 +366,54 @@
               </div>
             </div>
           </div>
+
+          <div class="row g-5 py-5">
+            <div class="col-lg-6 overflow-hidden mb-4">
+              <div class="row g-0 bg-white shadow-sm rounded hover-card align-items-center">
+                <div class="col-md-6">
+                  <img
+                    src="img/paper.png"
+                    class="img-fluid h-100 w-100 object-fit-cover"
+                    style="border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem"
+                    alt="Science Publication 1" />
+                </div>
+
+                <div class="col-md-6 px-3">
+                  <h4 class="text-dark fs-5 mb-2">Science 1</h4>
+                  <p class="text-muted fs-7 mb-3">Realizing the Value of Photosynthetic Biomass</p>
+                  <a
+                    href="pdf/Realizing_the_Value_of_Photosynthetic_Bi.pdf"
+                    class="text-primary text-decoration-none fw-medium"
+                    target="_blank">
+                    Read More <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 overflow-hidden mb-4">
+              <div class="row g-0 bg-white shadow-sm rounded hover-card align-items-center">
+                <div class="col-md-6">
+                  <img
+                    src="img/paper.png"
+                    class="img-fluid h-100 w-100 object-fit-cover"
+                    style="border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem"
+                    alt="Science Publication 1" />
+                </div>
+
+                <div class="col-md-6 px-3">
+                  <h4 class="text-dark fs-5 mb-2">Science 2</h4>
+                  <p class="text-muted fs-7 mb-3">ER Methodology for Mangrove Species</p>
+                  <a
+                    href="pdf/ER methodology, Mangrove Species.pdf"
+                    class="text-primary text-decoration-none fw-medium"
+                    target="_blank">
+                    Read More <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -326,12 +428,14 @@
 
             <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
               <div class="blog-item">
-                <div class="blog-img">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="img/blogs/how-the-oxygen-economy-works.jpg"
+                    src="asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
+
                 <div class="blog-content bg-light rounded-bottom p-4">
                   <h4 class="text-dark mb-3 fs-5">The Satanic Formula</h4>
                   <p id="less-content" class="text-muted">
@@ -347,12 +451,13 @@
             </div>
 
             <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-              <div class="blog-item">
-                <div class="blog-img">
+              <div class="blog-item h-100">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="img/blogs/how-the-oxygen-economy-works.jpg"
+                    src="asset/img/further-reading/blue-sky-mining-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
                 <div class="blog-content bg-light rounded-bottom p-4">
                   <h4 class="text-dark mb-3 fs-5">Blue Sky Mining</h4>
@@ -370,11 +475,12 @@
 
             <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
               <div class="blog-item">
-                <div class="blog-img">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="img/blogs/scaling-the-oxygen-economy-globally.jpg"
+                    src="asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
                 <div class="blog-content bg-light rounded-bottom p-4">
                   <h4 class="text-dark mb-3 fs-5">Are we killing the Future?</h4>
@@ -392,17 +498,19 @@
 
             <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
               <div class="blog-item">
-                <div class="blog-img">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="img/blogs/scaling-the-oxygen-economy-globally.jpg"
+                    src="asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
                 <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">Are we killing the Future?</h4>
+                  <h4 class="text-dark mb-3 fs-5">The Threat to Life</h4>
                   <p id="less-content" class="text-muted">
-                    Where Carbon Dioxide combine with water and powered by sunlight produces the solid organic
-                    matter (Carbohydrate) and the free molecular Oxygen.
+                    Threat is being constantly amplified by the actions of the man. The actions of modern
+                    technological man have helped bring this threat very close to becoming real for us on this
+                    planet of Earth.
                   </p>
 
                   <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
@@ -414,17 +522,18 @@
 
             <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
               <div class="blog-item">
-                <div class="blog-img">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="img/blogs/how-the-oxygen-economy-works.jpg"
+                    src="asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
                 <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">The Satanic Formula</h4>
+                  <h4 class="text-dark mb-3 fs-5">Why we Need Biomass?</h4>
                   <p id="less-content" class="text-muted">
-                    All of a sudden both the individual and society become disinterested observers. A lot of
-                    information is generated on how to perceive and understand the problem.
+                    The growth of the current carbon market in addressing climate change provides real
+                    benchmarks and suggests astounding the market opportunities.
                   </p>
 
                   <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
@@ -436,17 +545,18 @@
 
             <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
               <div class="blog-item">
-                <div class="blog-img">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="img/blogs/how-the-oxygen-economy-works.jpg"
+                    src="asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
                 <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">Blue Sky Mining</h4>
+                  <h4 class="text-dark mb-3 fs-5">Mining The Global Commons</h4>
                   <p id="less-content" class="text-muted">
-                    We know that the mean temperature will rise, but the speed of that increase may be much
-                    more than the Intergovernmental Panel on Climate Change (IPCC) has computed.
+                    In a tragic and insensitive interview, Elon Musk boasts that he relies on the availability
+                    of the Oxygen to power his rockets, because it is free.
                   </p>
 
                   <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
@@ -458,17 +568,18 @@
 
             <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
               <div class="blog-item">
-                <div class="blog-img">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="img/blogs/scaling-the-oxygen-economy-globally.jpg"
+                    src="asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
                 <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">Are we killing the Future?</h4>
+                  <h4 class="text-dark mb-3 fs-5">Bio-Currency</h4>
                   <p id="less-content" class="text-muted">
-                    Where Carbon Dioxide combine with water and powered by sunlight produces the solid organic
-                    matter (Carbohydrate) and the free molecular Oxygen.
+                    The Global Commons sustains the air we breathe, the water we drink, and the food we eat.
+                    It is under threat today, because of the Governments in nation and financial institutions.
                   </p>
 
                   <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
@@ -480,17 +591,19 @@
 
             <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
               <div class="blog-item">
-                <div class="blog-img">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="img/blogs/scaling-the-oxygen-economy-globally.jpg"
+                    src="asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
                 <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">Are we killing the Future?</h4>
+                  <h4 class="text-dark mb-3 fs-5">The Creation Formula</h4>
                   <p id="less-content" class="text-muted">
-                    Where Carbon Dioxide combine with water and powered by sunlight produces the solid organic
-                    matter (Carbohydrate) and the free molecular Oxygen.
+                    Biomass was impacted five times in the history of life, such that a large percentage of
+                    the existing biomass was fossilised, the imperative at each response was the growth of
+                    biomass.
                   </p>
 
                   <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"

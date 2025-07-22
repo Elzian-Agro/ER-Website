@@ -421,7 +421,7 @@
 .bg-breadcrumb {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/carousel-1.jpg);
+  background-image: url("../asset/img/further-reading/global-cover.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -454,7 +454,7 @@
   top: -150px;
   right: -150px;
   border-radius: 200px;
-  border: 80px solid rgba(68, 210, 246, 0.2);
+  border: 80px solid rgba(121, 176, 131, 0.2);
   animation: RotateMoveCircle 10s linear infinite;
   background: transparent;
   z-index: 2 !important;
@@ -484,7 +484,7 @@
   left: 0;
   margin-left: 160px;
   transform: rotate(-30deg);
-  background: rgba(68, 210, 246, 0.2);
+  background: rgba(121, 176, 131, 0.2);
   animation: RotateMoveRight 5s linear infinite;
   z-index: 2 !important;
 }
