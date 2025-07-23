@@ -102,7 +102,6 @@
         height: 100%;
         background-color: #79b083;
         opacity: 0.5; /* Adjust as needed */
-
         pointer-events: none; /* Ensures it doesn't block interactions */
       }
 
@@ -237,12 +236,26 @@
       <!-- Optional overlay -->
       <div class="bg-breadcrumb-single position-absolute top-0 start-0 w-100 h-100" style="z-index: 1"></div>
 
-      <!-- Centered Content -->
-      <div
-        class="d-flex flex-column justify-content-center align-items-center text-center position-relative w-100 h-100 wow fadeInUp"
-        style="z-index: 2">
-        <h4 class="text-white display-4 mb-4">The Satanic Formula</h4>
-        <h4 class="text-white display-4 mb-4">fCH₄ + bO₂ → nCO₂ + nH₂O + e</h4>
+      <!-- Flex layout to split content vertically -->
+      <div class="d-flex flex-column justify-content-center align-items-center h-100 position-relative">
+        <!-- Title + Paragraph Centered -->
+        <div class="container text-center" style="max-width: 900px; z-index: 10">
+          <h4 class="text-white display-4 mb-4">The Satanic Formula</h4>
+          <h4 class="text-white display-4 mb-4">fCH₄ + bO₂ → nCO₂ + nH₂O + e</h4>
+        </div>
+
+        <!-- Breadcrumb at bottom -->
+        <div class="position-absolute w-100" style="bottom: 30px; z-index: 10">
+          <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item text-white">
+              <a class="text-white" href="../../../index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item text-white">
+              <a class="text-white" href="#">Further reading</a>
+            </li>
+            <li class="breadcrumb-item text-white">Global</li>
+          </ol>
+        </div>
       </div>
     </div>
 
@@ -258,13 +271,10 @@
                 id="img-20"
                 src="../../asset/img/further-reading/satanic-formula-1.jpg"
                 alt="Image of industrial fumes"
-                class="img-fluid floating-image left shadow"
-                style="position: relative; z-index: 2" />
+                class="img-fluid floating-image left shadow" />
 
               <!-- Image overlay -->
-              <div
-                class="position-absolute top-0 start-0 w-100 h-100 rounded"
-                style="background-color: rgba(121, 176, 131, 0.4); z-index: 3"></div>
+              <div class="position-absolute top-0 start-0 w-100 h-100 rounded image-overlay"></div>
             </div>
 
             <p class="text-muted fs-6">
@@ -305,7 +315,7 @@
                 id="img-20"
                 src="../../asset/img/further-reading/satanic-formula-2.jpg"
                 alt="Image of industrial fumes"
-                class="img-fluid floating-image right shadow position-relative" />
+                class="img-fluid floating-image right shadow" />
 
               <!-- Image overlay -->
               <div class="position-absolute top-0 start-0 w-100 h-100 rounded image-overlay"></div>
@@ -338,13 +348,10 @@
                 id="img-20"
                 src="../../asset/img/further-reading/satanic-formula-3.jpg"
                 alt="Image of industrial fumes"
-                class="img-fluid floating-image left shadow"
-                style="position: relative; z-index: 2" />
+                class="img-fluid floating-image left shadow" />
 
               <!-- Image overlay -->
-              <div
-                class="position-absolute top-0 start-0 w-100 h-100 rounded"
-                style="background-color: rgba(121, 176, 131, 0.4); z-index: 3"></div>
+              <div class="position-absolute top-0 start-0 w-100 h-100 rounded image-overlay"></div>
             </div>
 
             <p class="text-muted fs-6">
