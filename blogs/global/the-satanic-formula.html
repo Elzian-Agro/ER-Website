@@ -42,20 +42,23 @@
       /* Float image to the right on larger screens */
       .floating-image.right {
         float: right;
-        margin-left: 30px;
-        margin-bottom: 10px;
-        border-radius: 20px;
+        border-radius: 10px;
         width: 500px;
         height: auto;
+        z-index: 2;
       }
 
       .floating-image.left {
         float: left;
-        margin-right: 30px;
-        margin-bottom: 10px;
-        border-radius: 20px;
+        border-radius: 10px;
         width: 500px;
         height: auto;
+        z-index: 2;
+      }
+
+      .image-overlay {
+        background-color: rgba(121, 176, 131, 0.4);
+        z-index: 3;
       }
 
       /* Responsive behavior: remove float on small screens */
@@ -84,6 +87,49 @@
         background-color: #79b083; /* Bootstrap green */
         color: #e7ebe7;
         border-radius: 8px;
+      }
+
+      .overlay-wrapper {
+        position: relative;
+        display: inline-block;
+      }
+
+      .color-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #79b083;
+        opacity: 0.5; /* Adjust as needed */
+
+        pointer-events: none; /* Ensures it doesn't block interactions */
+      }
+
+      .overlay-wrapper img {
+        display: block;
+      }
+    </style>
+
+    <style>
+      .hero-wrapper {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Your desired height */
+        overflow: hidden;
+      }
+
+      .bg-breadcrumb-single {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(121, 176, 131, 0.4); /* #79b083 overlay */
+      }
+
+      video.object-fit-cover {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     </style>
   </head>
@@ -181,36 +227,45 @@
     <!-- Navbar & Hero End -->
 
     <!-- Header Start -->
-    <div
-      class="container-fluid bg-breadcrumb"
-      style="background-image: url('../../asset/img/further-reading/satanic-formula-cover.png')">
-      <div class="bg-breadcrumb-single"></div>
-      <div class="container text-center py-5" style="max-width: 900px">
-        <h4 class="text-light display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">The Satanic Formula</h4>
-        <h4 class="text-light display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-          fCH₄ + bO₂ → nCO₂ + nH₂O + e
-        </h4>
-      </div>
-      <!-- Moved this block to the bottom of container-fluid -->
-      <div>
-        <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-          <li class="breadcrumb-item text-light"><a href="../../index.html">Home</a></li>
-          <li class="breadcrumb-item text-light"><a href="">Further reading</a></li>
-          <li class="breadcrumb-item text-light">Global</li>
-        </ol>
+    <div class="hero-wrapper position-relative">
+      <!-- Background Image -->
+      <img
+        src="../../asset/img/further-reading/satanic-formula-cover.png"
+        class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        alt="Background" />
+
+      <!-- Optional overlay -->
+      <div class="bg-breadcrumb-single position-absolute top-0 start-0 w-100 h-100" style="z-index: 1"></div>
+
+      <!-- Centered Content -->
+      <div
+        class="d-flex flex-column justify-content-center align-items-center text-center position-relative w-100 h-100 wow fadeInUp"
+        style="z-index: 2">
+        <h4 class="text-white display-4 mb-4">The Satanic Formula</h4>
+        <h4 class="text-white display-4 mb-4">fCH₄ + bO₂ → nCO₂ + nH₂O + e</h4>
       </div>
     </div>
+
     <!-- Header End -->
 
     <section class="py-5 bg-light">
-      <div class="container-fluid blog py-5">
+      <div class="container-fluid blog">
         <div class="container">
           <div class="description-container clearfix">
-            <img
-              id="img-20"
-              src="../../asset/img/further-reading/satanic-formula-1.jpg"
-              alt="image of industrial fumes 1"
-              class="img-fluid floating-image right shadow" />
+            <!-- Image wrapper with overlay -->
+            <div class="position-relative float-end ms-4 mb-4" style="max-width: 50%">
+              <img
+                id="img-20"
+                src="../../asset/img/further-reading/satanic-formula-1.jpg"
+                alt="Image of industrial fumes"
+                class="img-fluid floating-image left shadow"
+                style="position: relative; z-index: 2" />
+
+              <!-- Image overlay -->
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100 rounded"
+                style="background-color: rgba(121, 176, 131, 0.4); z-index: 3"></div>
+            </div>
 
             <p class="text-muted fs-6">
               <span class="first-letter">S</span>
@@ -230,7 +285,6 @@
               decreed good and whatever detracts from the individual satisfaction is decreed bad”; the
               salesmen of the world set about the activity of creating desire.
             </p>
-
             <p class="text-muted fs-6">
               So that, more and more resources were required to satisfy the individual preference, The
               individual preference being constantly redefined by the pecuniary actions of these same
@@ -246,11 +300,16 @@
           </div>
 
           <div class="description-container clearfix">
-            <img
-              id="img-20"
-              src="../../asset/img/further-reading/satanic-formula-2.jpg"
-              alt="image of industrial fumes 1"
-              class="img-fluid floating-image left shadow" />
+            <div class="position-relative float-start me-4 mb-4" style="max-width: 50%">
+              <img
+                id="img-20"
+                src="../../asset/img/further-reading/satanic-formula-2.jpg"
+                alt="Image of industrial fumes"
+                class="img-fluid floating-image right shadow position-relative" />
+
+              <!-- Image overlay -->
+              <div class="position-absolute top-0 start-0 w-100 h-100 rounded image-overlay"></div>
+            </div>
 
             <p class="text-muted fs-6">
               CH₄ + O₂ → CO₂ + H₂O + e This states that burning Hydrocarbons (fossil Fuels) using Oxygen gives
@@ -273,11 +332,20 @@
           </div>
 
           <div class="description-container clearfix">
-            <img
-              id="img-20"
-              src="../../asset/img/further-reading/satanic-formula-3.jpg"
-              alt="image of industrial fumes 1"
-              class="img-fluid floating-image right shadow" />
+            <!-- Image wrapper with overlay -->
+            <div class="position-relative float-end ms-4 mb-4" style="max-width: 50%">
+              <img
+                id="img-20"
+                src="../../asset/img/further-reading/satanic-formula-3.jpg"
+                alt="Image of industrial fumes"
+                class="img-fluid floating-image left shadow"
+                style="position: relative; z-index: 2" />
+
+              <!-- Image overlay -->
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100 rounded"
+                style="background-color: rgba(121, 176, 131, 0.4); z-index: 3"></div>
+            </div>
 
             <p class="text-muted fs-6">
               These ‘new’ gaseous inputs into the atmosphere accelerate the current trends of rampant global
@@ -324,14 +392,16 @@
       <div class="container-fluid blog py-5">
         <div class="container">
           <div class="row g-4 justify-content-center h-100">
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
               <div class="blog-item">
-                <div class="blog-img">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="../../img/blogs/how-the-oxygen-economy-works.jpg"
+                    src="../../asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
+
                 <div class="blog-content bg-light rounded-bottom p-4">
                   <h4 class="text-dark mb-3 fs-5">The Satanic Formula</h4>
                   <p id="less-content" class="text-muted">
@@ -339,7 +409,9 @@
                     information is generated on how to perceive and understand the problem.
                   </p>
 
-                  <a href="blogs/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
+                  <a
+                    href="../../blogs/global/the-satanic-formula.html"
+                    class="fw-bold text-secondary read-more-btn"
                     >Read More <i class="fa fa-angle-right"></i
                   ></a>
                 </div>
@@ -347,12 +419,13 @@
             </div>
 
             <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-              <div class="blog-item">
-                <div class="blog-img">
+              <div class="blog-item h-100">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="../../img/blogs/how-the-oxygen-economy-works.jpg"
+                    src="../../asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
                 <div class="blog-content bg-light rounded-bottom p-4">
                   <h4 class="text-dark mb-3 fs-5">Blue Sky Mining</h4>
@@ -361,20 +434,23 @@
                     more than the Intergovernmental Panel on Climate Change (IPCC) has computed.
                   </p>
 
-                  <a href="" class="fw-bold text-secondary read-more-btn"
+                  <a
+                    href="../../blogs/global/the-satanic-formula.html"
+                    class="fw-bold text-secondary read-more-btn"
                     >Read More <i class="fa fa-angle-right"></i
                   ></a>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
               <div class="blog-item">
-                <div class="blog-img">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="../../img/blogs/scaling-the-oxygen-economy-globally.jpg"
+                    src="../../asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
                 <div class="blog-content bg-light rounded-bottom p-4">
                   <h4 class="text-dark mb-3 fs-5">Are we killing the Future?</h4>
@@ -383,29 +459,35 @@
                     matter (Carbohydrate) and the free molecular Oxygen.
                   </p>
 
-                  <a href="" class="fw-bold text-secondary read-more-btn"
+                  <a
+                    href="../../blogs/global/the-satanic-formula.html"
+                    class="fw-bold text-secondary read-more-btn"
                     >Read More <i class="fa fa-angle-right"></i
                   ></a>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
               <div class="blog-item">
-                <div class="blog-img">
+                <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="../../img/blogs/scaling-the-oxygen-economy-globally.jpg"
+                    src="../../asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
+                  <div class="color-overlay rounded"></div>
                 </div>
                 <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">Are we killing the Future?</h4>
+                  <h4 class="text-dark mb-3 fs-5">The Threat to Life</h4>
                   <p id="less-content" class="text-muted">
-                    Where Carbon Dioxide combine with water and powered by sunlight produces the solid organic
-                    matter (Carbohydrate) and the free molecular Oxygen.
+                    Threat is being constantly amplified by the actions of the man. The actions of modern
+                    technological man have helped bring this threat very close to becoming real for us on this
+                    planet of Earth.
                   </p>
 
-                  <a href="" class="fw-bold text-secondary read-more-btn"
+                  <a
+                    href="../../blogs/global/the-satanic-formula.html"
+                    class="fw-bold text-secondary read-more-btn"
                     >Read More <i class="fa fa-angle-right"></i
                   ></a>
                 </div>
