@@ -34,6 +34,11 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <style>
       .overlay-wrapper {
         position: relative;
@@ -92,6 +97,28 @@
           transform: scale(0.7);
           opacity: 0;
         }
+      }
+    </style>
+
+    <style>
+      .hero-wrapper {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Your desired height */
+        overflow: hidden;
+      }
+
+      .bg-breadcrumb-single {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(121, 176, 131, 0.4); /* #79b083 overlay */
+      }
+
+      video.object-fit-cover {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     </style>
   </head>
@@ -189,15 +216,26 @@
     <!-- Navbar & Hero End -->
 
     <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
+    <div class="hero-wrapper">
+      <!-- Background Video -->
+      <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover">
+        <source src="asset/video/global-community-cover.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Optional overlay -->
       <div class="bg-breadcrumb-single"></div>
-      <div class="container text-center py-5" style="max-width: 900px">
-        <h4 class="text-light display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Global Community</h4>
-        <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-          <li class="breadcrumb-item text-light"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item text-light"><a href="">Further reading </a></li>
-          <li class="breadcrumb-item text-light">Global</li>
-        </ol>
+
+      <!-- Centered Text Content -->
+      <div
+        class="container text-center position-relative wow fadeInUp"
+        style="max-width: 900px; padding-top: 180px; z-index: 10">
+        <h4 class="text-white display-4 mb-4">Primary Ecosystem Services (PES)</h4>
+        <!-- <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item text-white"><a class="text-white" href="index.html">Home</a></li>
+          <li class="breadcrumb-item text-white"><a class="text-white" href="#">Further reading</a></li>
+          <li class="breadcrumb-item text-white">Global</li>
+        </ol> -->
       </div>
     </div>
     <!-- Header End -->
@@ -206,7 +244,7 @@
       <div class="container-fluid blog">
         <div class="container">
           <div class="row g-5 py-3 align-items-center">
-            <div class="col-lg-4">
+            <div class="col-lg-4 wow fadeInLeft">
               <div class="position-relative overlay-wrapper">
                 <img src="asset/img/further-reading/pes.jpeg" alt="Video 1" class="w-100 rounded shadow" />
                 <div class="color-overlay rounded"></div>
@@ -223,7 +261,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 wow fadeInRight">
               <h1 class="display-5 text-dark fs-3 mb-4">Primary Ecosystem Services (PES)</h1>
               <p class="text-muted mb-4 fs-6">
                 Primary Ecosystem Services are measured into the EarthRestoration system as a net positive
@@ -244,7 +282,7 @@
           </div>
 
           <div class="row g-5 py-3 align-items-center justify-content-end">
-            <div class="col-lg-6">
+            <div class="col-lg-6 wow fadeInLeft">
               <h1 class="display-5 text-dark fs-3 mb-4 text-lg-end">
                 Realizing the Value of Ecosystem Services
               </h1>
@@ -256,7 +294,7 @@
               </p>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 wow fadeInRight">
               <div class="position-relative overlay-wrapper">
                 <img
                   src="asset/img/further-reading/realizing-the-value.jpg"
@@ -278,7 +316,7 @@
           </div>
 
           <div class="row g-5 py-3 align-items-center">
-            <div class="col-lg-4">
+            <div class="col-lg-4 wow fadeInLeft">
               <div class="position-relative overlay-wrapper">
                 <img
                   src="asset/img/further-reading/forest-garden-products.png"
@@ -288,7 +326,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 wow fadeInRight">
               <h1 class="display-5 text-dark fs-3 mb-4">Forest Garden Products</h1>
               <p class="text-muted mb-4 fs-6">
                 In a world where restoring our forest is an ever more pressing necessity,there is an urgent
@@ -302,7 +340,7 @@
           </div>
 
           <div class="row g-5 py-3 align-items-center justify-content-end">
-            <div class="col-lg-6">
+            <div class="col-lg-6 wow fadeInLeft">
               <h1 class="display-5 text-dark fs-3 mb-4 text-lg-end">Analog forestry</h1>
 
               <p class="text-muted text-lg-end fs-6">
@@ -315,7 +353,7 @@
               </p>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 wow fadeInRight">
               <div class="position-relative overlay-wrapper">
                 <img
                   src="asset/img/further-reading/analog-foresty.jpg"
@@ -327,7 +365,7 @@
           </div>
 
           <div class="row g-5 pt-3 pb-5 align-items-center">
-            <div class="col-lg-4">
+            <div class="col-lg-4 wow fadeInLeft">
               <div class="position-relative overlay-wrapper">
                 <img
                   src="asset/img/further-reading/scientific-publications.jpg"
@@ -337,7 +375,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 wow fadeInRight">
               <h1 class="display-5 text-dark fs-3 mb-4">Scientific Publications</h1>
               <p class="text-muted mb-4 fs-6">
                 Photosynthetic biomass performs the act of primary production, the initial step in the
@@ -368,7 +406,7 @@
           </div>
 
           <div class="row g-5 py-5">
-            <div class="col-lg-6 overflow-hidden mb-4">
+            <div class="col-lg-6 overflow-hidden mb-4 wow fadeInUp" data-wow-delay="0.1s">
               <div class="row g-0 bg-white shadow-sm rounded hover-card align-items-center">
                 <div class="col-md-6">
                   <img
@@ -391,7 +429,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 overflow-hidden mb-4">
+            <div class="col-lg-6 overflow-hidden mb-4 wow fadeInUp" data-wow-delay="0.2s">
               <div class="row g-0 bg-white shadow-sm rounded hover-card align-items-center">
                 <div class="col-md-6">
                   <img
@@ -421,12 +459,12 @@
     <section class="py-5 bg-white">
       <div class="container-fluid blog py-5">
         <div class="container">
-          <div class="row g-4 justify-content-center h-100">
+          <div class="row g-4 justify-content-center">
             <h1 class="display-5 text-dark text-center fs-3">
               Unlocking 'Ecosystem Services value' Towards Sustaining <br />a Global Green Economy
             </h1>
 
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
               <div class="blog-item">
                 <div class="blog-img position-relative overlay-wrapper">
                   <img
@@ -454,7 +492,7 @@
               <div class="blog-item h-100">
                 <div class="blog-img position-relative overlay-wrapper">
                   <img
-                    src="asset/img/further-reading/blue-sky-mining-cover.png"
+                    src="asset/img/further-reading/satanic-formula-cover.png"
                     class="img-fluid rounded-top w-100"
                     alt="" />
                   <div class="color-overlay rounded"></div>
@@ -473,7 +511,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
               <div class="blog-item">
                 <div class="blog-img position-relative overlay-wrapper">
                   <img
@@ -496,7 +534,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
               <div class="blog-item">
                 <div class="blog-img position-relative overlay-wrapper">
                   <img
@@ -520,7 +558,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
               <div class="blog-item">
                 <div class="blog-img position-relative overlay-wrapper">
                   <img
@@ -566,7 +604,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
               <div class="blog-item">
                 <div class="blog-img position-relative overlay-wrapper">
                   <img
@@ -589,7 +627,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
               <div class="blog-item">
                 <div class="blog-img position-relative overlay-wrapper">
                   <img
@@ -618,7 +656,7 @@
     </section>
 
     <!-- Footer Start -->
-    <div class="container-fluid footer bg-primary pt-4 wow fadeIn">
+    <div class="container-fluid footer bg-primary pt-4">
       <div class="container py-5">
         <div class="row g-5">
           <div class="col-md-6 col-lg-6 col-xl-5">
@@ -783,6 +821,22 @@
 
       videoModal.addEventListener("hidden.bs.modal", function () {
         videoFrame.src = "";
+      });
+    </script>
+
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          bulletClass: "swiper-pagination-bullet-line",
+          bulletActiveClass: "swiper-pagination-bullet-line-active",
+        },
       });
     </script>
   </body>

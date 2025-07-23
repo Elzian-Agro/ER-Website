@@ -417,36 +417,11 @@
 }
 /*** Header Carousel End ***/
 
-/*** Single Page Hero Header Start ***/
-.bg-breadcrumb {
-  position: relative;
-  overflow: hidden;
-  background-image: url("../asset/img/further-reading/global-cover.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 60px 0 60px 0;
-}
-
-.bg-breadcrumb .breadcrumb-item a {
+/* .bg-breadcrumb .breadcrumb-item a {
   color: var(--bs-white) !important;
-}
+} */
 
-.bg-breadcrumb .bg-breadcrumb-single {
-  position: absolute;
-  width: 500px;
-  height: 1200px;
-  top: 0px;
-  left: 0;
-  margin-left: 30px;
-  transform: rotate(-30deg);
-  background: var(--bs-dark);
-  animation: RotateMoveLeft 5s linear infinite;
-  opacity: 0.7;
-  z-index: 2 !important;
-}
-
-.bg-breadcrumb::before {
+/* .bg-breadcrumb::before {
   content: "";
   position: absolute;
   width: 400px;
@@ -454,12 +429,12 @@
   top: -150px;
   right: -150px;
   border-radius: 200px;
-  border: 80px solid rgba(121, 176, 131, 0.2);
+  border: 80px solid rgba(217, 35, 11, 0.2);
   animation: RotateMoveCircle 10s linear infinite;
   background: transparent;
   z-index: 2 !important;
-}
-
+} */
+/* 
 @keyframes RotateMoveCircle {
   0% {
     top: -200px;
@@ -473,9 +448,9 @@
   100% {
     top: -200px;
   }
-}
+} */
 
-.bg-breadcrumb::after {
+/* .bg-breadcrumb::after {
   content: "";
   position: absolute;
   width: 150px;
@@ -487,7 +462,7 @@
   background: rgba(121, 176, 131, 0.2);
   animation: RotateMoveRight 5s linear infinite;
   z-index: 2 !important;
-}
+} */
 /*** Single Page Hero Header End ***/
 
 /*** About Start ***/
