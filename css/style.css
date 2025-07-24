@@ -188,7 +188,7 @@
   vertical-align: middle;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .navbar .nav-item .dropdown-menu {
     display: block;
     visibility: hidden;
@@ -198,23 +198,23 @@
     transform-origin: 0% 0%;
     border: 0;
     border-radius: 10px;
-    margin-top: 20px !important;
+    margin-top: 5px !important;
     transition: 0.5s;
     opacity: 0;
     z-index: 9;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .navbar .nav-item .dropdown-menu {
-    margin-top: 15px !important;
+    margin-top: 5px !important;
     transition: 0.5s;
   }
 }
 
 @media (max-width: 991px) {
   .navbar .navbar-nav .nav-item.nav-link {
-    margin: 5px 0 !important;
+    margin: 5px 5px !important;
   }
 }
 
@@ -227,7 +227,6 @@
   transform: rotateX(0deg);
   visibility: visible;
   background: var(--bs-light) !important;
-  margin-top: 20px !important;
   transition: 0.5s;
   opacity: 1;
 }
