@@ -1,418 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>EarthRestoration</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>EarthRestoration</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet" />
+  <link rel="icon" href="img/logo.png" type="image/x-icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet" />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
 
-    <style>
-      .overlay-wrapper {
-        position: relative;
-        display: inline-block;
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <style>
+    .overlay-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .color-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #79b083;
+      opacity: 0.5;
+      /* Adjust as needed */
+
+      pointer-events: none;
+      /* Ensures it doesn't block interactions */
+    }
+
+    .overlay-wrapper img {
+      display: block;
+    }
+
+    .pulse-ring {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pulse-ring::before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: rgba(121, 176, 131, 0.9);
+      /* #79b083 with opacity */
+      animation: pulse 2s infinite;
+      z-index: 0;
+    }
+
+    .pulse-ring i {
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.7);
+        opacity: 0.6;
       }
 
-      .color-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #79b083;
-        opacity: 0.5; /* Adjust as needed */
-
-        pointer-events: none; /* Ensures it doesn't block interactions */
+      70% {
+        transform: scale(1.4);
+        opacity: 0;
       }
 
-      .overlay-wrapper img {
-        display: block;
+      100% {
+        transform: scale(0.7);
+        opacity: 0;
       }
+    }
+  </style>
 
-      .pulse-ring {
-        position: relative;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-      }
+  <style>
+    .hero-wrapper {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      /* Your desired height */
+      overflow: hidden;
+    }
 
-      .pulse-ring::before {
-        content: "";
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background-color: rgba(121, 176, 131, 0.9); /* #79b083 with opacity */
-        animation: pulse 2s infinite;
-        z-index: 0;
-      }
+    .bg-breadcrumb-single {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(121, 176, 131, 0.4);
+      /* #79b083 overlay */
+    }
 
-      .pulse-ring i {
-        position: relative;
-        z-index: 1;
-      }
+    video.object-fit-cover {
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
 
-      @keyframes pulse {
-        0% {
-          transform: scale(0.7);
-          opacity: 0.6;
-        }
-        70% {
-          transform: scale(1.4);
-          opacity: 0;
-        }
-        100% {
-          transform: scale(0.7);
-          opacity: 0;
-        }
-      }
-    </style>
-
-    <style>
-      .hero-wrapper {
-        position: relative;
-        width: 100%;
-        height: 400px; /* Your desired height */
-        overflow: hidden;
-      }
-
-      .bg-breadcrumb-single {
-        position: absolute;
-        inset: 0;
-        background-color: rgba(121, 176, 131, 0.4); /* #79b083 overlay */
-      }
-
-      video.object-fit-cover {
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
-    <!-- Spinner End -->
+  </div>
+  <!-- Spinner End -->
 
-    <!-- Topbar Start -->
-    <div class="container-fluid topbar bg-primary px-0 d-none d-lg-block">
-      <div class="container px-0">
-        <div class="row gx-0 align-items-center" style="height: 35px">
-          <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-            <div class="d-flex flex-wrap">
-              <a href="mailto:info@restore.earth" class="text-light me-4">
-                <i class="fas fa-envelope text-light me-2"></i>info@restore.earth
-              </a>
-              <a href="tel:+94767191428" class="text-light me-4">
-                <i class="fas fa-phone-alt text-light me-2"></i>+94 76 719 1428
-              </a>
-            </div>
+  <!-- Topbar Start -->
+  <div class="container-fluid topbar bg-primary px-0 d-none d-lg-block">
+    <div class="container px-0">
+      <div class="row gx-0 align-items-center" style="height: 35px">
+        <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+          <div class="d-flex flex-wrap">
+            <a href="mailto:info@restore.earth" class="text-white me-4">
+              <i class="fas fa-envelope text-white me-2"></i>info@restore.earth
+            </a>
+            <a href="tel:+94767191428" class="text-white me-4">
+              <i class="fas fa-phone-alt text-white me-2"></i>+94 76 719 1428
+            </a>
           </div>
-          <div class="col-lg-4 text-center text-lg-end">
-            <div class="d-flex align-items-center justify-content-end">
-              <a
-                href="https://www.youtube.com/channel/UCL5dFM7Kr1dMapzjSJExftg?view_as=subscriber"
-                target="_blank"
-                class="btn nav-fill"
-                ><i class="fab fa-youtube text-light"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/profile.php?id=100045842366453"
-                target="_blank"
-                class="btn nav-fill"
-                ><i class="fab fa-facebook-f text-light"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/company/earth-restoration/"
-                target="_blank"
-                class="btn nav-fill"
-                ><i class="fab fa-linkedin-in text-light"></i
-              ></a>
-            </div>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="https://www.youtube.com/channel/UCL5dFM7Kr1dMapzjSJExftg?view_as=subscriber" target="_blank"
+              class="btn nav-fill"><i class="fab fa-youtube text-white"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100045842366453" target="_blank" class="btn nav-fill"><i
+                class="fab fa-facebook-f text-white"></i></a>
+            <a href="https://www.linkedin.com/company/earth-restoration/" target="_blank" class="btn nav-fill"><i
+                class="fab fa-linkedin-in text-white"></i></a>
           </div>
         </div>
       </div>
     </div>
-    <!-- Topbar End -->
+  </div>
+  <!-- Topbar End -->
 
-    <!-- Navbar & Hero Start -->
-    <div class="container-fluid sticky-top px-0">
-      <div class="position-absolute bg-primary" style="left: 0; top: 0; width: 100%; height: 100%"></div>
-      <div class="container px-0">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
-          <a href="index.html" class="navbar-brand p-0">
-            <img class="nav-logo" src="img/logo.png" alt="Logo" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse">
-            <span class="fa fa-bars"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0">
-              <a href="index.html#home" class="nav-item nav-link">Home</a>
-              <a href="index.html#about" class="nav-item nav-link">About</a>
-              <a href="index.html#why-we-do-it" class="nav-item nav-link">Why We Do It</a>
-              <a href="index.html#how-we-do-it" class="nav-item nav-link">How We Do It</a>
-              <a href="index.html#how-it-works" class="nav-item nav-link">How It Works</a>
-              <a href="index.html#our-products" class="nav-item nav-link">Our Products</a>
-              <a href="index.html#other-services" class="nav-item nav-link">Other Services</a>
-              <a href="index.html#who-we-are" class="nav-item nav-link">Who We Are</a>
-              <div class="nav-item dropdown active">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Further Reading</a>
-                <div class="dropdown-menu m-0">
-                  <a href="global.html" class="dropdown-item active">Global</a>
-                  <a href="local.html" class="dropdown-item">Local in Sri Lanka </a>
-                </div>
+  <!-- Navbar & Hero Start -->
+  <div class="container-fluid sticky-top px-0">
+    <div class="position-absolute bg-primary" style="left: 0; top: 0; width: 100%; height: 100%"></div>
+    <div class="container px-0">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+        <a href="index.html" class="navbar-brand p-0">
+          <img class="nav-logo" src="img/logo.png" alt="Logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto py-0">
+            <a href="index.html#home" class="nav-item nav-link">Home</a>
+            <a href="index.html#about" class="nav-item nav-link">About</a>
+            <a href="index.html#why-we-do-it" class="nav-item nav-link">Why We Do It</a>
+            <a href="index.html#how-we-do-it" class="nav-item nav-link">How We Do It</a>
+            <a href="index.html#how-it-works" class="nav-item nav-link">How It Works</a>
+            <a href="index.html#our-products" class="nav-item nav-link">Our Products</a>
+            <a href="index.html#other-services" class="nav-item nav-link">Other Services</a>
+            <a href="index.html#who-we-are" class="nav-item nav-link">Who We Are</a>
+            <div class="nav-item dropdown active">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Further Reading</a>
+              <div class="dropdown-menu m-0">
+                <a href="global.html" class="dropdown-item active">Global</a>
+                <a href="local.html" class="dropdown-item">Local in Sri Lanka </a>
               </div>
-              <a href="oxygen-economy.html" class="nav-item nav-link">Oxygen Economy</a>
             </div>
+            <a href="oxygen-economy.html" class="nav-item nav-link">Oxygen Economy</a>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Navbar & Hero End -->
+
+  <!-- Header Start -->
+  <div class="hero-wrapper">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover">
+      <source src="asset/video/global-community-cover.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Optional overlay -->
+    <div class="bg-breadcrumb-single"></div>
+
+    <!-- Flex layout to split content vertically -->
+    <div class="d-flex flex-column justify-content-center align-items-center h-100 position-relative">
+      <!-- Title + Paragraph Centered -->
+      <div class="container text-center" style="max-width: 900px; z-index: 10">
+        <h4 class="text-white display-4 mb-4">Primary Ecosystem Services (PES)</h4>
+      </div>
+
+      <!-- Breadcrumb at bottom -->
+      <div class="position-absolute w-100" style="bottom: 30px; z-index: 10">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item text-white"><a class="text-white" href="index.html">Home</a></li>
+          <li class="breadcrumb-item text-white">
+            <a class="text-white" href="#">Further reading</a>
+          </li>
+          <li class="breadcrumb-item text-white">Global</li>
+        </ol>
       </div>
     </div>
-    <!-- Navbar & Hero End -->
+  </div>
+  <!-- Header End -->
 
-    <!-- Header Start -->
-    <div class="hero-wrapper">
-      <!-- Background Video -->
-      <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover">
-        <source src="asset/video/global-community-cover.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+  <section class="py-5 bg-light">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row g-5 py-3 align-items-center">
+          <div class="col-lg-4 order-2 order-lg-1 wow fadeInLeft">
+            <div class="position-relative overlay-wrapper">
+              <img src="asset/img/further-reading/pes.jpeg" alt="Video 1" class="w-100 rounded shadow" />
+              <div class="color-overlay rounded"></div>
 
-      <!-- Optional overlay -->
-      <div class="bg-breadcrumb-single"></div>
+              <!-- Animated play icon -->
+              <div class="position-absolute top-50 start-50 translate-middle pulse-ring" style="cursor: pointer"
+                data-bs-toggle="modal" data-bs-target="#videoModal"
+                data-video-url="https://www.youtube.com/embed/tinG2ZWF544">
+                <i class="bi bi-play-circle-fill text-white" style="font-size: 3rem"></i>
+              </div>
+            </div>
+          </div>
 
-      <!-- Flex layout to split content vertically -->
-      <div class="d-flex flex-column justify-content-center align-items-center h-100 position-relative">
-        <!-- Title + Paragraph Centered -->
-        <div class="container text-center" style="max-width: 900px; z-index: 10">
-          <h4 class="text-white display-4 mb-4">Primary Ecosystem Services (PES)</h4>
+          <div class="col-lg-6 order-1 order-lg-2 wow fadeInLeft">
+            <h1 class="display-5 text-dark fs-3 mb-4">Primary Ecosystem Services (PES)</h1>
+            <p class="text-muted mb-4 fs-6">
+              Primary Ecosystem Services are measured into the EarthRestoration system as a net positive
+              externality to the Global Commons of Atmosphere. We see the climate problem from a whole
+              system perspective based on the falling levels of
+              <a href="https://www.oxygenlevels.org/" target="_blank"
+                class="text-primary text-decoration-underline">Oxygen</a>.
+            </p>
+
+            <a href="#" class="text-primary text-decoration-none fs-6">
+              More Info <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
         </div>
 
-        <!-- Breadcrumb at bottom -->
-        <div class="position-absolute w-100" style="bottom: 30px; z-index: 10">
-          <ol class="breadcrumb justify-content-center mb-0">
-            <li class="breadcrumb-item text-white"><a class="text-white" href="index.html">Home</a></li>
-            <li class="breadcrumb-item text-white">
-              <a class="text-white" href="#">Further reading</a>
-            </li>
-            <li class="breadcrumb-item text-white">Global</li>
-          </ol>
+        <div class="row g-5 py-3 align-items-center justify-content-end">
+          <div class="col-lg-6 wow fadeInRight">
+            <h1 class="display-5 text-dark fs-3 mb-4 text-lg-end">
+              Realizing the Value of Ecosystem Services
+            </h1>
+
+            <p class="text-muted text-lg-end fs-6">
+              Seniormost systems ecologist Dr. Ranil Senanayake brings up a case that ecosystem services
+              should be measured on biological activities that are Monitored / Recorded and Validated over
+              time and not by using subjective 'humanistic' approaches to evaluate them.
+            </p>
+          </div>
+
+          <div class="col-lg-4 wow fadeInRight">
+            <div class="position-relative overlay-wrapper">
+              <img src="asset/img/further-reading/realizing-the-value.jpg" alt="Video 1" class="w-100 rounded shadow" />
+              <div class="color-overlay rounded"></div>
+
+              <!-- Animated play icon -->
+              <div class="position-absolute top-50 start-50 translate-middle pulse-ring" style="cursor: pointer"
+                data-bs-toggle="modal" data-bs-target="#videoModal"
+                data-video-url="https://www.youtube.com/embed/U3Lj6T_WNkA">
+                <i class="bi bi-play-circle-fill text-white" style="font-size: 3rem"></i>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- Header End -->
 
-    <section class="py-5 bg-light">
-      <div class="container-fluid">
-        <div class="container">
-          <div class="row g-5 py-3 align-items-center">
-            <div class="col-lg-4 order-2 order-lg-1 wow fadeInLeft">
-              <div class="position-relative overlay-wrapper">
-                <img src="asset/img/further-reading/pes.jpeg" alt="Video 1" class="w-100 rounded shadow" />
-                <div class="color-overlay rounded"></div>
-
-                <!-- Animated play icon -->
-                <div
-                  class="position-absolute top-50 start-50 translate-middle pulse-ring"
-                  style="cursor: pointer"
-                  data-bs-toggle="modal"
-                  data-bs-target="#videoModal"
-                  data-video-url="https://www.youtube.com/embed/tinG2ZWF544">
-                  <i class="bi bi-play-circle-fill text-light" style="font-size: 3rem"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 order-1 order-lg-2 wow fadeInLeft">
-              <h1 class="display-5 text-dark fs-3 mb-4">Primary Ecosystem Services (PES)</h1>
-              <p class="text-muted mb-4 fs-6">
-                Primary Ecosystem Services are measured into the EarthRestoration system as a net positive
-                externality to the Global Commons of Atmosphere. We see the climate problem from a whole
-                system perspective based on the falling levels of
-                <a
-                  href="https://www.oxygenlevels.org/"
-                  target="_blank"
-                  class="text-primary text-decoration-underline"
-                  >Oxygen</a
-                >.
-              </p>
-
-              <a href="#" class="text-primary text-decoration-none fs-6">
-                More Info <i class="bi bi-arrow-right"></i>
-              </a>
+        <div class="row g-5 py-3 align-items-center">
+          <div class="col-lg-4 order-2 order-lg-1 wow fadeInLeft">
+            <div class="position-relative overlay-wrapper">
+              <img src="asset/img/further-reading/forest-garden-products.png" alt="Video 1"
+                class="w-100 rounded shadow" />
+              <div class="color-overlay rounded"></div>
             </div>
           </div>
 
-          <div class="row g-5 py-3 align-items-center justify-content-end">
-            <div class="col-lg-6 wow fadeInRight">
-              <h1 class="display-5 text-dark fs-3 mb-4 text-lg-end">
-                Realizing the Value of Ecosystem Services
-              </h1>
+          <div class="col-lg-6 order-1 order-lg-2 wow fadeInLeft">
+            <h1 class="display-5 text-dark fs-3 mb-4">Forest Garden Products</h1>
+            <p class="text-muted mb-4 fs-6">
+              In a world where restoring our forest is an ever more pressing necessity,there is an urgent
+              need to reconcile forest restoration with economic imperatives. Diverse and ecologically
+              mature agroforestry systems, or forest gardens, are essential to ensuring that bringing bck
+              forests can be profitable for the people who are restoring them. The Forest Garden Product
+              concept was born out of this necessity, showcasing the products that come from mature and
+              biodiverse forest gardens.
+            </p>
+          </div>
+        </div>
 
-              <p class="text-muted text-lg-end fs-6">
-                Seniormost systems ecologist Dr. Ranil Senanayake brings up a case that ecosystem services
-                should be measured on biological activities that are Monitored / Recorded and Validated over
-                time and not by using subjective 'humanistic' approaches to evaluate them.
-              </p>
+        <div class="row g-5 py-3 align-items-center justify-content-end">
+          <div class="col-lg-6 wow fadeInRight">
+            <h1 class="display-5 text-dark fs-3 mb-4 text-lg-end">Analog forestry</h1>
+
+            <p class="text-muted text-lg-end fs-6">
+              Analog forestry is a system of ecological restoration that focuses on increasing biodiversity
+              by imitating natural forest systems in order to create economically productive and
+              environmentally mature forests. The methodology is based on traditional forest gardens, which
+              are human-created analogs of the natural forest that serve needs such as food, fiber, timber,
+              medicine and water. By taking inspiration from analog forestry, FGP certificate affirms its
+              commitment to mature, biodiverse ecosystems that are in harmony with human needs.
+            </p>
+          </div>
+
+          <div class="col-lg-4 wow fadeInRight">
+            <div class="position-relative overlay-wrapper">
+              <img src="asset/img/further-reading/analog-foresty.jpg" alt="Video 1" class="w-100 rounded shadow" />
+              <div class="color-overlay rounded"></div>
             </div>
+          </div>
+        </div>
 
-            <div class="col-lg-4 wow fadeInRight">
-              <div class="position-relative overlay-wrapper">
-                <img
-                  src="asset/img/further-reading/realizing-the-value.jpg"
-                  alt="Video 1"
-                  class="w-100 rounded shadow" />
-                <div class="color-overlay rounded"></div>
-
-                <!-- Animated play icon -->
-                <div
-                  class="position-absolute top-50 start-50 translate-middle pulse-ring"
-                  style="cursor: pointer"
-                  data-bs-toggle="modal"
-                  data-bs-target="#videoModal"
-                  data-video-url="https://www.youtube.com/embed/U3Lj6T_WNkA">
-                  <i class="bi bi-play-circle-fill text-light" style="font-size: 3rem"></i>
-                </div>
-              </div>
+        <div class="row g-5 pt-3 pb-5 align-items-center">
+          <div class="col-lg-4 order-2 order-lg-1 wow fadeInLeft">
+            <div class="position-relative overlay-wrapper">
+              <img src="asset/img/further-reading/scientific-publications.jpg" alt="Video 1"
+                class="w-100 rounded shadow" />
+              <div class="color-overlay rounded"></div>
             </div>
           </div>
 
-          <div class="row g-5 py-3 align-items-center">
-            <div class="col-lg-4 order-2 order-lg-1 wow fadeInLeft">
-              <div class="position-relative overlay-wrapper">
-                <img
-                  src="asset/img/further-reading/forest-garden-products.png"
-                  alt="Video 1"
-                  class="w-100 rounded shadow" />
-                <div class="color-overlay rounded"></div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 order-1 order-lg-2 wow fadeInLeft">
-              <h1 class="display-5 text-dark fs-3 mb-4">Forest Garden Products</h1>
-              <p class="text-muted mb-4 fs-6">
-                In a world where restoring our forest is an ever more pressing necessity,there is an urgent
-                need to reconcile forest restoration with economic imperatives. Diverse and ecologically
-                mature agroforestry systems, or forest gardens, are essential to ensuring that bringing bck
-                forests can be profitable for the people who are restoring them. The Forest Garden Product
-                concept was born out of this necessity, showcasing the products that come from mature and
-                biodiverse forest gardens.
-              </p>
-            </div>
+          <div class="col-lg-6 order-1 order-lg-2 wow fadeInLeft">
+            <h1 class="display-5 text-dark fs-3 mb-4">Scientific Publications</h1>
+            <p class="text-muted mb-4 fs-6">
+              Photosynthetic biomass performs the act of primary production, the initial step in the
+              manifestation of life. The biomass so termed has the ability to increase in mass through the
+              absorption of solar or other electromagnetic radiation while releasing oxygen and water vapour
+              into the atmosphere. Respiring biomass is that component of living biomass that uses the
+              output of photosynthesis to make the complicated biological patterns of life.
+            </p>
           </div>
+        </div>
 
-          <div class="row g-5 py-3 align-items-center justify-content-end">
-            <div class="col-lg-6 wow fadeInRight">
-              <h1 class="display-5 text-dark fs-3 mb-4 text-lg-end">Analog forestry</h1>
-
-              <p class="text-muted text-lg-end fs-6">
-                Analog forestry is a system of ecological restoration that focuses on increasing biodiversity
-                by imitating natural forest systems in order to create economically productive and
-                environmentally mature forests. The methodology is based on traditional forest gardens, which
-                are human-created analogs of the natural forest that serve needs such as food, fiber, timber,
-                medicine and water. By taking inspiration from analog forestry, FGP certificate affirms its
-                commitment to mature, biodiverse ecosystems that are in harmony with human needs.
-              </p>
-            </div>
-
-            <div class="col-lg-4 wow fadeInRight">
-              <div class="position-relative overlay-wrapper">
-                <img
-                  src="asset/img/further-reading/analog-foresty.jpg"
-                  alt="Video 1"
-                  class="w-100 rounded shadow" />
-                <div class="color-overlay rounded"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row g-5 pt-3 pb-5 align-items-center">
-            <div class="col-lg-4 order-2 order-lg-1 wow fadeInLeft">
-              <div class="position-relative overlay-wrapper">
-                <img
-                  src="asset/img/further-reading/scientific-publications.jpg"
-                  alt="Video 1"
-                  class="w-100 rounded shadow" />
-                <div class="color-overlay rounded"></div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 order-1 order-lg-2 wow fadeInLeft">
-              <h1 class="display-5 text-dark fs-3 mb-4">Scientific Publications</h1>
-              <p class="text-muted mb-4 fs-6">
-                Photosynthetic biomass performs the act of primary production, the initial step in the
-                manifestation of life. The biomass so termed has the ability to increase in mass through the
-                absorption of solar or other electromagnetic radiation while releasing oxygen and water vapour
-                into the atmosphere. Respiring biomass is that component of living biomass that uses the
-                output of photosynthesis to make the complicated biological patterns of life.
-              </p>
-            </div>
-          </div>
-
-          <!-- Shared Modal -->
-          <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-              <div class="modal-content bg-black border-0">
-                <div class="modal-body p-0 position-relative">
-                  <button
-                    type="button"
-                    class="btn-close btn-close-white position-absolute end-0 m-2"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                  <div class="ratio ratio-16x9">
-                    <iframe id="videoFrame" src="" allowfullscreen allow="autoplay"></iframe>
-                  </div>
+        <!-- Shared Modal -->
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-black border-0">
+              <div class="modal-body p-0 position-relative">
+                <button type="button" class="btn-close btn-close-white position-absolute end-0 m-2"
+                  data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="ratio ratio-16x9">
+                  <iframe id="videoFrame" src="" allowfullscreen allow="autoplay"></iframe>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- <div class="row g-5 py-5">
+        <!-- <div class="row g-5 py-5">
             <div class="col-md-6 overflow-hidden mb-4 wow fadeInUp" data-wow-delay="0.1s">
               <div class="row g-0 bg-white shadow-sm rounded hover-card align-items-center">
                 <div class="col-6">
@@ -459,231 +425,207 @@
               </div>
             </div>
           </div> -->
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="py-5 bg-white">
-      <div class="container-fluid blog py-5">
-        <div class="container">
-          <div class="row g-4 justify-content-center">
-            <h1 class="display-5 text-dark text-center fs-3">
-              Unlocking 'Ecosystem Services value' Towards Sustaining <br />a Global Green Economy
-            </h1>
+  <section class="py-5 bg-white">
+    <div class="container-fluid blog py-5">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <h1 class="display-5 text-dark text-center fs-3">
+            Unlocking 'Ecosystem Services value' Towards Sustaining <br />a Global Green Economy
+          </h1>
 
-            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="blog-item">
-                <div class="blog-img position-relative overlay-wrapper">
-                  <img
-                    src="asset/img/further-reading/satanic-formula-cover.png"
-                    class="img-fluid rounded-top w-100"
-                    alt="" />
-                  <div class="color-overlay rounded"></div>
-                </div>
+          <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="blog-item">
+              <div class="blog-img position-relative overlay-wrapper">
+                <img src="asset/img/further-reading/satanic-formula-cover.png" class="img-fluid rounded-top w-100"
+                  alt="" />
+                <div class="color-overlay rounded"></div>
+              </div>
 
-                <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">The Satanic Formula</h4>
-                  <p id="less-content" class="text-muted">
-                    All of a sudden both the individual and society become disinterested observers. A lot of
-                    information is generated on how to perceive and understand the problem.
-                  </p>
+              <div class="blog-content bg-light rounded-bottom p-4">
+                <h4 class="text-dark mb-3 fs-5">The Satanic Formula</h4>
+                <p id="less-content" class="text-muted">
+                  All of a sudden both the individual and society become disinterested observers. A lot of
+                  information is generated on how to perceive and understand the problem.
+                </p>
 
-                  <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
-                    >Read More <i class="fa fa-angle-right"></i
-                  ></a>
-                </div>
+                <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn">Read More
+                  <i class="fa fa-angle-right"></i></a>
               </div>
             </div>
+          </div>
 
-            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-              <div class="blog-item h-100">
-                <div class="blog-img position-relative overlay-wrapper">
-                  <img
-                    src="asset/img/further-reading/satanic-formula-cover.png"
-                    class="img-fluid rounded-top w-100"
-                    alt="" />
-                  <div class="color-overlay rounded"></div>
-                </div>
-                <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">Blue Sky Mining</h4>
-                  <p id="less-content" class="text-muted">
-                    We know that the mean temperature will rise, but the speed of that increase may be much
-                    more than the Intergovernmental Panel on Climate Change (IPCC) has computed.
-                  </p>
+          <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="blog-item h-100">
+              <div class="blog-img position-relative overlay-wrapper">
+                <img src="asset/img/further-reading/satanic-formula-cover.png" class="img-fluid rounded-top w-100"
+                  alt="" />
+                <div class="color-overlay rounded"></div>
+              </div>
+              <div class="blog-content bg-light rounded-bottom p-4">
+                <h4 class="text-dark mb-3 fs-5">Blue Sky Mining</h4>
+                <p id="less-content" class="text-muted">
+                  We know that the mean temperature will rise, but the speed of that increase may be much
+                  more than the Intergovernmental Panel on Climate Change (IPCC) has computed.
+                </p>
 
-                  <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
-                    >Read More <i class="fa fa-angle-right"></i
-                  ></a>
-                </div>
+                <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn">Read More
+                  <i class="fa fa-angle-right"></i></a>
               </div>
             </div>
+          </div>
 
-            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-              <div class="blog-item">
-                <div class="blog-img position-relative overlay-wrapper">
-                  <img
-                    src="asset/img/further-reading/satanic-formula-cover.png"
-                    class="img-fluid rounded-top w-100"
-                    alt="" />
-                  <div class="color-overlay rounded"></div>
-                </div>
-                <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">Are we killing the Future?</h4>
-                  <p id="less-content" class="text-muted">
-                    Where Carbon Dioxide combine with water and powered by sunlight produces the solid organic
-                    matter (Carbohydrate) and the free molecular Oxygen.
-                  </p>
+          <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="blog-item">
+              <div class="blog-img position-relative overlay-wrapper">
+                <img src="asset/img/further-reading/satanic-formula-cover.png" class="img-fluid rounded-top w-100"
+                  alt="" />
+                <div class="color-overlay rounded"></div>
+              </div>
+              <div class="blog-content bg-light rounded-bottom p-4">
+                <h4 class="text-dark mb-3 fs-5">Are we killing the Future?</h4>
+                <p id="less-content" class="text-muted">
+                  Where Carbon Dioxide combine with water and powered by sunlight produces the solid organic
+                  matter (Carbohydrate) and the free molecular Oxygen.
+                </p>
 
-                  <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
-                    >Read More <i class="fa fa-angle-right"></i
-                  ></a>
-                </div>
+                <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn">Read More
+                  <i class="fa fa-angle-right"></i></a>
               </div>
             </div>
+          </div>
 
-            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-              <div class="blog-item">
-                <div class="blog-img position-relative overlay-wrapper">
-                  <img
-                    src="asset/img/further-reading/satanic-formula-cover.png"
-                    class="img-fluid rounded-top w-100"
-                    alt="" />
-                  <div class="color-overlay rounded"></div>
-                </div>
-                <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">The Threat to Life</h4>
-                  <p id="less-content" class="text-muted">
-                    Threat is being constantly amplified by the actions of the man. The actions of modern
-                    technological man have helped bring this threat very close to becoming real for us on this
-                    planet of Earth.
-                  </p>
+          <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="blog-item">
+              <div class="blog-img position-relative overlay-wrapper">
+                <img src="asset/img/further-reading/satanic-formula-cover.png" class="img-fluid rounded-top w-100"
+                  alt="" />
+                <div class="color-overlay rounded"></div>
+              </div>
+              <div class="blog-content bg-light rounded-bottom p-4">
+                <h4 class="text-dark mb-3 fs-5">The Threat to Life</h4>
+                <p id="less-content" class="text-muted">
+                  Threat is being constantly amplified by the actions of the man. The actions of modern
+                  technological man have helped bring this threat very close to becoming real for us on this
+                  planet of Earth.
+                </p>
 
-                  <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
-                    >Read More <i class="fa fa-angle-right"></i
-                  ></a>
-                </div>
+                <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn">Read More
+                  <i class="fa fa-angle-right"></i></a>
               </div>
             </div>
+          </div>
 
-            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="blog-item">
-                <div class="blog-img position-relative overlay-wrapper">
-                  <img
-                    src="asset/img/further-reading/satanic-formula-cover.png"
-                    class="img-fluid rounded-top w-100"
-                    alt="" />
-                  <div class="color-overlay rounded"></div>
-                </div>
-                <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">Why we Need Biomass?</h4>
-                  <p id="less-content" class="text-muted">
-                    The growth of the current carbon market in addressing climate change provides real
-                    benchmarks and suggests astounding the market opportunities.
-                  </p>
+          <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="blog-item">
+              <div class="blog-img position-relative overlay-wrapper">
+                <img src="asset/img/further-reading/satanic-formula-cover.png" class="img-fluid rounded-top w-100"
+                  alt="" />
+                <div class="color-overlay rounded"></div>
+              </div>
+              <div class="blog-content bg-light rounded-bottom p-4">
+                <h4 class="text-dark mb-3 fs-5">Why we Need Biomass?</h4>
+                <p id="less-content" class="text-muted">
+                  The growth of the current carbon market in addressing climate change provides real
+                  benchmarks and suggests astounding the market opportunities.
+                </p>
 
-                  <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
-                    >Read More <i class="fa fa-angle-right"></i
-                  ></a>
-                </div>
+                <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn">Read More
+                  <i class="fa fa-angle-right"></i></a>
               </div>
             </div>
+          </div>
 
-            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-              <div class="blog-item">
-                <div class="blog-img position-relative overlay-wrapper">
-                  <img
-                    src="asset/img/further-reading/satanic-formula-cover.png"
-                    class="img-fluid rounded-top w-100"
-                    alt="" />
-                  <div class="color-overlay rounded"></div>
-                </div>
-                <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">Mining The Global Commons</h4>
-                  <p id="less-content" class="text-muted">
-                    In a tragic and insensitive interview, Elon Musk boasts that he relies on the availability
-                    of the Oxygen to power his rockets, because it is free.
-                  </p>
+          <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="blog-item">
+              <div class="blog-img position-relative overlay-wrapper">
+                <img src="asset/img/further-reading/satanic-formula-cover.png" class="img-fluid rounded-top w-100"
+                  alt="" />
+                <div class="color-overlay rounded"></div>
+              </div>
+              <div class="blog-content bg-light rounded-bottom p-4">
+                <h4 class="text-dark mb-3 fs-5">Mining The Global Commons</h4>
+                <p id="less-content" class="text-muted">
+                  In a tragic and insensitive interview, Elon Musk boasts that he relies on the availability
+                  of the Oxygen to power his rockets, because it is free.
+                </p>
 
-                  <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
-                    >Read More <i class="fa fa-angle-right"></i
-                  ></a>
-                </div>
+                <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn">Read More
+                  <i class="fa fa-angle-right"></i></a>
               </div>
             </div>
+          </div>
 
-            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-              <div class="blog-item">
-                <div class="blog-img position-relative overlay-wrapper">
-                  <img
-                    src="asset/img/further-reading/satanic-formula-cover.png"
-                    class="img-fluid rounded-top w-100"
-                    alt="" />
-                  <div class="color-overlay rounded"></div>
-                </div>
-                <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">Bio-Currency</h4>
-                  <p id="less-content" class="text-muted">
-                    The Global Commons sustains the air we breathe, the water we drink, and the food we eat.
-                    It is under threat today, because of the Governments in nation and financial institutions.
-                  </p>
+          <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="blog-item">
+              <div class="blog-img position-relative overlay-wrapper">
+                <img src="asset/img/further-reading/satanic-formula-cover.png" class="img-fluid rounded-top w-100"
+                  alt="" />
+                <div class="color-overlay rounded"></div>
+              </div>
+              <div class="blog-content bg-light rounded-bottom p-4">
+                <h4 class="text-dark mb-3 fs-5">Bio-Currency</h4>
+                <p id="less-content" class="text-muted">
+                  The Global Commons sustains the air we breathe, the water we drink, and the food we eat.
+                  It is under threat today, because of the Governments in nation and financial institutions.
+                </p>
 
-                  <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
-                    >Read More <i class="fa fa-angle-right"></i
-                  ></a>
-                </div>
+                <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn">Read More
+                  <i class="fa fa-angle-right"></i></a>
               </div>
             </div>
+          </div>
 
-            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-              <div class="blog-item">
-                <div class="blog-img position-relative overlay-wrapper">
-                  <img
-                    src="asset/img/further-reading/satanic-formula-cover.png"
-                    class="img-fluid rounded-top w-100"
-                    alt="" />
-                  <div class="color-overlay rounded"></div>
-                </div>
-                <div class="blog-content bg-light rounded-bottom p-4">
-                  <h4 class="text-dark mb-3 fs-5">The Creation Formula</h4>
-                  <p id="less-content" class="text-muted">
-                    Biomass was impacted five times in the history of life, such that a large percentage of
-                    the existing biomass was fossilised, the imperative at each response was the growth of
-                    biomass.
-                  </p>
+          <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="blog-item">
+              <div class="blog-img position-relative overlay-wrapper">
+                <img src="asset/img/further-reading/satanic-formula-cover.png" class="img-fluid rounded-top w-100"
+                  alt="" />
+                <div class="color-overlay rounded"></div>
+              </div>
+              <div class="blog-content bg-light rounded-bottom p-4">
+                <h4 class="text-dark mb-3 fs-5">The Creation Formula</h4>
+                <p id="less-content" class="text-muted">
+                  Biomass was impacted five times in the history of life, such that a large percentage of
+                  the existing biomass was fossilised, the imperative at each response was the growth of
+                  biomass.
+                </p>
 
-                  <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn"
-                    >Read More <i class="fa fa-angle-right"></i
-                  ></a>
-                </div>
+                <a href="blogs/global/the-satanic-formula.html" class="fw-bold text-secondary read-more-btn">Read More
+                  <i class="fa fa-angle-right"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer Start -->
-    <div class="container-fluid footer bg-primary pt-4">
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-md-6 col-lg-6 col-xl-5">
-            <div class="footer-item d-flex flex-column">
-              <div class="footer-item">
-                <div class="row">
-                  <div class="col-lg-5">
-                    <img src="img/logo.png" alt="logo" class="w-100" />
-                  </div>
-                  <div class="col-lg-7">
-                    <h4 class="text-light mb-4 fw-bold">Earth Restoration</h4>
-                    <p class="mb-3 text-light">
-                      Earth Restoration is dedicated to regenerating ecosystems, restoring biodiversity, and
-                      empowering communities to create a sustainable and thriving planet for future
-                      generations.
-                    </p>
-                  </div>
+  <!-- Footer Start -->
+  <div class="container-fluid footer bg-primary pt-4">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-6 col-xl-5">
+          <div class="footer-item d-flex flex-column">
+            <div class="footer-item">
+              <div class="row">
+                <div class="col-lg-5">
+                  <img src="img/logo.png" alt="logo" class="w-100" />
                 </div>
+                <div class="col-lg-7">
+                  <h4 class="text-white mb-4 fw-bold">Earth Restoration</h4>
+                  <p class="mb-3 text-white">
+                    Earth Restoration is dedicated to regenerating ecosystems, restoring biodiversity, and
+                    empowering communities to create a sustainable and thriving planet for future
+                    generations.
+                  </p>
+                </div>
+              </div>
 
-                <!-- <div class="position-relative mx-auto rounded-pill">
+              <!-- <div class="position-relative mx-auto rounded-pill">
                   <input
                     class="form-control rounded-sm w-100 py-3 ps-4 pe-5"
                     type="text"
@@ -694,157 +636,131 @@
                     SignUp
                   </button>
                 </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class=" ">
+            <h4 class="text-white mb-4">Quick Links</h4>
+            <div class="row g-5">
+              <div class="col-6 footer-item d-flex flex-column">
+                <a href="index.html#home" class="text-white"><i class="fas fa-angle-right me-2 text-white"></i> Home</a>
+                <a href="index.html#about" class="text-white"><i class="fas fa-angle-right me-2 text-white"></i>
+                  About</a>
+                <a href="index.html#why-we-do-it" class="text-white"><i class="fas fa-angle-right me-2 text-white"></i>
+                  Why we do it</a>
+                <a href="index.html#how-we-do-it" class="text-white"><i class="fas fa-angle-right me-2 text-white"></i>
+                  How we do it</a>
+                <a href="index.html#how-it-works" class="text-white"><i class="fas fa-angle-right me-2 text-white"></i>
+                  How it works</a>
+              </div>
+              <div class="col-6 footer-item d-flex flex-column">
+                <a href="index.html#our-products" class="text-white"><i class="fas fa-angle-right me-2 text-white"></i>
+                  Our Products</a>
+                <a href="index.html#other-services" class="text-white"><i
+                    class="fas fa-angle-right me-2 text-white"></i> Other Services</a>
+                <a href="index.html#who-we-are" class="text-white"><i class="fas fa-angle-right me-2 text-white"></i>
+                  Who We Are</a>
+
+                <a href="oxygen-economy.html" class="text-white"><i class="fas fa-angle-right me-2 text-white"></i>
+                  Oxygen Economy</a>
+                <a href="index.html#contact" class="text-white"><i class="fas fa-angle-right me-2 text-white"></i>
+                  Contact</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="col-md-6 col-lg-6 col-xl-4">
-            <div class=" ">
-              <h4 class="text-white mb-4">Quick Links</h4>
-              <div class="row g-5">
-                <div class="col-6 footer-item d-flex flex-column">
-                  <a href="index.html#home" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> Home</a
-                  >
-                  <a href="index.html#about" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> About</a
-                  >
-                  <a href="index.html#why-we-do-it" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> Why we do it</a
-                  >
-                  <a href="index.html#how-we-do-it" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> How we do it</a
-                  >
-                  <a href="index.html#how-it-works" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> How it works</a
-                  >
-                </div>
-                <div class="col-6 footer-item d-flex flex-column">
-                  <a href="index.html#our-products" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> Our Products</a
-                  >
-                  <a href="index.html#other-services" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> Other Services</a
-                  >
-                  <a href="index.html#who-we-are" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> Who We Are</a
-                  >
+        <div class="col-md-6 col-lg-6 col-xl-3">
+          <div class="footer-item d-flex flex-column">
+            <h4 class="text-white mb-4">Contact Info</h4>
+            <a href="#" class="text-white">
+              <i class="fa fa-map-marker-alt me-2"></i> Belipola Arboretum, Mirahawatte,<br />
+              <span style="padding-left: 22px">Sri Lanka.</span>
+            </a>
 
-                  <a href="oxygen-economy.html" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> Oxygen Economy</a
-                  >
-                  <a href="index.html#contact" class="text-light"
-                    ><i class="fas fa-angle-right me-2 text-light"></i> Contact</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-6 col-xl-3">
-            <div class="footer-item d-flex flex-column">
-              <h4 class="text-white mb-4">Contact Info</h4>
-              <a href="#" class="text-light">
-                <i class="fa fa-map-marker-alt me-2"></i> Belipola Arboretum, Mirahawatte,<br />
-                <span style="padding-left: 22px">Sri Lanka.</span>
-              </a>
-
-              <a href="mailto:info@restore.earth" class="text-light"
-                ><i class="fas fa-envelope me-2"></i> info@restore.earth</a
-              >
-              <a href="tel:+94767191428" class="text-light"
-                ><i class="fas fa-phone me-2"></i> +94 76 719 1428</a
-              >
-              <div class="d-flex align-items-center mt-2">
-                <a
-                  href="https://www.youtube.com/channel/UCL5dFM7Kr1dMapzjSJExftg?view_as=subscriber"
-                  target="_blank"
-                  class="btn nav-fill"
-                  style="padding-left: 0"
-                  ><i class="fab fa-youtube text-light"></i
-                ></a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100045842366453"
-                  target="_blank"
-                  class="btn nav-fill"
-                  ><i class="fab fa-facebook-f text-light"></i
-                ></a>
-                <a
-                  href="https://www.linkedin.com/company/earth-restoration/"
-                  target="_blank"
-                  class="btn nav-fill"
-                  ><i class="fab fa-linkedin-in text-light"></i
-                ></a>
-              </div>
+            <a href="mailto:info@restore.earth" class="text-white"><i class="fas fa-envelope me-2"></i>
+              info@restore.earth</a>
+            <a href="tel:+94767191428" class="text-white"><i class="fas fa-phone me-2"></i> +94 76 719 1428</a>
+            <div class="d-flex align-items-center mt-2">
+              <a href="https://www.youtube.com/channel/UCL5dFM7Kr1dMapzjSJExftg?view_as=subscriber" target="_blank"
+                class="btn nav-fill" style="padding-left: 0"><i class="fab fa-youtube text-white"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100045842366453" target="_blank" class="btn nav-fill"><i
+                  class="fab fa-facebook-f text-white"></i></a>
+              <a href="https://www.linkedin.com/company/earth-restoration/" target="_blank" class="btn nav-fill"><i
+                  class="fab fa-linkedin-in text-white"></i></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Footer End -->
+  </div>
+  <!-- Footer End -->
 
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright bg-primary py-4">
-      <div class="container text-center">
-        <p class="mb-1 text-light" style="font-size: 13px">
-          <a href="#home" class="border-bottom text-light">
-            <i class="fas fa-copyright text-light me-2"></i>EarthRestoration,
-          </a>
-          All rights reserved.
-        </p>
-        <p class="mb-0 text-light" style="font-size: 13px">
-          Designed By Digital Technology Partner
-          <a class="border-bottom text-light" href="https://agro.elzian.com/" target="_blank">Elzian Agro</a>
-        </p>
-      </div>
+  <!-- Copyright Start -->
+  <div class="container-fluid copyright bg-primary py-4">
+    <div class="container text-center">
+      <p class="mb-1 text-white" style="font-size: 13px">
+        <a href="#home" class="border-bottom text-white">
+          <i class="fas fa-copyright text-white me-2"></i>EarthRestoration,
+        </a>
+        All rights reserved.
+      </p>
+      <p class="mb-0 text-white" style="font-size: 13px">
+        Designed By Digital Technology Partner
+        <a class="border-bottom text-white" href="https://agro.elzian.com/" target="_blank">Elzian Agro</a>
+      </p>
     </div>
-    <!-- Copyright End -->
+  </div>
+  <!-- Copyright End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
 
-    <script>
-      const videoModal = document.getElementById("videoModal");
-      const videoFrame = document.getElementById("videoFrame");
+  <script>
+    const videoModal = document.getElementById("videoModal");
+    const videoFrame = document.getElementById("videoFrame");
 
-      videoModal.addEventListener("show.bs.modal", function (event) {
-        const trigger = event.relatedTarget;
-        const videoURL = trigger.getAttribute("data-video-url");
-        videoFrame.src = videoURL + "?autoplay=1&modestbranding=1";
-      });
+    videoModal.addEventListener("show.bs.modal", function (event) {
+      const trigger = event.relatedTarget;
+      const videoURL = trigger.getAttribute("data-video-url");
+      videoFrame.src = videoURL + "?autoplay=1&modestbranding=1";
+    });
 
-      videoModal.addEventListener("hidden.bs.modal", function () {
-        videoFrame.src = "";
-      });
-    </script>
+    videoModal.addEventListener("hidden.bs.modal", function () {
+      videoFrame.src = "";
+    });
+  </script>
 
-    <script>
-      const swiper = new Swiper(".mySwiper", {
-        loop: true,
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          bulletClass: "swiper-pagination-bullet-line",
-          bulletActiveClass: "swiper-pagination-bullet-line-active",
-        },
-      });
-    </script>
-  </body>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        bulletClass: "swiper-pagination-bullet-line",
+        bulletActiveClass: "swiper-pagination-bullet-line-active",
+      },
+    });
+  </script>
+</body>
+
 </html>

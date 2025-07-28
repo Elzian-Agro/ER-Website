@@ -5,7 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #0d6efd;
+  --bs-blue: #85d0f8;
+  --bs-blue-secondary: #66c1f2;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -2536,18 +2537,15 @@ fieldset:disabled .btn {
   opacity: 0.65;
 }
 .btn-primary {
-  color: #e7ebe7;
   background-color: #79b083;
   border-color: #79b083;
 }
 .btn-primary:hover {
-  color: #e7ebe7;
   background-color: #65a877;
   border-color: #65a877;
 }
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
-  color: #e7ebe7;
   background-color: #65a877;
   border-color: #65a877;
 }
@@ -2574,38 +2572,16 @@ fieldset:disabled .btn {
   border-color: #44d2f6;
 }
 .btn-secondary {
-  color: #1e2320;
-  background-color: #f9f9f7;
-  border-color: #f9f9f7;
+  color: var(--bs-light);
+  background-color: var(--bs-blue);
+  border-color: var(--bs-blue);
 }
 .btn-secondary:hover {
-  color: #1e2320;
-  background-color: #e2e2dc;
-  border-color: #e2e2dc;
+  color: var(--bs-light);
+  background-color: var(--bs-blue-secondary);
+  border-color: var(--bs-blue-secondary);
 }
-.btn-check:focus + .btn-secondary,
-.btn-secondary:focus {
-  color: #fff;
-  background-color: #5c636a;
-  border-color: #565e64;
-  box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
-}
-.btn-check:checked + .btn-secondary,
-.btn-check:active + .btn-secondary,
-.btn-secondary:active,
-.btn-secondary.active,
-.show > .btn-secondary.dropdown-toggle {
-  color: #fff;
-  background-color: #565e64;
-  border-color: #51585e;
-}
-.btn-check:checked + .btn-secondary:focus,
-.btn-check:active + .btn-secondary:focus,
-.btn-secondary:active:focus,
-.btn-secondary.active:focus,
-.show > .btn-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
-}
+
 .btn-secondary:disabled,
 .btn-secondary.disabled {
   color: #fff;
@@ -6787,10 +6763,13 @@ fieldset:disabled .btn {
   color: #1e2320 !important;
 }
 .text-white {
-  color: #fff !important;
+  color: #f9f9f7 !important;
 }
 .text-body {
   color: #818181 !important;
+}
+.text-blue {
+  color: #85d0f8 !important;
 }
 .text-muted {
   color: #7c817f !important;
@@ -6833,6 +6812,12 @@ fieldset:disabled .btn {
 }
 .bg-white {
   background-color: #f9f9f7 !important;
+}
+.bg-blue {
+  background-color: #85d0f8 !important;
+}
+.bg-blue-secondary {
+  background-color: #66c1f2 !important;
 }
 .bg-transparent {
   background-color: rgba(0, 0, 0, 0) !important;

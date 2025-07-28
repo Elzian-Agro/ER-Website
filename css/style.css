@@ -73,7 +73,6 @@
 
 .btn.btn-primary {
   background: var(--bs-primary) !important;
-  color: var(--bs-light) !important;
   font-family: "Roboto", sans-serif;
   border: none;
   font-weight: 400;
