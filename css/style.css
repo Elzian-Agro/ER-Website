@@ -184,6 +184,23 @@
   color: var(--bs-primary) !important;
 }
 
+/* Override: Blue for the Oxygen Economy page */
+body.oxygen-economy-page .navbar .navbar-nav .nav-link:hover,
+body.oxygen-economy-page .navbar .navbar-nav .nav-link.active,
+body.oxygen-economy-page .sticky-top .navbar .navbar-nav .nav-link:hover,
+body.oxygen-economy-page .sticky-top .navbar .navbar-nav .nav-link.active {
+  color: var(--bs-blue) !important;
+}
+
+/* Override: Blue for the Oxygen Economy page */
+body.oxygen-economy-page .navbar .navbar-nav .dropdown-item:hover,
+body.oxygen-economy-page .navbar .navbar-nav .dropdown-itemactive,
+body.oxygen-economy-page .sticky-top .navbar .navbar-nav .dropdown-item:hover,
+body.oxygen-economy-page .sticky-top .navbar .navbar-nav .dropdown-item.active {
+  background-color: var(--bs-blue) !important;
+  color: var(--bs-white);
+}
+
 .navbar .dropdown-toggle::after {
   border: none;
   content: "\f107" !important;
