@@ -164,11 +164,11 @@
   <!-- Spinner End -->
 
   <!-- Topbar Start -->
-  <div class="container-fluid topbar bg-primary px-0 d-none d-lg-block">
+  <div class="container-fluid topbar bg-primary px-0 d-block">
     <div class="container px-0">
-      <div class="row gx-0 align-items-center" style="height: 35px">
-        <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-          <div class="d-flex flex-wrap">
+      <div class="row gx-0 align-items-center" style="height: 45px">
+        <div class="col-sm-6 text-center text-lg-start mb-lg-0">
+          <div class="d-flex flex-wrap d-none d-md-block">
             <a href="mailto:info@restore.earth" class="text-white me-4">
               <i class="fas fa-envelope text-white me-2"></i>info@restore.earth
             </a>
@@ -177,14 +177,9 @@
             </a>
           </div>
         </div>
-        <div class="col-lg-4 text-center text-lg-end">
+        <div class="col-sm-6 text-center text-lg-end">
           <div class="d-flex align-items-center justify-content-end">
-            <a href="https://www.youtube.com/channel/UCL5dFM7Kr1dMapzjSJExftg?view_as=subscriber" target="_blank"
-              class="btn nav-fill"><i class="fab fa-youtube text-white"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100045842366453" target="_blank" class="btn nav-fill"><i
-                class="fab fa-facebook-f text-white"></i></a>
-            <a href="https://www.linkedin.com/company/earth-restoration/" target="_blank" class="btn nav-fill"><i
-                class="fab fa-linkedin-in text-white"></i></a>
+            <div id="google_translate_element" class="translate-frame "></div>
           </div>
         </div>
       </div>
@@ -736,6 +731,17 @@
       },
     });
   </script>
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
