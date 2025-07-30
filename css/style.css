@@ -848,6 +848,18 @@ body.oxygen-economy-page .sticky-top .navbar .navbar-nav .dropdown-item.active {
   position: relative;
 }
 
+.testimonial-carousel .owl-item {
+  height: 100% !important;
+}
+
+.testimonial-item {
+  min-height: 300px;
+  /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .testimonial .testimonial-carousel .owl-dots {
   margin-top: 30px;
   display: flex;
@@ -862,14 +874,14 @@ body.oxygen-economy-page .sticky-top .navbar .navbar-nav .dropdown-item.active {
   width: 15px;
   height: 15px;
   background: var(--bs-light);
-  border: 1px solid var(--bs-primary);
+  border: 1px solid var(--bs-blue);
   border-radius: 10px;
   transition: 0.5s;
 }
 
 .testimonial .testimonial-carousel .owl-dot.active {
   width: 40px;
-  background: var(--bs-primary);
+  background: var(--bs-blue);
 }
 
 /*** Testimonial End ***/
