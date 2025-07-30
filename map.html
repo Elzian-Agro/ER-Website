@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>EarthRestoration</title>
+    <link rel="icon" href="asset/img/logo.png" type="image/x-icon" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .mapboxgl-popup-content {
+            max-width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            padding: 10px 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            overflow: auto;
+            word-break: break-word;
+        }
+
+        .mapboxgl-popup-content pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidGtkZXNoYW4iLCJhIjoiY21kbXhwa3VoMTVibDJxczU3cXd1aTg2aSJ9.B4DkNDxd73tbS0XKhcALeA';
+
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/satellite-streets-v12',
+            center: [80.94833, 6.86111],
+            zoom: 5,
+            maxZoom: 20
+        });
+
+        // Restrict movement to project area
+        const bounds = [
+            [80.9414, 6.8548], // Southwest corner [lng, lat]
+            [80.955, 6.865] // Northeast corner [lng, lat]
+        ];
+        map.setMaxBounds(bounds);
+
+        map.on('load', () => {
+            // Add custom icons
+            map.loadImage('asset/img/oxygen-economy/christmas-tree.png', (err, image) => {
+                if (err) throw err;
+                map.addImage('tree-icon', image, { sdf: true });
+            });
+
+            map.loadImage('asset/img/oxygen-economy/location.png', (err, image) => {
+                if (err) throw err;
+                map.addImage('location-icon', image, { sdf: true });
+            });
+
+            // Unit boundaries
+            map.addSource('unit-boundaries', {
+                type: 'geojson',
+                data: 'asset/data/ER94UP MirahawatteBelipola1.json'
+            });
+
+            map.addLayer({
+                id: 'units-lines',
+                type: 'line',
+                source: 'unit-boundaries',
+                layout: { 'line-join': 'round', 'line-cap': 'round' },
+                paint: {
+                    'line-color': '#ecfc03',
+                    'line-width': 3
+                }
+            });
+
+            map.on('click', 'units-lines', (e) => {
+                const props = e.features[0].properties;
+                const name = props.name || 'Unnamed';
+                const desc = props.description || 'No description';
+
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(`<div class="popup"><strong>${name}</strong><br><pre>${desc}</pre></div>`)
+                    .addTo(map);
+            });
+
+            map.on('mouseenter', 'units-lines', () => map.getCanvas().style.cursor = 'pointer');
+            map.on('mouseleave', 'units-lines', () => map.getCanvas().style.cursor = '');
+
+            // Planting points
+            map.addSource('plant-points', {
+                type: 'geojson',
+                data: 'asset/data/ER94UP MirahawatteBelipola2.json'
+            });
+
+            // Tree icon for non-ER/ points
+            map.addLayer({
+                id: 'tree-icon-layer',
+                type: 'symbol',
+                source: 'plant-points',
+                filter: ['!', ['in', ['slice', ['get', 'name'], 0, 3], ['literal', ['ER/']]]],
+                layout: {
+                    'icon-image': 'tree-icon',
+                    'icon-size': 0.06,
+                    'icon-allow-overlap': true,
+                    'text-field': ['get', 'name'],
+                    'text-font': ['Open Sans Bold'],
+                    'text-offset': [0, 1.2],
+                    'text-anchor': 'top',
+                    'text-size': 10,
+
+                    'text-allow-overlap': true,
+                    'text-ignore-placement': true,
+                    'icon-ignore-placement': true
+                },
+                paint: {
+                    'icon-color': '#4CAF50', // ✅ Green color
+                    'text-color': '#fff',
+                    'text-halo-color': '#000',
+                    'text-halo-width': 1.5
+                }
+            });
+
+            // Location icon for names starting with "ER/"
+            map.addLayer({
+                id: 'location-icon-layer',
+                type: 'symbol',
+                source: 'plant-points',
+                filter: ['==', ['slice', ['get', 'name'], 0, 3], 'ER/'],
+                layout: {
+                    'icon-image': 'location-icon',
+                    'icon-size': 0.05,
+                    'icon-allow-overlap': true,
+                    'text-field': ['get', 'name'],
+                    'text-font': ['Open Sans Bold'],
+                    'text-offset': [0, 1.2],
+                    'text-anchor': 'top',
+                    'text-size': 14,
+
+                    'text-allow-overlap': true,
+                    'text-ignore-placement': true,
+                    'icon-ignore-placement': true
+                },
+                paint: {
+                    'icon-color': '#E53935', // ✅ Red color
+                    'text-color': '#fff',
+                    'text-halo-color': '#000',
+                    'text-halo-width': 1.5
+                }
+            });
+
+            // Shared popup click handler for both layers
+            ['tree-icon-layer', 'location-icon-layer'].forEach(layer => {
+                map.on('click', layer, (e) => {
+                    const props = e.features[0].properties;
+                    const name = props.name || 'Unknown';
+                    const desc = props.description || 'No description';
+
+                    new mapboxgl.Popup()
+                        .setLngLat(e.lngLat)
+                        .setHTML(`<div class="popup"><strong>${name}</strong><br><pre>${desc}</pre></div>`)
+                        .addTo(map);
+                });
+
+                map.on('mouseenter', layer, () => map.getCanvas().style.cursor = 'pointer');
+                map.on('mouseleave', layer, () => map.getCanvas().style.cursor = '');
+            });
+        });
+    </script>
+</body>
+
+</html>

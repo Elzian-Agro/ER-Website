@@ -86,6 +86,66 @@
       box-shadow: none;
     }
   </style>
+
+  <style>
+    .image-hover-effect .img-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-hover-effect img {
+      transition: transform 0.3s ease-in-out;
+      display: block;
+      width: 100%;
+    }
+
+    .image-hover-effect .img-container:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Overlay base */
+    .image-hover-effect .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* No background by default */
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+      transition: background 0.3s ease-in-out;
+      pointer-events: none;
+      /* ensures links still work */
+    }
+
+    /* Show background on hover only */
+    .image-hover-effect .img-container:hover .overlay {
+      background: rgba(133, 208, 248, 0.6);
+      /* Blue overlay */
+    }
+
+    /* Icon is always visible */
+    .always-visible-icon {
+      z-index: 2;
+    }
+
+    /* Title appears on hover */
+    .hover-title {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .img-container:hover .hover-title {
+      opacity: 1;
+    }
+  </style>
+
+
 </head>
 
 <body class="oxygen-economy-page">
@@ -625,46 +685,74 @@
   <section class="py-2 bg-white">
     <div class="container-fluid">
       <div class="container">
-        <div class="row g-4 py-5">
-          <div class="col-lg-7 pe-0 pe-lg-5">
+        <div class="row g-0 g-lg-4 py-5">
+          <div class="col-lg-6 pe-0 pe-lg-5">
             <h4 class="text-dark mb-4 wow fadeInUp">Sri Lanka Pilot Project</h4>
-            <div class="row mb-2">
-              <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="ratio ratio-16x9">
-                  <iframe src="https://www.youtube.com/embed/jFnokSDbcoo" title="Interview with Local Farmers"
-                    allowfullscreen></iframe>
-                </div>
-                <p class="mt-3 text-center fw-bold">#Project 1</p>
+            <div class="wow fadeInUp" data-wow-delay="0.1s">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/jFnokSDbcoo" title="Interview with Local Farmers"
+                  allowfullscreen></iframe>
               </div>
-              <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="ratio ratio-16x9">
-                  <iframe src="https://www.youtube.com/embed/E1NJ7B2fbpQ" title="Sri Lankan Oxygen Economy Overview"
-                    allowfullscreen></iframe>
-                </div>
-                <p class="mt-3 text-center fw-bold">#Project 2</p>
-              </div>
+              <p class="mt-2 text-center fw-bold">#Project 1</p>
             </div>
 
-            <div class="row">
-              <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="ratio ratio-16x9">
-                  <iframe src="https://www.youtube.com/embed/qxo-0WMDN_0" title="Interview with Local Farmers"
-                    allowfullscreen></iframe>
-                </div>
-                <p class="mt-3 text-center fw-bold">#Project 3</p>
+            <div class="wow fadeInUp" data-wow-delay="0.2s">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/E1NJ7B2fbpQ" title="Sri Lankan Oxygen Economy Overview"
+                  allowfullscreen></iframe>
               </div>
+              <p class="mt-2 text-center fw-bold">#Project 2</p>
+            </div>
 
+            <div class="wow fadeInUp" data-wow-delay="0.3s">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/qxo-0WMDN_0" title="Interview with Local Farmers"
+                  allowfullscreen></iframe>
+              </div>
+              <p class="mt-2 text-center fw-bold">#Project 3</p>
             </div>
           </div>
 
-          <div class="col-lg-5 ps-0 ps-lg-5 wow fadeInUp">
+          <div class="col-lg-6 ps-0 ps-lg-5 wow fadeInUp">
             <h4 class="text-dark mb-4">Highlighted Regions Involved in the Pilot</h4>
-            <p>will be update soon</p>
+            <div class="image-hover-effect">
+              <div class="img-container mb-5">
+                <a href="map.html" target="_blank">
+                  <img src="asset/img/oxygen-economy/map.png" class="img-fluid shadow-sm" alt="img" />
+                  <div class="overlay">
+                    <p class="hover-title mb-2 text-white fs-6">#Project 1</p>
+                    <i class="bi bi-zoom-in always-visible-icon text-white fs-4"></i>
+                  </div>
+                </a>
+              </div>
 
-            <!-- <img src="img/map.png" class="img-fluid rounded mb-3" alt="Why the Oxygen Economy?" style="width: 100%" /> -->
+              <div class="img-container mb-5">
+                <a href="map.html" target="_blank">
+                  <img src="asset/img/oxygen-economy/map.png" class="img-fluid shadow-sm" alt="img" />
+                  <div class="overlay">
+                    <p class="hover-title mb-2 text-white fs-6">#Project 2</p>
+                    <i class="bi bi-zoom-in always-visible-icon text-white fs-4"></i>
+                  </div>
+                </a>
+              </div>
+
+              <div class="img-container">
+                <a href="map.html" target="_blank">
+                  <img src="asset/img/oxygen-economy/map.png" class="img-fluid shadow-sm" alt="img" />
+                  <div class="overlay">
+                    <p class="hover-title mb-2 text-white fs-6">#Project 3</p>
+                    <i class="bi bi-zoom-in always-visible-icon text-white fs-4"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+
           </div>
+
         </div>
+
       </div>
+    </div>
     </div>
   </section>
 
