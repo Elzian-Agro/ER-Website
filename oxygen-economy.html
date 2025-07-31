@@ -91,12 +91,17 @@
     .image-hover-effect .img-container {
       position: relative;
       overflow: hidden;
+      height: 100%;
+      display: flex;
+      justify-content: center;
     }
 
     .image-hover-effect img {
       transition: transform 0.3s ease-in-out;
       display: block;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .image-hover-effect .img-container:hover img {
@@ -144,7 +149,18 @@
       opacity: 1;
     }
   </style>
+  <!-- 
+  <style>
+    .btn-matched {
+      flex: 1 1 80%;
+    }
 
+    @media (min-width: 576px) {
+      .btn-matched {
+        flex: 1 1 48%;
+      }
+    }
+  </style> -->
 
 </head>
 
@@ -237,15 +253,53 @@
               aspect of vegetation suggests a value of between USD $ 80-200 per tree unit over 4 years.
             </p>
             <div class="d-flex flex-wrap flex-column flex-sm-row gap-2">
-              <a class="btn btn-secondary rounded-sm py-3 px-5 text-white" href="#oxygen-economy">Explore the Oxygen
-                Economy</a>
-              <a class="btn btn-secondary rounded-sm py-3 px-5 text-white" href="#">Watch Our Story</a>
+              <a class="btn btn-secondary rounded-sm py-3 px-5 text-white btn-matched" href="#oxygen-economy">Explore
+                the Oxygen Economy</a>
+              <button type="button" class="btn btn-secondary rounded-sm py-3 px-5 text-white btn-matched"
+                data-bs-toggle="modal" data-bs-target="#videoModal">
+                Watch Our Story
+              </button>
+            </div>
+
+            <!-- <div class="row">
+              <div class="col-lg-10">
+                <div class="d-flex flex-wrap flex-column flex-sm-row gap-2">
+                  <a class="btn btn-secondary rounded-sm py-3 px-5 text-white btn-matched"
+                    href="#oxygen-economy">Explore
+                    the Oxygen Economy</a>
+                  <button type="button" class="btn btn-secondary rounded-sm py-3 px-5 text-white btn-matched"
+                    data-bs-toggle="modal" data-bs-target="#videoModal">
+                    Watch Our Story
+                  </button>
+                </div>
+
+                <div class="d-flex flex-wrap flex-column flex-sm-row pt-2">
+                  <button type="button" class="btn btn-secondary rounded-sm py-3 px-5 text-white btn-matched"
+                    data-bs-toggle="modal" data-bs-target="#videoModal">
+                    Upcoming Documentary [Teaser]
+                  </button>
+                </div>
+              </div>
+            </div> -->
+
+
+
+            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                      <iframe id="youtubePlayer" src="https://www.youtube.com/embed/U3Lj6T_WNkA" title="YouTube video"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-4 text-center pt-0 pt-lg-0 text-sm-center text-md-start wow fadeInRight">
             <img src="asset/img/oxygen-economy/oxygen-economy.png" alt="home-1" class="img-fluid" />
-            <p class="mb-0">(temporary image)</p>
           </div>
         </div>
       </div>
@@ -254,10 +308,9 @@
 
   <section id="oxygen-economy" class="py-5 bg-white">
     <div class="container-fluid">
-      <div class="container py-5">
+      <div class="container py-4">
         <div class="row align-items-center">
           <div class="col-lg-4 order-2 order-lg-1 pt-4 pt-lg-0 wow fadeInUp" data-wow-delay="0.1s">
-            <p class="mb-0">(temporary image)</p>
             <img src="asset/img/oxygen-economy/oxygen flow.png" alt="Oxygen Flow" class="shadow-sm"
               style="max-width: 100%; height: auto" />
 
@@ -299,7 +352,7 @@
 
   <section class="py-5 bg-light">
     <div class="container-fluid">
-      <div class="container py-5">
+      <div class="container py-4">
         <div class="row">
           <div class="col-lg-6 pe-0 pe-lg-5">
             <div class="row g-4">
@@ -681,80 +734,87 @@
     </div>
   </section>
 
-  <section class="py-2 bg-white">
+  <section class="py-5 bg-white">
     <div class="container-fluid">
-      <div class="container">
-        <div class="row g-0 g-lg-4 py-5">
-          <div class="col-lg-6 pe-0 pe-lg-5">
-            <h4 class="text-dark mb-4 wow fadeInUp">Sri Lanka Pilot Project</h4>
+      <div class="container py-4">
+        <h4 class="text-dark mb-4 wow fadeInUp text-center">Add Titile</h4>
+        <div class="row g-3">
+          <div class="col-lg-8">
             <div class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="ratio ratio-16x9">
                 <iframe src="https://www.youtube.com/embed/jFnokSDbcoo" title="Interview with Local Farmers"
                   allowfullscreen></iframe>
               </div>
-              <p class="mt-2 text-center fw-bold">#title</p>
-            </div>
-
-            <div class="row g-4">
-              <div class="col-lg-6">
-                <div class="wow fadeInUp" data-wow-delay="0.2s">
-                  <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/E1NJ7B2fbpQ" title="Sri Lankan Oxygen Economy Overview"
-                      allowfullscreen></iframe>
-                  </div>
-                  <p class="mt-2 text-center fw-bold">#title</p>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="wow fadeInUp" data-wow-delay="0.3s">
-                  <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/qxo-0WMDN_0" title="Interview with Local Farmers"
-                      allowfullscreen></iframe>
-                  </div>
-                  <p class="mt-2 text-center fw-bold">#title</p>
-                </div>
-              </div>
+              <!-- <p class="mt-2 text-center fw-bold">#title</p> -->
             </div>
           </div>
 
-          <div class="col-lg-6 ps-0 ps-lg-5 wow fadeInUp">
-            <h4 class="text-dark mb-4">Highlighted Regions Involved in the Pilot</h4>
-            <div class="image-hover-effect">
-              <div class="img-container mb-5">
-                <a href="map.html?project=1" target="_blank">
-                  <img src="asset/img/oxygen-economy/map.png" class="img-fluid shadow-sm" alt="img" />
-                  <div class="overlay">
-                    <p class="hover-title mb-2 text-white fs-6">#Project 1</p>
-                    <i class="bi bi-zoom-in always-visible-icon text-white fs-4"></i>
-                  </div>
-                </a>
+          <div class="col-lg-4">
+            <div class="wow fadeInUp" data-wow-delay="0.2s">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/E1NJ7B2fbpQ" title="Sri Lankan Oxygen Economy Overview"
+                  allowfullscreen></iframe>
               </div>
-
-              <div class="img-container mb-5">
-                <a href="map.html?project=1" target="_blank">
-                  <img src="asset/img/oxygen-economy/map.png" class="img-fluid shadow-sm" alt="img" />
-                  <div class="overlay">
-                    <p class="hover-title mb-2 text-white fs-6">#Project 2</p>
-                    <i class="bi bi-zoom-in always-visible-icon text-white fs-4"></i>
-                  </div>
-                </a>
-              </div>
-
-              <div class="img-container">
-                <a href="map.html?project=3" target="_blank">
-                  <img src="asset/img/oxygen-economy/map.png" class="img-fluid shadow-sm" alt="img" />
-                  <div class="overlay">
-                    <p class="hover-title mb-2 text-white fs-6">#Project 3</p>
-                    <i class="bi bi-zoom-in always-visible-icon text-white fs-4"></i>
-                  </div>
-                </a>
-              </div>
+              <!-- <p class="mt-2 text-center fw-bold">#title</p> -->
             </div>
 
-          </div>
+            <div class="pt-3 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/qxo-0WMDN_0" title="Interview with Local Farmers"
+                  allowfullscreen></iframe>
+              </div>
+              <!-- <p class="mt-2 text-center fw-bold">#title</p> -->
+            </div>
 
+
+          </div>
         </div>
+      </div>
+    </div>
+    </div>
+  </section>
 
+  <section class="py-5 bg-light">
+    <div class="container-fluid">
+      <div class="container py-4">
+        <div class="row h-100">
+          <h4 class="text-dark mb-4 text-center">Highlighted Regions Involved in the Pilot Projects</h4>
+          <div class="col-lg-4 image-hover-effect wow fadeInUp" data-wow-delay="0.1s">
+            <div class="img-container mb-5">
+              <a href="map.html?project=1" target="_blank">
+                <img src="asset/img/oxygen-economy/map-project1.png" class="img-fluid shadow-sm" alt="img" />
+                <div class="overlay">
+                  <p class="hover-title mb-2 text-white fs-6">#Project 1</p>
+                  <i class="bi bi-zoom-in always-visible-icon text-white fs-4"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 image-hover-effect wow fadeInUp" data-wow-delay="0.3s">
+            <div class="img-container mb-5">
+              <a href="#" target="_blank">
+                <img src="asset/img/oxygen-economy/map-project1.png" class="img-fluid shadow-sm" alt="img" />
+                <div class="overlay">
+                  <p class="hover-title mb-2 text-white fs-6">#Project 2</p>
+                  <i class="bi bi-zoom-in always-visible-icon text-white fs-4"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 image-hover-effect wow fadeInUp" data-wow-delay="0.3s">
+            <div class="img-container">
+              <a href="map.html?project=3" target="_blank">
+                <img src="asset/img/oxygen-economy/map-project3.png" class="img-fluid shadow-sm" alt="img" />
+                <div class="overlay">
+                  <p class="hover-title mb-2 text-white fs-6">#Project 3</p>
+                  <i class="bi bi-zoom-in always-visible-icon text-white fs-4"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     </div>
@@ -762,8 +822,8 @@
 
   <!-- Testimonial Start -->
   <section class="bg-white">
-    <div class="container-fluid testimonial bg-light py-5">
-      <div class="container py-5">
+    <div class="container-fluid testimonial py-5">
+      <div class="container py-4">
         <div class="row g-4 align-items-center">
           <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
             <div class="h-100 rounded">
@@ -774,7 +834,7 @@
           <div class="col-xl-8">
             <div class="testimonial-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
               <div class="h-100">
-                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100">
+                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100 shadow-sm my-2">
                   <div class="d-flex">
                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
                     <p class="mt-4">
@@ -797,8 +857,8 @@
                 </div>
               </div>
 
-              <div class="h-100">
-                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100">
+              <div class="h-100 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100 shadow-sm my-2">
                   <div class="d-flex">
                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
                     <p class="mt-4">
@@ -810,8 +870,8 @@
                 </div>
               </div>
 
-              <div class="h-100">
-                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100">
+              <div class="h-100 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100 shadow-sm my-2">
                   <div class="d-flex">
                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
                     <p class="mt-4">
@@ -822,8 +882,8 @@
                 </div>
               </div>
 
-              <div class="h-100">
-                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100">
+              <div class="h-100 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100 shadow-sm my-2">
                   <div class="d-flex">
                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
                     <p class="mt-4">
@@ -835,7 +895,7 @@
               </div>
 
               <div class="h-100">
-                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100">
+                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100 shadow-sm my-2">
                   <div class="d-flex">
                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
                     <p class="mt-4">
@@ -847,7 +907,7 @@
               </div>
 
               <div class="h-100">
-                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100">
+                <div class="testimonial-item bg-white rounded p-4 d-flex flex-column h-100 shadow-sm my-2">
                   <div class="d-flex">
                     <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
                     <p class="mt-4">
