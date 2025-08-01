@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
     function activateNavLink() {
-        const scrollPos = window.scrollY;
+        const scrollPos = window.scrollY + 100;
 
         sections.forEach((section) => {
             const top = section.offsetTop;
