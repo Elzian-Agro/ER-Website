@@ -127,8 +127,11 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".navbar-nav .nav-link").forEach(function (navLink) {
         navLink.addEventListener("click", function () {
-            const isDropdown = navLink.closest(".dropdown-menu");
-            if (!isDropdown) {
+            // Don't close if it's a dropdown toggle
+            const isDropdownToggle = navLink.classList.contains("dropdown-toggle");
+            const isInsideDropdown = navLink.closest(".dropdown-menu");
+
+            if (!isDropdownToggle && !isInsideDropdown) {
                 const navbarCollapse = document.querySelector(".navbar-collapse");
                 if (navbarCollapse && navbarCollapse.classList.contains("show")) {
                     const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
