@@ -2107,15 +2107,20 @@
 
   <script>
     document.querySelectorAll('.navbar-nav .nav-link').forEach(function (navLink) {
-      navLink.addEventListener('click', function () {
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse.classList.contains('show')) {
-          const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
-          bsCollapse.hide();
+      navLink.addEventListener('click', function (e) {
+        // Check if it's inside a dropdown menu
+        const isDropdown = navLink.closest('.dropdown-menu');
+        if (!isDropdown) {
+          const navbarCollapse = document.querySelector('.navbar-collapse');
+          if (navbarCollapse.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
+            bsCollapse.hide();
+          }
         }
       });
     });
   </script>
+
 </body>
 
 </html>
