@@ -71,7 +71,6 @@
     });
 
 
-
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -87,4 +86,95 @@
 
 
 })(jQuery);
+
+// Scroll Spy - Highlight nav link on scroll
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    function activateNavLink() {
+        const scrollPos = window.scrollY;
+
+        sections.forEach((section) => {
+            const top = section.offsetTop;
+            const bottom = top + section.offsetHeight;
+            const id = section.getAttribute("id");
+
+            if (scrollPos >= top && scrollPos <= bottom) {
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${id}`) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener("scroll", activateNavLink);
+    activateNavLink(); // Run once on load
+
+    // Manually set active class on nav click
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+            navLinks.forEach((l) => l.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+});
+
+// Collapse mobile nav on link click
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".navbar-nav .nav-link").forEach(function (navLink) {
+        navLink.addEventListener("click", function () {
+            const isDropdown = navLink.closest(".dropdown-menu");
+            if (!isDropdown) {
+                const navbarCollapse = document.querySelector(".navbar-collapse");
+                if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
+                    bsCollapse.hide();
+                }
+            }
+        });
+    });
+});
+
+
+// Google Translate Integration
+window.googleTranslateElementInit = function () {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+    }, 'google_translate_element');
+};
+
+// Dynamically load Google Translate script
+const loadGoogleTranslate = () => {
+    const script = document.createElement('script');
+    script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    script.async = true;
+    document.body.appendChild(script);
+};
+
+loadGoogleTranslate();
+
+// Video Modal - Load YouTube video dynamically
+const videoModal = document.getElementById("videoModal");
+const videoFrame = document.getElementById("videoFrame");
+
+if (videoModal && videoFrame) {
+    videoModal.addEventListener("show.bs.modal", function (event) {
+        const trigger = event.relatedTarget;
+        if (trigger && trigger.getAttribute("data-video-url")) {
+            const videoURL = trigger.getAttribute("data-video-url");
+            videoFrame.src = `${videoURL}?autoplay=1&modestbranding=1`;
+        }
+    });
+
+    videoModal.addEventListener("hidden.bs.modal", function () {
+        videoFrame.src = "";
+    });
+}
+
+
 

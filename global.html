@@ -569,48 +569,6 @@
 
   <!-- Custom Javascript -->
   <script src="js/main.js"></script>
-
-  <script>
-    const videoModal = document.getElementById("videoModal");
-    const videoFrame = document.getElementById("videoFrame");
-
-    videoModal.addEventListener("show.bs.modal", function (event) {
-      const trigger = event.relatedTarget;
-      const videoURL = trigger.getAttribute("data-video-url");
-      videoFrame.src = videoURL + "?autoplay=1&modestbranding=1";
-    });
-
-    videoModal.addEventListener("hidden.bs.modal", function () {
-      videoFrame.src = "";
-    });
-  </script>
-
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        bulletClass: "swiper-pagination-bullet-line",
-        bulletActiveClass: "swiper-pagination-bullet-line-active",
-      },
-    });
-  </script>
-
-  <!-- Google Translate Script -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        layout: google.translate.TranslateElement.InlineLayout.VERTICAL
-      }, 'google_translate_element');
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
