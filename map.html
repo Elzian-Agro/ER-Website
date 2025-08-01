@@ -16,6 +16,15 @@
             padding: 0;
         }
 
+        #project-title {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            z-index: 999;
+            font-family: sans-serif
+        }
+
         #map {
             width: 100vw;
             height: 100vh;
@@ -43,8 +52,7 @@
 
 <body>
     <div>
-        <div id="project-title"
-            style="position:absolute;top:10px;left:10px;color:#fff;z-index:999;font-family:sans-serif">
+        <div id="project-title">
             Project Loading...
         </div>
 
@@ -59,6 +67,7 @@
 
         const projectId = getQueryParam('project');
 
+        // Load landscape data
         import { geojsonFiles } from './asset/landscape/landscape.js';
 
         const selected = geojsonFiles[projectId];

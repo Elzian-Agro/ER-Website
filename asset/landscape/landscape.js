@@ -7,20 +7,8 @@ export const geojsonFiles = {
         zoom: 15,
         maxZoom: 21,
         bounds: [
-            [80.93806, 6.85444],
-            [80.96028, 6.86583]
-        ]
-    },
-    '2': {
-        name: 'Project 2',
-        boundaries: null,
-        plants: null,
-        center: [80.94833, 6.86111],
-        zoom: 15,
-        maxZoom: 21,
-        bounds: [
-            [80.9414, 6.8548],
-            [80.955, 6.865]
+            [80.93806, 6.85444],// Bounding southwest corner
+            [80.96028, 6.86583] // Bounding northeast corner
         ]
     },
     '3': {

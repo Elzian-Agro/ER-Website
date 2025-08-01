@@ -30,103 +30,13 @@
   <!-- Customized Bootstrap Stylesheet -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Template Stylesheet -->
+  <!-- Custom Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <style>
-    .overlay-wrapper {
-      position: relative;
-      display: inline-block;
-    }
-
-    .color-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #79b083;
-      opacity: 0.5;
-      /* Adjust as needed */
-
-      pointer-events: none;
-      /* Ensures it doesn't block interactions */
-    }
-
-    .overlay-wrapper img {
-      display: block;
-    }
-
-    .pulse-ring {
-      position: relative;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .pulse-ring::before {
-      content: "";
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background-color: rgba(121, 176, 131, 0.9);
-      /* #79b083 with opacity */
-      animation: pulse 2s infinite;
-      z-index: 0;
-    }
-
-    .pulse-ring i {
-      position: relative;
-      z-index: 1;
-    }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(0.7);
-        opacity: 0.6;
-      }
-
-      70% {
-        transform: scale(1.4);
-        opacity: 0;
-      }
-
-      100% {
-        transform: scale(0.7);
-        opacity: 0;
-      }
-    }
-  </style>
-
-  <style>
-    .hero-wrapper {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      /* Your desired height */
-      overflow: hidden;
-    }
-
-    .bg-breadcrumb-single {
-      position: absolute;
-      inset: 0;
-      background-color: rgba(121, 176, 131, 0.4);
-      /* #79b083 overlay */
-    }
-
-    video.object-fit-cover {
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  </style>
 </head>
 
 <body>
@@ -201,23 +111,17 @@
 
   <!-- Header Start -->
   <div class="hero-wrapper">
-    <!-- Background Video -->
     <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover">
       <source src="asset/video/global-community-cover.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-
-    <!-- Optional overlay -->
     <div class="bg-breadcrumb-single"></div>
 
-    <!-- Flex layout to split content vertically -->
     <div class="d-flex flex-column justify-content-center align-items-center h-100 position-relative">
-      <!-- Title + Paragraph Centered -->
       <div class="container text-center" style="max-width: 900px; z-index: 10">
         <h4 class="text-white display-4 mb-4">Primary Ecosystem Services (PES)</h4>
       </div>
 
-      <!-- Breadcrumb at bottom -->
       <div class="position-absolute w-100" style="bottom: 30px; z-index: 10">
         <ol class="breadcrumb justify-content-center mb-0">
           <li class="breadcrumb-item text-white"><a class="text-white" href="index.html">Home</a></li>
@@ -231,7 +135,7 @@
   </div>
   <!-- Header End -->
 
-  <section class="py-5 bg-light">
+  <section class="further-reading py-5 bg-light">
     <div class="container-fluid">
       <div class="container">
         <div class="row g-5 py-3 align-items-center">
@@ -372,59 +276,11 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="row g-5 py-5">
-            <div class="col-md-6 overflow-hidden mb-4 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="row g-0 bg-white shadow-sm rounded hover-card align-items-center">
-                <div class="col-6">
-                  <img
-                    src="img/paper.png"
-                    class="img-fluid h-100 w-100 object-fit-cover"
-                    style="border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem"
-                    alt="Science Publication 1" />
-                </div>
-
-                <div class="col-6 ps-3">
-                  <h4 class="text-dark fs-5 mb-2">Science 1</h4>
-                  <p class="text-muted fs-7 mb-3">Realizing the Value of Photosynthetic Biomass</p>
-                  <a
-                    href="pdf/Realizing_the_Value_of_Photosynthetic_Bi.pdf"
-                    class="text-primary text-decoration-none fw-medium"
-                    target="_blank">
-                    Read More <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 overflow-hidden mb-4 wow fadeInUp" data-wow-delay="0.2s">
-              <div class="row g-0 bg-white shadow-sm rounded hover-card align-items-center">
-                <div class="col-6">
-                  <img
-                    src="img/paper.png"
-                    class="img-fluid h-100 w-100 object-fit-cover"
-                    style="border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem"
-                    alt="Science Publication 1" />
-                </div>
-
-                <div class="col-6 ps-3">
-                  <h4 class="text-dark fs-5 mb-2">Science 2</h4>
-                  <p class="text-muted fs-7 mb-3">ER Methodology for Mangrove Species</p>
-                  <a
-                    href="pdf/ER methodology, Mangrove Species.pdf"
-                    class="text-primary text-decoration-none fw-medium"
-                    target="_blank">
-                    Read More <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> -->
       </div>
     </div>
   </section>
 
-  <section class="py-5 bg-white">
+  <section class="further-reading py-5 bg-white">
     <div class="container-fluid blog py-5">
       <div class="container">
         <div class="row g-4 justify-content-center">
@@ -619,18 +475,6 @@
                   </p>
                 </div>
               </div>
-
-              <!-- <div class="position-relative mx-auto rounded-pill">
-                  <input
-                    class="form-control rounded-sm w-100 py-3 ps-4 pe-5"
-                    type="text"
-                    placeholder="Enter your email" />
-                  <button
-                    type="button"
-                    class="btn btn-primary rounded-sm position-absolute top-0 end-0 py-2 mt-2 me-2">
-                    SignUp
-                  </button>
-                </div> -->
             </div>
           </div>
         </div>
@@ -723,7 +567,7 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-  <!-- Template Javascript -->
+  <!-- Custom Javascript -->
   <script src="js/main.js"></script>
 
   <script>

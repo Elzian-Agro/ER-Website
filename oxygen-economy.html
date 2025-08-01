@@ -30,125 +30,8 @@
   <!-- Customized Bootstrap Stylesheet -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Template Stylesheet -->
+  <!-- Custom Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
-
-  <style>
-    .flip-card {
-      perspective: 1000px;
-      height: 250px;
-      max-height: 500px;
-      border-radius: 10px;
-    }
-
-    .card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-      cursor: pointer;
-    }
-
-    .flip-card:hover .card-inner {
-      transform: rotateY(180deg);
-    }
-
-    .card-front,
-    .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      top: 0;
-      left: 0;
-    }
-
-    .card-front {
-      background-color: #85d0f8;
-      z-index: 2;
-    }
-
-    .card-back {
-      background-color: #f9f9f7;
-      transform: rotateY(180deg);
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    /* blog */
-    .btn-close:focus {
-      outline: none;
-      box-shadow: none;
-    }
-  </style>
-
-  <style>
-    .image-hover-effect .img-container {
-      position: relative;
-      overflow: hidden;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .image-hover-effect img {
-      transition: transform 0.3s ease-in-out;
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .image-hover-effect .img-container:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Overlay base */
-    .image-hover-effect .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      /* No background by default */
-      background: transparent;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 10px;
-      transition: background 0.3s ease-in-out;
-      pointer-events: none;
-      /* ensures links still work */
-    }
-
-    /* Show background on hover only */
-    .image-hover-effect .img-container:hover .overlay {
-      background: rgba(133, 208, 248, 0.6);
-      /* Blue overlay */
-    }
-
-    /* Icon is always visible */
-    .always-visible-icon {
-      z-index: 2;
-    }
-
-    /* Title appears on hover */
-    .hover-title {
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    .img-container:hover .hover-title {
-      opacity: 1;
-    }
-  </style>
 </head>
 
 <body class="oxygen-economy-page">
@@ -221,7 +104,7 @@
   </div>
   <!-- Navbar & Hero End -->
 
-  <section class="py-5 bg-light" style="border-top: 1px solid #85d0f8">
+  <section class="oxygen-economy py-5 bg-light" style="border-top: 1px solid #85d0f8">
     <div class="container-fluid">
       <div class="container py-4">
         <div class="row align-items-center pb-5">
@@ -284,7 +167,7 @@
     </div>
   </section>
 
-  <section id="oxygen-economy" class="py-5 bg-white">
+  <section class="oxygen-economy py-5 bg-white">
     <div class="container-fluid">
       <div class="container py-4">
         <div class="row align-items-center">
@@ -328,7 +211,7 @@
     </div>
   </section>
 
-  <section class="py-5 bg-light">
+  <section class="oxygen-economy py-5 bg-light">
     <div class="container-fluid">
       <div class="container py-4">
         <div class="row">
@@ -781,7 +664,7 @@
     </div>
   </section>
 
-  <section class="py-5 bg-white">
+  <section class="oxygen-economy py-5 bg-white">
     <div class="container-fluid">
       <div class="container py-4">
         <h4 class="text-dark mb-4 wow fadeInUp text-center">Add Titile</h4>
@@ -819,7 +702,7 @@
     </div>
   </section>
 
-  <section class="py-5 bg-light">
+  <section class="oxygen-economy py-5 bg-light">
     <div class="container-fluid">
       <div class="container py-4">
         <div class="row g-4 h-100">
@@ -866,8 +749,8 @@
   </section>
 
   <!-- Testimonial Start -->
-  <section class="bg-white">
-    <div class="container-fluid testimonial py-5">
+  <section class="oxygen-economy  py-5 bg-white">
+    <div class="container-fluid testimonial">
       <div class="container py-4">
         <div class="row g-4 align-items-center">
           <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
@@ -990,18 +873,6 @@
                   </p>
                 </div>
               </div>
-
-              <!-- <div class="position-relative mx-auto rounded-pill">
-                  <input
-                    class="form-control rounded-sm w-100 py-3 ps-4 pe-5"
-                    type="text"
-                    placeholder="Enter your email" />
-                  <button
-                    type="button"
-                    class="btn btn-primary rounded-sm position-absolute top-0 end-0 py-2 mt-2 me-2">
-                    SignUp
-                  </button>
-                </div> -->
             </div>
           </div>
         </div>
@@ -1094,7 +965,7 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-  <!-- Template Javascript -->
+  <!-- Custom Javascript -->
   <script src="js/main.js"></script>
 
   <!-- Google Translate Script -->
