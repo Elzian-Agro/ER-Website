@@ -203,6 +203,33 @@
       opacity: 0.5;
       pointer-events: none;
     }
+
+    .VIpgJd-ZVi9od-ORHb-OEVmcd {
+      z-index: 999 !important;
+    }
+
+    .navbar {
+      z-index: 1000 !important;
+    }
+
+
+    @media (min-width: 1300px) {
+      html {
+        scroll-padding-top: 20px;
+      }
+    }
+
+    @media (min-width: 991px) and (max-width: 1300px) {
+      html {
+        scroll-padding-top: 400px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      html {
+        scroll-padding-top: 500px;
+      }
+    }
   </style>
 </head>
 
@@ -2077,6 +2104,18 @@
     }
   </script>
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script>
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(function (navLink) {
+      navLink.addEventListener('click', function () {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse.classList.contains('show')) {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
+          bsCollapse.hide();
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
