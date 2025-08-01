@@ -759,6 +759,24 @@ video.object-fit-cover {
   text-align: justify;
 }
 
+@media (max-width: 640px) {
+  .text-justify-sm {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 1024px) {
+  .text-justify-lg {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 991px) {
+  .text-justify-md {
+    text-align: justify;
+  }
+}
+
 .hover-card {
   border: none;
   transition: transform 0.3s;
