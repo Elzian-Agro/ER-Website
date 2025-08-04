@@ -353,6 +353,12 @@ body.oxygen-economy-page .sticky-top .navbar .navbar-nav .dropdown-item.active {
   margin: 0rem auto;
 }
 
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* How We Do It  End */
 
 /* Oxygen Economy Start */
