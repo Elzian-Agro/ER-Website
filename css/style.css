@@ -467,11 +467,12 @@ body.oxygen-economy-page .sticky-top .navbar .navbar-nav .dropdown-item.active {
 }
 
 .testimonial-carousel .owl-item {
-  height: 100% !important;
+  height: 500px !important;
+  padding-bottom: 30px !important;
 }
 
 .testimonial-item {
-  min-height: 300px;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -499,6 +500,10 @@ body.oxygen-economy-page .sticky-top .navbar .navbar-nav .dropdown-item.active {
 .testimonial .testimonial-carousel .owl-dot.active {
   width: 40px;
   background: var(--bs-blue);
+}
+
+.testimonial-item p {
+  flex-grow: 1;
 }
 
 /* Oxygen Economy  End */
