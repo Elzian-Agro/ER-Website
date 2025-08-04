@@ -172,7 +172,7 @@ address {
 
 ol,
 ul {
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 ol,
@@ -8173,6 +8173,14 @@ fieldset:disabled .btn {
 .fs-6 {
   font-size: 1rem !important;
 }
+
+@media (min-width: 640px) {
+
+  .fs-sm-6 {
+    font-size: 1rem !important;
+  }
+}
+
 
 .fst-italic {
   font-style: italic !important;

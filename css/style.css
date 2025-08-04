@@ -467,7 +467,7 @@ body.oxygen-economy-page .sticky-top .navbar .navbar-nav .dropdown-item.active {
 }
 
 .testimonial-carousel .owl-item {
-  height: 500px !important;
+  height: 520px !important;
   padding-bottom: 30px !important;
 }
 
@@ -491,7 +491,6 @@ body.oxygen-economy-page .sticky-top .navbar .navbar-nav .dropdown-item.active {
   margin: 0 5px;
   width: 15px;
   height: 15px;
-  background: var(--bs-light);
   border: 1px solid var(--bs-blue);
   border-radius: 10px;
   transition: 0.5s;
@@ -796,6 +795,12 @@ video.object-fit-cover {
 
 .hover-card:hover {
   transform: translateY(-5px);
+}
+
+@media (min-width: 991px) {
+  .divide-padding {
+    padding-left: 60px;
+  }
 }
 
 /*** Common end ***/
