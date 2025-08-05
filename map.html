@@ -172,7 +172,12 @@
                     id: 'location-icon-layer',
                     type: 'symbol',
                     source: 'plant-points',
-                    filter: ['==', ['slice', ['get', 'name'], 0, 3], 'ER/'],
+                    filter: [
+                        'any',
+                        ['==', ['slice', ['get', 'name'], 0, 3], 'ER/'],
+                        ['==', ['slice', ['get', 'name'], 0, 16], 'ER94NPCOMMUNITY/']
+                    ]
+                    ,
                     layout: {
                         'icon-image': 'location-icon',
                         'icon-size': 0.05,
