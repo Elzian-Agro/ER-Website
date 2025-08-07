@@ -505,6 +505,19 @@ body.oxygen-economy-page .sticky-top .navbar .navbar-nav .dropdown-item.active {
   flex-grow: 1;
 }
 
+.cpes-box {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media (min-width: 576px) {
+  .cpes-box {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
 /* Oxygen Economy  End */
 
 /* Further Readings (Local, Global, Blogs)  Start */
