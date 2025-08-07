@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>EarthRestoration</title>
+    <link rel="icon" href="asset/img/logo.png" type="image/x-icon" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #project-title {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            z-index: 999;
+            font-family: sans-serif
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .mapboxgl-popup-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            padding: 10px 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 12px;
+            line-height: 1.5;
+            overflow: auto;
+        }
+
+        .mapboxgl-popup-content pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="project-title">
+            Project Loading...
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script type="module">
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        const projectId = getQueryParam('project');
+
+        // Load landscape data
+        import { geojsonFiles } from './asset/landscape/landscape.js';
+
+        const selected = geojsonFiles[projectId];
+
+        document.getElementById('project-title').textContent = `${selected.name}`;
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoidGtkZXNoYW4iLCJhIjoiY21kbXhwa3VoMTVibDJxczU3cXd1aTg2aSJ9.B4DkNDxd73tbS0XKhcALeA';
+
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/satellite-streets-v12',
+            center: selected.center,
+            zoom: selected.zoom,
+            maxZoom: selected.maxZoom
+        });
+
+        // Restrict movement to project area
+        map.setMaxBounds(selected.bounds);
+
+        map.on('load', () => {
+            // Boundaries
+            if (selected.boundaries) {
+                map.addSource('unit-boundaries', {
+                    type: 'geojson',
+                    data: selected.boundaries
+                });
+
+                map.addLayer({
+                    id: 'units-lines',
+                    type: 'line',
+                    source: 'unit-boundaries',
+                    layout: { 'line-join': 'round', 'line-cap': 'round' },
+                    paint: {
+                        'line-color': '#ecfc03',
+                        'line-width': 3
+                    }
+                });
+
+                // map.on('click', 'units-lines', (e) => {
+                //     const props = e.features[0].properties;
+                //     const name = props.name || 'Unnamed';
+                //     const desc = props.description || 'No description';
+
+                //     new mapboxgl.Popup()
+                //         .setLngLat(e.lngLat)
+                //         .setHTML(`<div class="popup"><strong>${name}</strong><br><pre>${desc}</pre></div>`)
+                //         .addTo(map);
+                // });
+
+                map.on('mouseenter', 'units-lines', () => map.getCanvas().style.cursor = 'pointer');
+                map.on('mouseleave', 'units-lines', () => map.getCanvas().style.cursor = '');
+            }
+
+            // Planting points
+            if (selected.plants) {
+                // custom icons for units
+                map.loadImage('asset/img/oxygen-economy/christmas-tree.png', (err, image) => {
+                    if (err) throw err;
+                    map.addImage('tree-icon', image, { sdf: true });
+                });
+
+                map.loadImage('asset/img/oxygen-economy/location.png', (err, image) => {
+                    if (err) throw err;
+                    map.addImage('location-icon', image, { sdf: true });
+                });
+
+                map.addSource('plant-points', {
+                    type: 'geojson',
+                    data: selected.plants
+                });
+
+                // Tree icon for non-ER/ points
+                map.addLayer({
+                    id: 'tree-icon-layer',
+                    type: 'symbol',
+                    source: 'plant-points',
+                    filter: ['!', ['in', ['slice', ['get', 'name'], 0, 3], ['literal', ['ER/']]]],
+                    layout: {
+                        'icon-image': 'tree-icon',
+                        'icon-size': 0.06,
+                        'icon-allow-overlap': true,
+                        'icon-ignore-placement': false,
+
+                        'text-field': ['get', 'name'],
+                        'text-font': ['Open Sans Bold'],
+                        'text-offset': [0, 1.2],
+                        'text-anchor': 'top',
+                        'text-size': 10,
+                        'text-allow-overlap': false,
+                        'text-ignore-placement': false
+                    },
+                    paint: {
+                        'icon-color': '#4CAF50',
+                        'text-color': '#fff',
+                        'text-halo-color': '#000',
+                        'text-halo-width': 1.5
+                    }
+                });
+
+                // Location icon for names starting with "ER/"
+                map.addLayer({
+                    id: 'location-icon-layer',
+                    type: 'symbol',
+                    source: 'plant-points',
+                    filter: [
+                        'any',
+                        ['==', ['slice', ['get', 'name'], 0, 3], 'ER/'],
+                        ['==', ['slice', ['get', 'name'], 0, 16], 'ER94NPCOMMUNITY/']
+                    ]
+                    ,
+                    layout: {
+                        'icon-image': 'location-icon',
+                        'icon-size': 0.05,
+                        'icon-allow-overlap': true,
+                        'icon-ignore-placement': false,
+
+                        'text-field': ['get', 'name'],
+                        'text-font': ['Open Sans Bold'],
+                        'text-offset': [0, 1.2],
+                        'text-anchor': 'top',
+                        'text-size': 14,
+                        'text-allow-overlap': false,
+                        'text-ignore-placement': false
+                    },
+                    paint: {
+                        'icon-color': '#0c0fe8',
+                        'text-color': '#fff',
+                        'text-halo-color': '#000',
+                        'text-halo-width': 1.5
+                    }
+                });
+
+                // Popup click handler
+                ['tree-icon-layer', 'location-icon-layer'].forEach(layer => {
+                    map.on('click', layer, (e) => {
+                        const props = e.features[0].properties;
+                        const name = props.name || 'Unknown';
+                        const desc = props.description || 'No description';
+
+                        new mapboxgl.Popup()
+                            .setLngLat(e.lngLat)
+                            .setHTML(`<div class="popup"><strong>${name}</strong><br><pre>${desc}</pre></div>`)
+                            .addTo(map);
+                    });
+
+                    map.on('mouseenter', layer, () => map.getCanvas().style.cursor = 'pointer');
+                    map.on('mouseleave', layer, () => map.getCanvas().style.cursor = '');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

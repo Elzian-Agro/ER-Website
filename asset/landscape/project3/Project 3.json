@@ -1,0 +1,281 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.9385864553258,
+                    6.755129970349396,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER/094/UP/003",
+                "description": "Registration Number : ER/094/UP/003\nLocation : Nikapotha , Beragala\nGPS : N06.75547, E 080.93850\nLand details : Bare land \nExisting biodiversity : 1st seral stage \nArea : 1 acer\nLand Owner : Dayani Abesekara\nDate of planted : 01.09.2018\nDate of 1st monitaring : 19.03.2019\nER unit : 10",
+                "styleUrl": "#msn_parks0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.9385042494656,
+                    6.75547005184375,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Toona celiata",
+                "description": "Botanical name : Toona celiata\nCommon name : Toona \nRegistration Number : ER/094/UP/003\nLocation : Nikapotha , Beragala\nGPS : N06.75547, E 080.93850\nLand details : Bare land \nExisting biodiversity : 1st seral stage \nArea : 1 acer\nLand Owner : Dayani Abesekara\nGrowth rate : Fast\nPlant condition : Moderate \nDate of planted : 01.09.2018\nDate of 1st monitaring : 19.03.2019\nLifeForce TM ledger PES values\nAverage O2 production at 1st year : 7.4 L\nAverage H2O production at 1st year : 2.6 L",
+                "styleUrl": "#msn_parks",
+                "icon-scale": 0.8,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.93879055798364,
+                    6.755231171383544,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Toona celiata",
+                "description": "Botanical name : Toona celiata\nCommon name : Toona \nRegistration Number : ER/094/UP/003\nLocation : Nikapotha , Beragala\nGPS : N06.75523, E 080.93879\nLand details : Bare land \nExisting biodiversity : 1st seral stage \nArea : 1 acer\nLand Owner : Dayani Abesekara\nGrowth rate : Fast\nPlant condition : Good\nDate of planted: 01.09.2018\nDate of 1st monitaring : 19.03.2019\nLifeForce TM ledger PES values\nAverage O2 production at 1st year : 7.4 L\nAverage H2O production at 1st year : 2.6 L",
+                "styleUrl": "#msn_parks",
+                "icon-scale": 0.8,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.9387913239718,
+                    6.755149463198635,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Persea americana",
+                "description": "Botanical name : Persea americana\nCommon name : Avocado\nRegistration Number : ER/094/UP/003\nLocation : Nikapotha , Beragala\nGPS : N06.75515, E 080.93879\nLand details : Bare land \nExisting biodiversity : 1st seral stage \nArea : 1 acer\nLand Owner : Dayani Abesekara\nGrowth rate : Moderate\nPlant condition : Good\nDate of planted : 01.09.2018\nDate of 1st monitaring : 19.03.2019\nLifeForce TM ledger PES values\nAverage O2 production at 1st year :16.4 L\nAverage H2O production at 1st year : 5.8 L",
+                "styleUrl": "#msn_parks",
+                "icon-scale": 0.8,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.93895342208403,
+                    6.754518813562287,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Mangifera indica",
+                "description": "Botanical name : Mangifera indica\nCommon name : Mango\nRegistration Number : ER/094/UP/003\nLocation : Nikapotha , Beragala\nGPS : N06.75489, E 080.93898\nLand details : Bare land \nExisting biodiversity : 1st seral stage \nArea : 1 acer\nLand Owner : Dayani Abesekara\nGrowth rate : Moderate\nPlant condition : Good\nDate of planted : 01.09.2018\nDate of 1st monitaring : 19.03.2019\nLifeForce TM ledger PES values\nAverage O2 production at 1st year :6.6 L\nAverage H2O production at 1st year : 2.3 L",
+                "styleUrl": "#msn_parks",
+                "icon-scale": 0.8,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.93901864724202,
+                    6.754844051129172,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Mangifera indica",
+                "description": "Botanical name : Mangifera indica\nCommon name : Mango\nRegistration Number : ER/094/UP/003\nLocation : Nikapotha , Beragala\nGPS : N06.75535, E 080.93840\nLand details : Bare land \nExisting biodiversity : 1st seral stage \nArea : 1 acer\nLand Owner : Dayani Abesekara\nGrowth rate : Moderate\nPlant condition : Good\nDate of planted : 01.09.2018\nDate of 1st monitaring : 19.03.2019\nLifeForce TM ledger PES values\nAverage O2 production at 1st year :6.6 L\nAverage H2O production at 1st year : 2.3 L",
+                "styleUrl": "#msn_parks",
+                "icon-scale": 0.8,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.93840747484569,
+                    6.755351054746694,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Persea americana",
+                "description": "Botanical name : Persea americana\nCommon name : Avocado\nRegistration Number : ER/094/UP/003\nLocation : Nikapotha , Beragala\nGPS : N06.75535, E 080.93840\nLand details : Bare land \nExisting biodiversity : 1st seral stage \nArea : 1 acer\nLand Owner : Dayani Abesekara\nGrowth rate : Moderate\nPlant condition : Good\nDate of planted : 01.09.2018\nDate of 1st monitaring : 19.03.2019\nLifeForce TM ledger PES values\nAverage O2 production at 1st year :16.4 L\nAverage H2O production at 1st year : 5.8 L",
+                "styleUrl": "#msn_parks",
+                "icon-scale": 0.8,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.93841255948276,
+                    6.755309693736731,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Mangifera indica",
+                "description": "Botanical name : Mangifera indica\nCommon name : Mango\nRegistration Number : ER/094/UP/003\nLocation : Nikapotha , Beragala\nGPS : N06.75530, E 080.93849\nLand details : Bare land \nExisting biodiversity : 1st seral stage \nArea : 1 acer\nLand Owner : Dayani Abesekara\nGrowth rate : Moderate\nPlant condition : Good\nDate of planted : 01.09.2018\nDate of 1st monitaring : 19.03.2019\nLifeForce TM ledger PES values\nAverage O2 production at 1st year :6.6 L\nAverage H2O production at 1st year : 2.3 L",
+                "styleUrl": "#msn_parks",
+                "icon-scale": 0.8,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.9384632655641,
+                    6.755299465014333,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Persea americana",
+                "description": "Botanical name : Persea americana\nCommon name : Avocado\nRegistration Number : ER/094/UP/003\nLocation : Nikapotha , Beragala\nGPS : N06.75530, E 080.93846\nLand details : Bare land \nExisting biodiversity : 1st seral stage \nArea : 1 acer\nLand Owner : Dayani Abesekara\nGrowth rate : Moderate\nPlant condition : Good\nDate of planted : 01.09.2018\nDate of 1st monitaring : 19.03.2019\nLifeForce TM ledger PES values\nAverage O2 production at 1st year :16.4 L\nAverage H2O production at 1st year : 5.8 L",
+                "styleUrl": "#msn_parks",
+                "icon-scale": 0.8,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.93849217777468,
+                    6.755289895363662,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Mangifera indica",
+                "description": "Botanical name : Mangifera indica\nCommon name : Mango\nRegistration Number : ER/094/UP/003\nLocation : Nikapotha , Beragala\nGPS : N06.75529, E 080.93849\nLand details : Bare land \nExisting biodiversity : 1st seral stage \nArea : 1 acer\nLand Owner : Dayani Abesekara\nGrowth rate : Moderate\nPlant condition : Good\nDate of planted : 01.09.2018\nDate of 1st monitaring : 19.03.2019\nLifeForce TM ledger PES values\nAverage O2 production at 1st year :6.6 L\nAverage H2O production at 1st year : 2.3 L",
+                "styleUrl": "#msn_parks",
+                "icon-scale": 0.8,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.93880145753289,
+                    6.754718970239979,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Toona celiata",
+                "description": "Botanical name : Toona celiata\nCommon name : Toona \nRegistration Number : ER/094/UP/003\nLocation : Nikapotha , Beragala\nGPS : N06.75472, E 080.93880\nLand details : Bare land \nExisting biodiversity : 1st seral stage \nArea : 1 acer\nLand Owner : Dayani Abesekara\nGrowth rate : Fast\nPlant condition : Good\nDate of planted : 01.09.2018\nDate of 1st monitaring : 19.03.2019\nLifeForce TM ledger PES values\nAverage O2 production at 1st year : 7.4 L\nAverage H2O production at 1st year : 2.6 L",
+                "styleUrl": "#msn_parks",
+                "icon-scale": 0.8,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        }
+    ]
+}

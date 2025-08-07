@@ -1,0 +1,1149 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30512944622392,
+                    8.688550000000001,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NPCOMMUNITY/001",
+                "description": "Registration Number :  ER/094/NP/001\nCountry : Sri Lanka\nLocation :  Chettikulam, Khristokulam \t\t\tGPS: N 8.688590 , E 80.305213\nLand Details : Home Garden \nExisting biodiversity : 1ST Seral stage\nArea : 1 Acre\nOwner : Paakiyarasa Pushpawathy\nBank Details :Bank of Ceylon Cheddikulam\nA/C no : 78199776\nER units: 10\nDate of planted  : 01.10. 2018\nDate of 1st monitoring : 12.12 2018\nDate of 2nd monitoring: 06.08.2019",
+                "styleUrl": "#msn_blu-blank"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30522777777777,
+                    8.688505555555556,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP001/01",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack Fruit\nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°41'18.62\"N, 80°18'18.82\"E\nLand Details : Home Garden \nExisting biodiversity  : 1ST Seral stage\nArea : 1 Acre\nOwner : Paakiyarasa Pushpawathy\nInvestor : Mr. Dejan de Zoysa \nDate of Planted : 01.10.2018",
+                "styleUrl": "#msn_parks00",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30521388888889,
+                    8.688469444444445,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP001/02",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack Fruit\nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°41'18.49\"N, 80°18'18.77\"E\nLand Details : Home Garden \nExisting biodiversity  : 1ST Seral stage\nArea : 1 Acre\nOwner : Paakiyarasa Pushpawathy\nInvestor : Mr Dejan de Zoysa\nDate of Planted : 01.10.2018",
+                "styleUrl": "#msn_parks00",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30513888888889,
+                    8.688447222222223,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ERNP94001/03",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack Fruit\nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°41'18.41\"N, 80°18'18.50\"E\nLand Details : Home Garden \nExisting biodiversity  : 1ST Seral stage\nArea : 1 Acre\nOwner : Paakiyarasa Pushpawathy\nInvestor : Mr Dejan de Zoysa",
+                "styleUrl": "#msn_parks00",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30518055555555,
+                    8.688405555555557,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ERNP94001/04",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack Fruit\nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°41'18.26\"N,  80°18'18.65\"E\nLand Details : Home Garden \nExisting biodiversity  : 1ST Seral stage\nArea : 1 Acre\nOwner : Paakiyarasa Pushpawathy\nInvestor : Mr Dejan de Zoysa\nDate of Planted : 01.10.2018",
+                "styleUrl": "#msn_parks00",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30523055555555,
+                    8.688433333333334,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ERNP94001/05",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack Fruit\nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS: 8°41'18.36\"N, 80°18'18.83\"E\nLand Details : Home Garden \nExisting biodiversity  : 1ST Seral stage\nArea : 1 Acre\nOwner : Paakiyarasa Pushpawathy\nInvestor : EarthRestoration \nAllocated to : Mr Sameera Abeyratne \nDate of Planted : 01.10.2018",
+                "styleUrl": "#msn_parks00",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30527222222221,
+                    8.68845,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ERNP94001/06",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack Fruit\nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°41'18.42\"N, 80°18'18.98\"E\nLand Details : Home Garden \nExisting biodiversity  : 1ST Seral stage\nArea : 1 Acre\nOwner : Paakiyarasa Pushpawathy\nInvestor : EarthRestoration \nLedger allocated to : Mr. Quincy Saul (USA) \nDate of Planted : 01.10.2018",
+                "styleUrl": "#msn_parks00",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30531388888889,
+                    8.688483333333334,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ERNP94001/07",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack Fruit\nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°41'18.54\"N,  80°18'19.13\"E\nLand Details : Home Garden \nExisting biodiversity  : 1ST Seral stage\nArea : 1 Acre\nOwner : Paakiyarasa Pushpawathy\nInvestro : EarthRestoration \nLedger allocated to : Ecosocialist Horizons Network (USA) \nDate of Planted : 01.10.2018",
+                "styleUrl": "#msn_parks00",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30536111111111,
+                    8.688511111111112,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ERNP94001/08",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack Fruit\nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°41'18.64\"N, 80°18'19.30\"E\nLand Details : Home Garden \nExisting biodiversity  : 1ST Seral stage\nArea : 1 Acre\nOwner : Paakiyarasa Pushpawathy\nInvestor : Mr Andrew Ananda \nDate of Planted : 01.10.2018",
+                "styleUrl": "#msn_parks0",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30525,
+                    8.688588888888889,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ERNP94001/09",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack Fruit\nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS: 8°41'18.92\"N, 80°18'18.90\"E\nLand Details : Home Garden \nExisting biodiversity  : 1ST Seral stage\nArea : 1 Acre\nOwner : Paakiyarasa Pushpawathy\nInvestor : Mr. Robin Van Asparen (Europe) \nDate of Planted : 01.10.2018",
+                "styleUrl": "#msn_parks00",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30526111111111,
+                    8.688647222222222,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP001/10",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack Fruit\nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°41'19.13\"N, 0°18'18.94\"E\nLand Details : Home Garden \nExisting biodiversity  : 1ST Seral stage\nArea : 1 Acre\nOwner : Paakiyarasa Pushpawathy\nInvestor : Mr. Dorian Geis \nDate of Planted : 01.10.2018",
+                "styleUrl": "#msn_parks00",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.3010929826778,
+                    8.681811431901002,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NPCOMMUNITY/002",
+                "description": "Registration Number :  ER/094/NP/002\nCountry : Sri Lanka \nLocation :  Chettikulam -Kristhovakulam \nGPS: N 8.681874 , E 80.301064\nLand Details : Home Garden \nExisting biodiversity : 1st  and 2nd Seral stage\nArea : 0.5 Acres\nOwner : Selvaratnam Sithamparam\nBank Details :Peoples Bank Chettikulam\nA/C No :  356200140004517\nDate of planted  : 01.10.2018\nDate of 1st monitoring : 12.12.2018\nER units : 10\nDate of 2nd monitoring: 06.08.2019",
+                "styleUrl": "#m_ylw-pushpin7"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.301075,
+                    8.681763888888888,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ERNP94002/01",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack fruit \nRegistration Number :  ER/094/NP/002\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°40'54.35\"N,  80°18'3.87\"E\nLand Details : Home Garden \nExisting biodiversity  : 1st Seral stage\nArea : 1 Acre\nOwner : Selvaratnam Sithamparam\nInvestor  Dr. Ranil Senanayake \nDate of Planted :2018.10.01\nDate of 1st  Monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year : 10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 46cm\nCrown height: 32cm\nNumber of leaves: 31\nBranches: 4\nStem diameter : 0.6cm\nPhotosynthetic biomass: 46 g\nO2 production :11.56 L/year\nH2O production: 4.13 L/year",
+                "styleUrl": "#msn_parks1",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30112222222222,
+                    8.681705555555554,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP002/02",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack fruit \nRegistration Number :  ER/094/NP/002\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:  8°40'54.14\"N, 80°18'4.04\"E\nLand Details : Home Garden \nExisting biodiversity  : 1st Seral stage\nArea : 1 Acre\nOwner : Selvaratnam Sithamparam\nInvestor  Dr. Ranil Senanayake \nDate of Planted :2018.10.01\nDate of 1st  Monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year : 10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 125cm\nCrown height: 102cm\nNumber of leaves: 72\nBranches: 8\nStem diameter : 1cm\nPhotosynthetic biomass: 93.6 g\nO2 production :26.2 L/year\nH2O production: 9.36 L/year",
+                "styleUrl": "#msn_parks1",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30114166666667,
+                    8.681741666666666,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP002/03",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack fruit \nRegistration Number :  ER/094/NP/002\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°40'54.27\"N, 80°18'4.11\"E\nLand Details : Home Garden \nExisting biodiversity  : 1st Seral stage\nArea : 1 Acre\nOwner : Selvaratnam Sithamparam\nInvestor  EarthRestoration\nLedger allocated to : Mr Ravi Bandaranaike \nDate of Planted :2018.10.01\nDate of 1st  Monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year : 10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 32cm\nCrown height: 29cm\nNumber of leaves: 17\nBranches: 4\nStem diameter : 0.4cm\nPhotosynthetic biomass: 22.1 g\nO2 production :6.18 L/year\nH2O production: 2.21 L/year",
+                "styleUrl": "#msn_parks1",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30120277777777,
+                    8.681727777777777,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP002/04",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack fruit \nRegistration Number :  ER/094/NP/002\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°40'54.22\"N,  80°18'4.33\"E\nLand Details : Home Garden \nExisting biodiversity  : 1st Seral stage\nArea : 1 Acre\nOwner : Selvaratnam Sithamparam\nInvestor  Dr. Ranil Senanayake \nDate of Planted :2018.10.01\nDate of 1st  Monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year : 10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 58cm\nCrown height: 37cm\nNumber of leaves: 20\nBranches: 3\nStem diameter : 0.6cm\nPhotosynthetic biomass: 20 g\nO2 production :5.59 L/year\nH2O production: 2 L/year",
+                "styleUrl": "#msn_parks1",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.3012,
+                    8.681688888888889,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP002/05",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack fruit \nRegistration Number :  ER/094/NP/002\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°40'54.08\"N, 80°18'4.32\"E\nLand Details : Home Garden \nExisting biodiversity  : 1st Seral stage\nArea : 1 Acre\nOwner : Selvaratnam Sithamparam\nInvestor  Dr. Ranil Senanayake \nDate of Planted :2018.10.01\nDate of 1st  Monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year : 10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 77cm\nCrown height: 57cm\nNumber of leaves: 28\nBranches: 4\nStem diameter : 0.5cm\nPhotosynthetic biomass: 28 g\nO2 production :7.83 L/year\nH2O production: 2.8 L/year",
+                "styleUrl": "#msn_parks1",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30126944444444,
+                    8.681730555555555,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP002/06",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack fruit \nRegistration Number :  ER/094/NP/002\nLocation :  Chettikulam, Khristokulam \t\t\tGPS: 8°40'54.23\"N,80°18'4.57\"E\nLand Details : Home Garden \nExisting biodiversity  : 1st Seral stage\nArea : 1 Acre\nOwner : Selvaratnam Sithamparam\nInvestor  Dr. Ranil Senanayake \nDate of Planted :2018.10.01\nDate of 1st  Monitaring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year : 10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 53cm\nCrown height: 31cm\nNumber of leaves: 17\nBranches: 4\nStem diameter : 0.4cm\nPhotosynthetic biomass: 22.1 g\nO2 production :6.18 L/year\nH2O production: 2.21 L/year",
+                "styleUrl": "#msn_parks1",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30127222222222,
+                    8.681702777777778,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP002/10",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack fruit \nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS: 8°40'54.13\"N, 80°18'4.58\"E\nLand Details : Home Garden \nExisting biodiversity  : 1st Seral stage\nArea : 1 Acre\nOwner : Selvaratnam Sithamparam\nInvestor  Dr. Ranil Senanayake \nDate of Planted :2018.10.01\nDate of 1st  Monitaring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year : 10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 93cm\nCrown height: 85cm\nNumber of leaves: 44\nBranches: 5\nStem diameter : 0.9cm\nPhotosynthetic biomass: 70.4 g\nO2 production :19.7 L/year\nH2O production: 7.04 L/year",
+                "styleUrl": "#msn_parks1",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30118055555555,
+                    8.681630555555556,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP002/08",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack fruit \nRegistration Number :  ER/094/NP/002\nLocation :  Chettikulam, Khristokulam \t\t\tGPS:   8°40'53.87\"N, 80°18'4.25\"E\nLand Details : Home Garden \nExisting biodiversity  : 1st Seral stage\nArea : 1 Acre\nOwner : Selvaratnam Sithamparam\nInvestor  EarthRestoration\nLedger allocated to : Mr Charith Senanayake (Australia) \nDate of Planted :2018.10.01\nDate of 1st  Monitaring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year : 10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 60cm\nCrown height: 52cm\nNumber of leaves: 24\nBranches: 4\nStem diameter : 0.6cm\nPhotosynthetic biomass: 24 g\nO2 production :6.71 L/year\nH2O production: 2.4 L/year",
+                "styleUrl": "#msn_parks1",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30115277777777,
+                    8.681652777777778,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP002/07",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack fruit \nRegistration Number :  ER/094/NP/002\nLocation :  Chettikulam, Khristokulam \t\t\tGPS: 8°40'53.95\"N, 80°18'4.15\"E\nLand Details : Home Garden \nExisting biodiversity  : 1st Seral stage\nArea : 1 Acre\nOwner : Selvaratnam Sithamparam\nInvestor  Dr. Ranil Senanayake \nDate of Planted :2018.10.01\nDate of 1st  Monitaring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year : 10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 39cm\nCrown height: 34cm\nNumber of leaves: 9\nBranches: 2\nStem diameter : 0.5cm\nPhotosynthetic biomass: 11.7 g\nO2 production :3.27 L/year\nH2O production: 1.17 L/year",
+                "styleUrl": "#msn_parks1",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.30123888888889,
+                    8.68161111111111,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP002/09",
+                "description": "Botanical name : Artocarpus heterophyllus\nCommon name : Jack fruit \nRegistration Number :  ER/094/NP/001\nLocation :  Chettikulam, Khristokulam \t\t\tGPS: 8°40'53.80\"N, 80°18'4.46\"E\nLand Details : Home Garden \nExisting biodiversity  : 1st Seral stage\nArea : 1 Acre\nOwner : Selvaratnam Sithamparam\nInvestor  EarthRestoration\nLedger allocated to : Mr Chris Dharmakeerthi \nDate of Planted :2018.10.01\nDate of 1st  Monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year : 10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 92cm\nCrown height: 57cm\nNumber of leaves: 22\nBranches: 5\nStem diameter : 0.6cm\nPhotosynthetic biomass: 22 g\nO2 production :6.15 L/year\nH2O production: 2.2 L/year",
+                "styleUrl": "#msn_parks1",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34527272436276,
+                    8.617159433796704,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NPCOMMUNITY/003",
+                "description": "Registration Number :  ER/094/NP/003\nCountry : Sri Lanka \nLocation :  Thuttuwahai,  Neriyakulam \nGPS:  N 8.617008 , E 80.345252\nLand Details : Home Garden \nExisting biodiversity : 1st Seral stage\nArea : 0.5 Acres\nOwner : Navaratnasamy Poomani\nBank Details :Bank of Ceylon – Chettikulam \nA/C No : 77869861\nDate of planted : 01, 10, 2018\nDate of 1st monitoring : 12.12.2018\nER units : 10\nDate of 2nd monitoring: 06.08.2019",
+                "styleUrl": "#m_ylw-pushpin70"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34529722222221,
+                    8.616986111111112,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP003/03",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/003\nLocation :  Thuttuwahai, Neriyakulam \t\t\tGPS:  8°37'1.15\"N , 80°20'43.07\"E\nLand Details :Home Garden \nExisting biodiversity :1st  Seral stage\nArea : 0.5 Acres\nOwner : Navaratnasamy Poomani\nINvestor : Mr Dejan de Zoysa\nDate of Planted : 01, 10, 2018\nDate of 1st monitoring :12, 12, 2018\nGrowth rate: Moderate\nPlant condition : Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 35cm\nCrown height: 19cm\nNumber of leaves: 4\nBranches: 4\nStem diameter : 0.4cm\nPhotosynthetic biomass: 4 g\nO2 production :1.11 L/year\nH2O production: 0.4 L/year",
+                "styleUrl": "#msn_parks2",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34530833333334,
+                    8.61705,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP003/04",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/003\nLocation :  Thuttuwahai, Neriyakulam \t\t\tGPS:   8°37'1.38\"N , 80°20'43.11\"E\nLand Details :Home Garden \nExisting biodiversity :1st  Seral stage\nArea : 0.5 Acres\nOwner : Navaratnasamy Poomani\nInvestor : Mr Kaspar Koenig ( switzerland) \nDate of Planted : 01, 10, 2018\nDate of 1st monitoring :12, 12, 2018\nGrowth rate: Moderate\nPlant condition : Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Moderate \nPlant height : 51cm\nCrown height: 39cm\nNumber of leaves: 22\nBranches: 3\nStem diameter : 0.7cm\nPhotosynthetic biomass: 22 g\nO2 production :6.15 L/year\nH2O production: 2.2 L/year",
+                "styleUrl": "#msn_parks2",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34526388888888,
+                    8.617061111111111,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP003/05",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/003\nLocation :  Thuttuwahai, Neriyakulam \t\t\tGPS:  8°37'1.42\"N, 80°20'42.95\"E\nLand Details :Home Garden \nExisting biodiversity :1st  Seral stage\nArea : 0.5 Acres\nOwner : Navaratnasamy Poomani\nInvestor : Mr Dejan de Zoysa\nDate of Planted : 01, 10, 2018\nDate of 1st monitoring :12, 12, 2018\nGrowth rate: Moderate\nPlant condition : Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 54cm\nCrown height: 24cm\nNumber of leaves: 25\nBranches: 4\nStem diameter : 0.5cm\nPhotosynthetic biomass: 27.5 g\nO2 production :7.69 L/year\nH2O production: 2.75 L/year",
+                "styleUrl": "#msn_parks2",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34523333333333,
+                    8.617019444444445,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP003/06",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/003\nLocation :  Thuttuwahai, Neriyakulam \t\t\tGPS:   8°37'1.27\"N , 80°20'42.84\"E\nLand Details :Home Garden \nExisting biodiversity :1st  Seral stage\nArea : 0.5 Acres\nOwner : Navaratnasamy Poomani\nInvestor : Mr Dejan de ZOysa\nDate of Planted : 01, 10, 2018\nDate of 1st monitoring :12, 12, 2018\nGrowth rate: Moderate\nPlant condition : Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Moderate\nPlant height : 30cm\nCrown height: 15cm\nNumber of leaves: 10\nBranches: 3\nStem diameter : 0.5cm\nPhotosynthetic biomass: 10g\nO2 production :2.79 L/year\nH2O production: 1 L/year",
+                "styleUrl": "#msn_parks2",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34519166666666,
+                    8.617052777777777,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP003/07",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/003\nLocation :  Thuttuwahai, Neriyakulam \t\t\tGPS:  8°37'1.39\"N, 80°20'42.69\"E\nLand Details :Home Garden \nExisting biodiversity :1st  Seral stage\nArea : 0.5 Acres\nOwner : Navaratnasamy Poomani\nINvestor : Mr. Dejan de Zoysa\nDate of Planted : 01, 10, 2018\nDate of 1st monitoring :12, 12, 2018\nGrowth rate: Moderate\nPlant condition : Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 40cm\nCrown height: 30cm\nNumber of leaves: 2\nBranches: 3\nStem diameter : 0.5cm\nPhotosynthetic biomass: 2 g\nO2 production :0.5 L/year\nH2O production: 0,2 L/year",
+                "styleUrl": "#msn_parks2",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34522222222222,
+                    8.617091666666667,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP003/08",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/003\nLocation :  Thuttuwahai, Neriyakulam \t\t\tGPS:  8°37'1.53\"N , 80°20'42.80\"E\nLand Details :Home Garden \nExisting biodiversity :1st  Seral stage\nArea : 0.5 Acres\nOwner : Navaratnasamy Poomani\nInvestor : EarthRestoration \nLedger allocated to : Mr Brian Hill (USA) \nDate of Planted : 01, 10, 2018\nDate of 1st monitoring :12, 12, 2018\nGrowth rate: Moderate\nPlant condition : Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 30cm\nCrown height: 20cm\nNumber of leaves: 16\nBranches: 4\nStem diameter : 0.6cm\nPhotosynthetic biomass: 14.4 g\nO2 production :4.03 L/year\nH2O production: 1.44 L/year",
+                "styleUrl": "#msn_parks2",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34515277777777,
+                    8.617119444444445,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP003/09",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/003\nLocation :  Thuttuwahai, Neriyakulam \t\t\tGPS: 8°37'1.63\"N, 80°20'42.55\"E\nLand Details :Home Garden \nExisting biodiversity :1st  Seral stage\nArea : 0.5 Acres\nOwner : Navaratnasamy Poomani\nInvestor : EarthRestoration \nLedger allocated to : Mr. Amrik Jayawardena \nDate of Planted : 01, 10, 2018\nDate of 1st monitoring :12, 12, 2018\nGrowth rate: Moderate\nPlant condition : Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 30cm\nCrown height: 25cm\nNumber of leaves: 8\nBranches: 4\nStem diameter : 0.4cm\nPhotosynthetic biomass: 7 g\nO2 production :1.95 L/year\nH2O production: 0.7 L/year",
+                "styleUrl": "#msn_parks2",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34535,
+                    8.616955555555556,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP003/02",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/003\nLocation :  Thuttuwahai, Neriyakulam \t\t\tGPS:  8°37'1.04\"N,  80°20'43.26\"E\nLand Details :Home Garden \nExisting biodiversity :1st  Seral stage\nArea : 0.5 Acres\nOwner : Navaratnasamy Poomani\nInvestor : EarthRestoration\nLedger allocated to : Mr. Lilan Dayananda \nDate of Planted : 01, 10, 2018\nDate of 1st monitoring :12, 12, 2018\nGrowth rate: Moderate\nPlant condition : Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 35cm\nCrown height: 31cm\nNumber of leaves: 10\nBranches: 5\nStem diameter : 0.9cm\nPhotosynthetic biomass: 11 g\nO2 production :3.07 L/year\nH2O production: 1.1 L/year",
+                "styleUrl": "#msn_parks2",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34512222222222,
+                    8.617080555555557,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP003/10",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/003\nLocation :  Thuttuwahai, Neriyakulam \t\t\tGPS:  8°37'1.49\"N , 80°20'42.44\"E\nLand Details :Home Garden \nExisting biodiversity :1st  Seral stage\nArea : 0.5 Acres\nOwner : Navaratnasamy Poomani\nInvestor : EarthRestoration \nLedger allocated to : Mr Nimesh Chaturanga \nDate of Planted : 01, 10, 2018\nDate of 1st monitoring :12, 12, 2018\nGrowth rate: Moderate\nPlant condition : Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Moderate \nPlant height : 30cm\nCrown height: 15cm\nNumber of leaves: 2\nBranches: 3\nStem diameter : 0.6cm\nPhotosynthetic biomass: 2 g\nO2 production :0.5 L/year\nH2O production: 0.2 L/year",
+                "styleUrl": "#msn_parks2",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34536944444444,
+                    8.617008333333334,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP003/01",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/003\nLocation :  Thuttuwahai, Neriyakulam \t\t\tGPS:  8°37'1.23\"N , 80°20'43.33\"E\nLand Details :Home Garden \nExisting biodiversity :1st  Seral stage\nArea : 0.5 Acres\nOwner : Navaratnasamy Poomani\nInvestor : EarthRestoration\nLedger allocated to : Mr Nuwan Hennayake \nDate of Planted : 01, 10, 2018\nDate of 1st monitoring :12, 12, 2018\nGrowth rate: Moderate\nPlant condition : Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10.2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 40cm\nCrown height: 36cm\nNumber of leaves: 3\nBranches: 4\nStem diameter : 0.7cm\nPhotosynthetic biomass: 3 g\nO2 production :0.83 L/year\nH2O production: 0.3 L/year",
+                "styleUrl": "#msn_parks2",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.3418735154066,
+                    8.64159034379523,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NPCOMMUNITY/004",
+                "description": "Registration Number :  ER/094/NP/004\nCountry : Sri Lanka \nLocation : Kaanthy Nagar, Periyapuliyalankulam \n GPS: N 08.64140, E 080.34164\nLand Details : Home Garden \nExisting biodiversity : 1st and 2nd Seral stage\nArea : 0.75 Acres\nOwner : Peter Nalini\nBank Details : Peoples Bank – Chettikuam\nA/C no-: 356200130008605 \nDate of planted  : 01.10.2018\nDate of 1st monitoring : 12.12.2018\nER units : 09\nDate of 2nd monitoring: 07.08.2019",
+                "styleUrl": "#m_ylw-pushpin71"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34169166666666,
+                    8.641438888888889,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP004/01",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/004\nLocation : Kaanthy Nagar, Periyapuliyalankulam\t\nGPS: 8°38'29.18\"N, 80°20'30.09\"E\nLand Details : Home Garden \nExisting biodiversity : 1st and 2nd Seral stage\nArea : 0.75 Acres\nOwner : Peter Nalini\nInvestor : EarthRestoration\nLedger allocated to : Mr Giles Scott \nDate of Planted : 2018.10.01\nDate of 1st monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10. 2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 52cm\nCrown height: 30cm\nNumber of leaves: 13\nBranches: 3\nStem diameter : 0.3cm\nPhotosynthetic biomass: 15.6 g\nO2 production :4.36 L/year\nH2O production: 1.56 L/year",
+                "styleUrl": "#msn_parks30",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34163888888888,
+                    8.641397222222222,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP004/02",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/004\nLocation : Kaanthy Nagar, Periyapuliyalankulam\t\nGPS: 8°38'29.03\"N, 80°20'29.90\"E\nLand Details : Home Garden \nExisting biodiversity : 1st and 2nd Seral stage\nArea : 0.75 Acres\nOwner : Peter Nalini\nInvestor : EarthRestoration \nLedger allocated to : Mr Namunu Madhage \nDate of Planted : 2018.10.01\nDate of 1st monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10. 2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 37cm\nCrown height: 19cm\nNumber of leaves: 6\nBranches: 3\nStem diameter : 0.7cm\nPhotosynthetic biomass: 7.2 g\nO2 production :2.01 L/year\nH2O production: 0.72 L/year",
+                "styleUrl": "#msn_parks30",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34165277777777,
+                    8.641361111111111,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP004/03",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/004\nLocation : Kaanthy Nagar, Periyapuliyalankulam\t\nGPS: 8°38'28.90\"N, 80°20'29.95\"E\nLand Details : Home Garden \nExisting biodiversity : 1st and 2nd Seral stage\nArea : 0.75 Acres\nOwner : Peter Nalini\nInvestor : Guayapi International\nDate of Planted : 2018.10.01\nDate of 1st monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10. 2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 57cm\nCrown height: 16cm\nNumber of leaves: 31\nBranches: 5\nStem diameter : 0.8cm\nPhotosynthetic biomass: 37.2 g\nO2 production :10.41 L/year\nH2O production: 3.72 L/year",
+                "styleUrl": "#msn_parks30",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34171666666666,
+                    8.641311111111111,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP004/04",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/004\nLocation : Kaanthy Nagar, Periyapuliyalankulam\t\nGPS: 8°38'28.72\"N, 80°20'30.18\"E\nLand Details : Home Garden \nExisting biodiversity : 1st and 2nd Seral stage\nArea : 0.75 Acres\nOwner : Peter Nalini\nInvestor : Elzian Agro PL\nDate of Planted : 2018.10.01\nDate of 1st monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10. 2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 42cm\nCrown height: 25cm\nNumber of leaves: 9\nBranches: 3\nStem diameter : 0.5cm\nPhotosynthetic biomass: 10.8 g\nO2 production :3.02 L/year\nH2O production: 1.08 L/year",
+                "styleUrl": "#msn_parks30",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34174166666666,
+                    8.641319444444443,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP004/05",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/004\nLocation : Kaanthy Nagar, Periyapuliyalankulam\t\nGPS:  8°38'28.75\"N, 80°20'30.27\"E\nLand Details : Home Garden \nExisting biodiversity : 1st and 2nd Seral stage\nArea : 0.75 Acres\nOwner : Peter Nalini\nInvestor : Dr.Ananda Malawathanthri ( assigned from ER) \nDate of Planted : 2018.10.01\nDate of 1st monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10. 2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 62cm\nCrown height: 49cm\nNumber of leaves: 21\nBranches: 3\nStem diameter : 0.6cm\nPhotosynthetic biomass: 25.2 g\nO2 production :7.05 L/year\nH2O production: 2.52 L/year",
+                "styleUrl": "#msn_parks3",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34171111111111,
+                    8.641388888888889,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP004/06",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/004\nLocation : Kaanthy Nagar, Periyapuliyalankulam\t\nGPS:  8°38'29.00\"N, 80°20'30.16\"E\nLand Details : Home Garden \nExisting biodiversity : 1st and 2nd Seral stage\nArea : 0.75 Acres\nOwner : Peter Nalini\nInvestor : Mrs. Deshika Van Haught  \nDate of Planted : 2018.10.01\nDate of 1st monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10. 2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 33cm\nCrown height: 29cm\nNumber of leaves: 20\nBranches: 5\nStem diameter : 0.7cm\nPhotosynthetic biomass: 24 g\nO2 production :6.71 L/year\nH2O production: 2.4 L/year",
+                "styleUrl": "#msn_parks3",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34178055555554,
+                    8.641402777777778,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP004/07",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/004\nLocation : Kaanthy Nagar, Periyapuliyalankulam\t\nGPS: 8°38'29.05\"N, 80°20'30.41\"E\nLand Details : Home Garden \nExisting biodiversity : 1st and 2nd Seral stage\nArea : 0.75 Acres\nOwner : Peter Nalini\nInvestor : Mrs Ranmali Nadaraja \nDate of Planted : 2018.10.01\nDate of 1st monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10. 2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 52cm\nCrown height: 17cm\nNumber of leaves: 3\nBranches: 1\nStem diameter : 0.4cm\nPhotosynthetic biomass: 3.6 g\nO2 production :1 L/year\nH2O production: 0.36 L/year",
+                "styleUrl": "#msn_parks30",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34184166666667,
+                    8.641419444444445,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP004/08",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/004\nLocation : Kaanthy Nagar, Periyapuliyalankulam\t\nGPS: 8°38'29.11\"N, 80°20'30.63\"E\nLand Details : Home Garden \nExisting biodiversity : 1st and 2nd Seral stage\nArea : 0.75 Acres\nOwner : Peter Nalini\nInvestor : International Analog Forestry Network\nDate of Planted : 2018.10.01\nDate of 1st monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10. 2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 44cm\nCrown height: 29cm\nNumber of leaves: 13\nBranches: 5\nStem diameter : 0.4cm\nPhotosynthetic biomass: 15.6 g\nO2 production :4.3L/year\nH2O production: 1.56 L/year",
+                "styleUrl": "#msn_parks30",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34189166666667,
+                    8.641430555555555,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ER94NP004/09",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/004\nLocation : Kaanthy Nagar, Periyapuliyalankulam\t\nGPS: 8°38'29.15\"N,  80°20'30.81\"E\nLand Details : Home Garden \nExisting biodiversity : 1st and 2nd Seral stage\nArea : 0.75 Acres\nOwner : Peter Nalini\nInvestor : Hon Dinesh and Yadamini Gunewardane\nDate of Planted : 2018.10.01\nDate of 1st monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10. 2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 53cm\nCrown height: 45cm\nNumber of leaves: 23\nBranches: 6\nStem diameter : 0.6cm\nPhotosynthetic biomass: 27.6 g\nO2 production :7.76 L/year\nH2O production: 2.76 L/year",
+                "styleUrl": "#msn_parks30",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.34185833333333,
+                    8.641372222222222,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "ERNP004/10",
+                "description": "Botanical name :Artocarpus heterophyllus\nCommon name : Jack fruit\nRegistration Number :  ER/094/NP/004\nLocation : Kaanthy Nagar, Periyapuliyalankulam\t\nGPS:   8°38'28.94\"N,   80°20'30.69\"E\nLand Details : Home Garden \nExisting biodiversity : 1st and 2nd Seral stage\nArea : 0.75 Acres\nOwner : Peter Nalini\nInvestor : Dejan deZoysa\nDate of Planted : 2018.10.01\nDate of 1st monitoring : 12. 12. 2018\nGrowth rate: Moderate\nPlant condition: Good\nLifeForce TM ledger PES values \nAverage O2 production at 1st year :10. 2 L\nAverage H2O production at 1st year : 3.6 L\nDate of 2nd monitoring: 06.08.2019\nPlant condition: Good \nPlant height : 53cm\nCrown height: 45cm\nNumber of leaves: 23\nBranches: 6\nStem diameter : 0.6cm\nPhotosynthetic biomass: 27.6 g\nO2 production :7.76 L/year\nH2O production: 2.76 L/year",
+                "styleUrl": "#msn_parks3",
+                "label-scale": 0.6,
+                "icon-scale": 0.6,
+                "icon-offset": [
+                    0.5,
+                    0
+                ],
+                "icon-offset-units": [
+                    "fraction",
+                    "fraction"
+                ],
+                "icon": "http://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+        }
+    ]
+}
